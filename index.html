@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aminoácidos — guía completa desde cero</title>
+<meta name="description" content="Guía completa y para principiantes sobre los aminoácidos: qué son, los 20 que forman tus proteínas, cómo se unen, para qué sirven y de dónde se obtienen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papel:#EDEFE8;
+  --papel-2:#F7F8F3;
+  --tinta:#16211E;
+  --tinta-suave:#5A675F;
+  --linea:#D2D8CB;
+  --azul:#24429E;
+  --hidro:#B87C1C;
+  --polar:#237A70;
+  --acido:#A32E3C;
+  --basico:#4348AC;
+  --especial:#7A4699;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --texto:"Source Serif 4",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+body{
+  margin:0;background:var(--papel);color:var(--tinta);
+  font-family:var(--texto);font-size:1.0625rem;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(var(--linea) 1px,transparent 1px),linear-gradient(90deg,var(--linea) 1px,transparent 1px);
+  background-size:64px 64px;background-position:-1px -1px;
+}
+.lienzo{background:var(--papel);}
+img,svg{max-width:100%}
+a{color:var(--azul)}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.08;margin:0;font-weight:800;letter-spacing:-.02em}
+p{margin:0 0 1.1em}
+.contenedor{max-width:var(--max);margin:0 auto;padding:0 clamp(18px,5vw,40px)}
+.mono{font-family:var(--mono)}
+
+/* ---------- barra superior ---------- */
+.barra{position:sticky;top:0;z-index:60;background:rgba(237,239,232,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.barra-in{max-width:var(--max);margin:0 auto;padding:10px clamp(18px,5vw,40px);display:flex;align-items:center;gap:16px}
+.marca{font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;white-space:nowrap}
+.marca b{color:var(--azul)}
+.indice{margin-left:auto;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.indice::-webkit-scrollbar{display:none}
+.indice a{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--tinta-suave);text-decoration:none;padding:6px 9px;border-radius:4px;white-space:nowrap}
+.indice a:hover,.indice a.activo{color:var(--tinta);background:rgba(36,66,158,.09)}
+.progreso{height:2px;background:var(--azul);width:0;transition:width .1s linear}
+@media(max-width:820px){.indice{display:none}}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(48px,10vw,110px) 0 clamp(40px,7vw,80px);border-bottom:1px solid var(--linea)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,60px);align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.ojo{font-family:var(--mono);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--azul);margin-bottom:22px;display:block}
+.hero h1{font-size:clamp(2.9rem,8.5vw,5.6rem);letter-spacing:-.045em}
+.hero h1 em{font-style:normal;color:var(--azul)}
+.entrada{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--tinta-suave);max-width:46ch;margin-top:26px}
+.hero-datos{display:flex;gap:28px;flex-wrap:wrap;margin-top:34px;padding-top:22px;border-top:1px solid var(--linea)}
+.dato b{display:block;font-family:var(--display);font-size:1.9rem;font-weight:800;line-height:1}
+.dato span{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--tinta-suave)}
+
+/* molécula firma */
+.molecula{background:var(--papel-2);border:1px solid var(--linea);border-radius:3px;padding:22px}
+.molecula figcaption{font-family:var(--mono);font-size:.72rem;color:var(--tinta-suave);margin-top:14px;line-height:1.5}
+.traza{stroke-dasharray:600;stroke-dashoffset:600;animation:dibujar 2.2s ease forwards}
+@keyframes dibujar{to{stroke-dashoffset:0}}
+.aparece{opacity:0;animation:aparece .8s ease forwards}
+@keyframes aparece{to{opacity:1}}
+.pulso{animation:pulso 3.4s ease-in-out infinite}
+@keyframes pulso{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+/* ---------- secciones ---------- */
+section{padding:clamp(52px,8vw,92px) 0;border-bottom:1px solid var(--linea)}
+.rotulo{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--azul);display:block;margin-bottom:14px}
+h2{font-size:clamp(1.9rem,4.6vw,3rem);max-width:20ch;margin-bottom:26px}
+h3{font-size:clamp(1.15rem,2.6vw,1.5rem);margin:38px 0 12px;font-weight:600}
+h4{font-size:1rem;font-family:var(--mono);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin:26px 0 8px}
+.prosa{max-width:68ch}
+.prosa ul,.prosa ol{max-width:66ch;padding-left:1.2em;margin:0 0 1.2em}
+.prosa li{margin-bottom:.5em}
+strong{font-weight:600}
+.term{border-bottom:1.5px dotted var(--azul);cursor:help}
+
+/* tarjetas y avisos */
+.nota{background:var(--papel-2);border:1px solid var(--linea);border-left:3px solid var(--azul);padding:18px 20px;margin:26px 0;border-radius:0 3px 3px 0;max-width:68ch}
+.nota p:last-child{margin-bottom:0}
+.nota .etq{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--azul);display:block;margin-bottom:6px}
+.rejilla{display:grid;gap:16px;margin:28px 0}
+.c2{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.c3{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.tarjeta{background:var(--papel-2);border:1px solid var(--linea);border-radius:3px;padding:20px}
+.tarjeta h4{margin-top:0}
+.tarjeta p:last-child{margin-bottom:0}
+.tarjeta p{font-size:.95rem}
+
+/* tabla */
+.tabla-envoltura{overflow-x:auto;margin:26px 0;border:1px solid var(--linea);background:var(--papel-2)}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--linea)}
+th{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--tinta-suave);font-weight:600;white-space:nowrap}
+tbody tr:last-child td{border-bottom:none}
+
+/* ---------- los 20 ---------- */
+.filtros{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:26px 0 10px}
+.filtro{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;padding:7px 12px;border:1px solid var(--linea);background:var(--papel-2);color:var(--tinta-suave);border-radius:2px;cursor:pointer}
+.filtro:hover{border-color:var(--tinta-suave)}
+.filtro[aria-pressed="true"]{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
+.buscador{font-family:var(--mono);font-size:.8rem;padding:8px 12px;border:1px solid var(--linea);background:var(--papel-2);color:var(--tinta);border-radius:2px;min-width:190px;margin-left:auto}
+.buscador:focus{outline:2px solid var(--azul);outline-offset:1px}
+@media(max-width:640px){.buscador{margin-left:0;width:100%}}
+
+.tablero{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px;margin-top:20px}
+.aa{position:relative;background:var(--papel-2);border:1px solid var(--linea);border-radius:3px;padding:12px;text-align:left;cursor:pointer;font-family:inherit;color:inherit;transition:transform .15s ease,box-shadow .15s ease;overflow:hidden}
+.aa:hover{transform:translateY(-3px);box-shadow:0 6px 0 -2px rgba(22,33,30,.12);border-color:var(--tinta-suave)}
+.aa:focus-visible{outline:2px solid var(--azul);outline-offset:2px}
+.aa .letra{font-family:var(--display);font-size:2.4rem;font-weight:800;line-height:.9;letter-spacing:-.04em}
+.aa .abrev{font-family:var(--mono);font-size:.7rem;color:var(--tinta-suave);letter-spacing:.06em}
+.aa .nombre{font-size:.86rem;line-height:1.25;margin-top:8px;display:block;font-weight:600}
+.aa .banda{position:absolute;top:0;right:0;width:8px;height:100%}
+.aa .esen{position:absolute;top:10px;right:16px;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--azul);border:1px solid var(--azul);padding:1px 4px;border-radius:2px}
+.aa.oculto{display:none}
+.leyenda{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px;font-family:var(--mono);font-size:.72rem;color:var(--tinta-suave)}
+.leyenda span{display:flex;align-items:center;gap:6px}
+.punto{width:11px;height:11px;border-radius:50%;display:inline-block}
+
+/* panel detalle */
+.telon{position:fixed;inset:0;background:rgba(22,33,30,.55);z-index:90;display:none;padding:20px;overflow-y:auto}
+.telon.abierto{display:flex;align-items:center;justify-content:center}
+.panel{background:var(--papel);border:1px solid var(--tinta);max-width:560px;width:100%;padding:clamp(22px,4vw,34px);border-radius:3px;position:relative;max-height:90vh;overflow-y:auto}
+.panel .cerrar{position:absolute;top:12px;right:12px;background:none;border:1px solid var(--linea);width:32px;height:32px;border-radius:2px;cursor:pointer;font-size:1.1rem;color:var(--tinta);line-height:1}
+.panel .cerrar:hover{background:var(--papel-2)}
+.panel h3{margin:0 0 4px;font-size:1.8rem;font-weight:800}
+.panel .sub{font-family:var(--mono);font-size:.78rem;color:var(--tinta-suave);margin-bottom:18px}
+.ficha{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.9rem;margin:16px 0;padding:16px 0;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.ficha dt{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--tinta-suave);padding-top:3px}
+.ficha dd{margin:0}
+.codones{font-family:var(--mono);font-size:.76rem;display:flex;flex-wrap:wrap;gap:5px}
+.codones i{font-style:normal;background:var(--papel-2);border:1px solid var(--linea);padding:2px 6px;border-radius:2px}
+
+/* traductor */
+.laboratorio{background:var(--tinta);color:var(--papel);border-radius:3px;padding:clamp(20px,4vw,30px);margin:30px 0}
+.laboratorio h4{color:var(--papel);margin-top:0;opacity:.7}
+.laboratorio textarea{width:100%;font-family:var(--mono);font-size:.95rem;letter-spacing:.14em;background:rgba(255,255,255,.07);color:#fff;border:1px solid rgba(255,255,255,.22);border-radius:2px;padding:12px;resize:vertical;min-height:76px}
+.laboratorio textarea:focus{outline:2px solid #9db4ff}
+.acciones{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.boton{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;padding:9px 16px;border-radius:2px;border:1px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer}
+.laboratorio .boton{border-color:rgba(255,255,255,.3);background:transparent;color:var(--papel)}
+.laboratorio .boton.primario{background:var(--papel);color:var(--tinta);border-color:var(--papel)}
+.salida{margin-top:18px;display:flex;flex-wrap:wrap;gap:6px;min-height:44px}
+.pieza{text-align:center;padding:6px 9px;border-radius:2px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2)}
+.pieza b{display:block;font-family:var(--display);font-size:1.1rem;font-weight:800}
+.pieza span{font-family:var(--mono);font-size:.6rem;opacity:.65;letter-spacing:.06em}
+.pieza.alto{background:rgba(255,255,255,.85);color:var(--tinta)}
+.aviso-lab{font-family:var(--mono);font-size:.72rem;opacity:.6;margin-top:14px}
+
+/* codones tabla */
+.mapa-codones{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:24px 0;font-family:var(--mono);font-size:.66rem}
+.codon{background:var(--papel-2);border:1px solid var(--linea);padding:5px 4px;border-radius:2px;text-align:center;line-height:1.3}
+.codon b{display:block;font-size:.72rem;letter-spacing:.06em}
+.codon span{color:var(--tinta-suave);font-size:.6rem}
+.codon.paro{background:var(--tinta);color:var(--papel)}
+.codon.paro span{color:rgba(255,255,255,.6)}
+
+/* quiz */
+.pregunta{background:var(--papel-2);border:1px solid var(--linea);border-radius:3px;padding:20px;margin-bottom:14px}
+.pregunta p{font-weight:600;margin-bottom:14px}
+.opcion{display:block;width:100%;text-align:left;font-family:inherit;font-size:.95rem;background:var(--papel);border:1px solid var(--linea);padding:10px 14px;border-radius:2px;margin-bottom:7px;cursor:pointer;color:inherit}
+.opcion:hover{border-color:var(--tinta-suave)}
+.opcion.bien{border-color:var(--polar);background:rgba(35,122,112,.12);font-weight:600}
+.opcion.mal{border-color:var(--acido);background:rgba(163,46,60,.1)}
+.explica{font-size:.9rem;color:var(--tinta-suave);margin:10px 0 0;display:none}
+.explica.visible{display:block}
+.marcador{font-family:var(--mono);font-size:.8rem;letter-spacing:.08em;padding:14px;text-align:center;border:1px dashed var(--linea);border-radius:3px}
+
+/* pie */
+footer{padding:56px 0 70px;font-size:.9rem;color:var(--tinta-suave)}
+footer h4{color:var(--tinta)}
+footer a{color:var(--azul)}
+.arriba{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;display:inline-block;margin-top:20px}
+
+/* ---------- examen ---------- */
+.examen{background:var(--papel-2);border:1px solid var(--tinta);border-radius:3px;padding:clamp(20px,4vw,34px);margin-top:28px}
+.ex-cab{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--linea);margin-bottom:22px}
+.ex-cab .paso{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-suave)}
+.ex-cab .crono{margin-left:auto;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--tinta-suave)}
+.ex-riel{height:3px;background:var(--linea);border-radius:2px;overflow:hidden;flex-basis:100%;order:9}
+.ex-riel i{display:block;height:100%;background:var(--azul);width:0;transition:width .25s ease}
+.ex-tema{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--azul);display:block;margin-bottom:10px}
+.ex-preg{font-family:var(--display);font-size:clamp(1.15rem,3vw,1.5rem);font-weight:600;line-height:1.25;margin:0 0 20px;letter-spacing:-.015em}
+.ex-op{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;font-family:inherit;font-size:.98rem;line-height:1.45;background:var(--papel);border:1px solid var(--linea);padding:12px 15px;border-radius:2px;margin-bottom:8px;cursor:pointer;color:inherit}
+.ex-op:hover{border-color:var(--tinta-suave)}
+.ex-op i{font-style:normal;font-family:var(--mono);font-size:.7rem;font-weight:600;border:1px solid var(--linea);width:22px;height:22px;min-width:22px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:var(--tinta-suave);margin-top:1px}
+.ex-op[aria-pressed="true"]{border-color:var(--azul);background:rgba(36,66,158,.07)}
+.ex-op[aria-pressed="true"] i{background:var(--azul);border-color:var(--azul);color:#fff}
+.ex-pie{display:flex;gap:8px;align-items:center;margin-top:20px;padding-top:18px;border-top:1px solid var(--linea);flex-wrap:wrap}
+.ex-pie .cuenta{font-family:var(--mono);font-size:.7rem;color:var(--tinta-suave);margin-left:auto}
+.boton.suave{background:transparent;color:var(--tinta);border-color:var(--linea)}
+.boton.suave:hover{border-color:var(--tinta-suave)}
+.boton[disabled]{opacity:.35;cursor:not-allowed}
+.ex-puntos{display:flex;flex-wrap:wrap;gap:5px;margin-top:18px}
+.ex-punto{width:26px;height:26px;border:1px solid var(--linea);background:var(--papel);border-radius:2px;font-family:var(--mono);font-size:.64rem;color:var(--tinta-suave);cursor:pointer;padding:0}
+.ex-punto.resuelta{background:var(--tinta-suave);color:var(--papel);border-color:var(--tinta-suave)}
+.ex-punto.aqui{outline:2px solid var(--azul);outline-offset:1px}
+/* resultado */
+.ex-nota{display:flex;align-items:center;gap:clamp(16px,4vw,34px);flex-wrap:wrap;margin-bottom:26px}
+.aro{width:132px;height:132px;flex-shrink:0}
+.aro circle{fill:none;stroke-width:11}
+.aro .base{stroke:var(--linea)}
+.aro .marca{stroke:var(--azul);stroke-linecap:round;transform:rotate(-90deg);transform-origin:50% 50%;transition:stroke-dashoffset 1.1s cubic-bezier(.3,.9,.3,1)}
+.aro text{font-family:var(--display);font-weight:800;fill:var(--tinta)}
+.ex-veredicto h3{margin:0 0 6px;font-size:clamp(1.3rem,3.4vw,1.9rem);font-weight:800}
+.ex-veredicto p{margin:0;color:var(--tinta-suave);font-size:.95rem;max-width:42ch}
+.ex-temas{display:grid;gap:8px;margin:24px 0}
+.ex-tema-fila{display:grid;grid-template-columns:1fr 90px 46px;gap:12px;align-items:center;font-size:.9rem;padding:9px 0;border-bottom:1px solid var(--linea)}
+.ex-tema-fila:last-child{border-bottom:none}
+.medidor{height:6px;background:var(--linea);border-radius:3px;overflow:hidden}
+.medidor i{display:block;height:100%;background:var(--polar)}
+.medidor i.bajo{background:var(--acido)}
+.ex-tema-fila b{font-family:var(--mono);font-size:.74rem;text-align:right;font-weight:500;color:var(--tinta-suave)}
+.revision{border-left:3px solid var(--acido);background:var(--papel);padding:14px 16px;margin-bottom:10px;border-radius:0 2px 2px 0}
+.revision.acertada{border-left-color:var(--polar)}
+.revision .pq{font-weight:600;font-size:.95rem;margin:0 0 8px}
+.revision .lin{font-family:var(--mono);font-size:.74rem;margin:0 0 3px;color:var(--tinta-suave)}
+.revision .lin b{color:var(--acido);font-weight:500}
+.revision .lin.buena b{color:var(--polar)}
+.revision .por{font-size:.88rem;margin:8px 0 0;color:var(--tinta-suave)}
+::selection{background:var(--azul);color:#fff}
+:focus-visible{outline:2px solid var(--azul);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header class="barra">
+  <div class="barra-in">
+    <span class="marca">Guía de <b>aminoácidos</b></span>
+    <nav class="indice" aria-label="Secciones">
+      <a href="#que-son">Qué son</a>
+      <a href="#estructura">Estructura</a>
+      <a href="#los-20">Los 20</a>
+      <a href="#enlace">Enlace</a>
+      <a href="#clases">Clases</a>
+      <a href="#esenciales">Esenciales</a>
+      <a href="#codigo">Código genético</a>
+      <a href="#funciones">Funciones</a>
+      <a href="#comida">Comida</a>
+      <a href="#mitos">Mitos</a>
+      <a href="#practica">Practica</a>
+      <a href="#examen">Examen</a>
+    </nav>
+  </div>
+  <div class="progreso" id="progreso"></div>
+</header>
+
+<div class="hero">
+  <div class="contenedor hero-grid">
+    <div>
+      <span class="ojo">Bioquímica desde cero · sin dar nada por sabido</span>
+      <h1>Veinte piezas <em>te construyen entero</em>.</h1>
+      <p class="entrada">Tu piel, tus músculos, las enzimas que digieren tu comida y los anticuerpos que te defienden están hechos de proteínas. Y todas las proteínas están hechas de aminoácidos: veinte piezas que se repiten en distinto orden. Esta guía explica qué son, cómo se unen y por qué importan, empezando desde cero.</p>
+      <div class="hero-datos">
+        <div class="dato"><b>20</b><span>piezas estándar</span></div>
+        <div class="dato"><b>9</b><span>esenciales para ti</span></div>
+        <div class="dato"><b>~20&nbsp;000</b><span>proteínas humanas</span></div>
+        <div class="dato"><b>1</b><span>esqueleto común</span></div>
+      </div>
+    </div>
+
+    <figure class="molecula" style="margin:0">
+      <svg viewBox="0 0 320 250" role="img" aria-label="Esquema de un aminoácido: carbono central unido a un grupo amino, un grupo carboxilo, un hidrógeno y un grupo R variable">
+        <g fill="none" stroke="#16211E" stroke-width="2" class="traza">
+          <line x1="160" y1="125" x2="70" y2="125"/>
+          <line x1="160" y1="125" x2="250" y2="125"/>
+          <line x1="160" y1="125" x2="160" y2="55"/>
+          <line x1="160" y1="125" x2="160" y2="196"/>
+        </g>
+        <g class="aparece" style="animation-delay:.9s">
+          <circle cx="160" cy="125" r="24" fill="#EDEFE8" stroke="#16211E" stroke-width="2"/>
+          <text x="160" y="131" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="17" font-weight="600" fill="#16211E">Cα</text>
+
+          <circle cx="70" cy="125" r="26" fill="#EDEFE8" stroke="#5A675F" stroke-width="1.5"/>
+          <text x="70" y="131" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="14" fill="#16211E">NH₂</text>
+          <text x="70" y="172" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" letter-spacing="1.5" fill="#5A675F">AMINO</text>
+
+          <circle cx="250" cy="125" r="26" fill="#EDEFE8" stroke="#5A675F" stroke-width="1.5"/>
+          <text x="250" y="131" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="13" fill="#16211E">COOH</text>
+          <text x="250" y="172" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" letter-spacing="1.5" fill="#5A675F">ÁCIDO</text>
+
+          <circle cx="160" cy="55" r="20" fill="#EDEFE8" stroke="#5A675F" stroke-width="1.5"/>
+          <text x="160" y="61" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="14" fill="#16211E">H</text>
+        </g>
+        <g class="aparece pulso" style="animation-delay:1.5s;transform-origin:160px 196px">
+          <circle cx="160" cy="196" r="27" fill="#24429E"/>
+          <text x="160" y="204" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-size="24" font-weight="800" fill="#EDEFE8">R</text>
+        </g>
+        <text x="160" y="240" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" letter-spacing="1.5" fill="#24429E" class="aparece" style="animation-delay:1.8s">LO ÚNICO QUE CAMBIA</text>
+      </svg>
+      <figcaption>Los veinte aminoácidos comparten exactamente este esqueleto. La única diferencia entre uno y otro es la pieza azul: el grupo R.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<main class="lienzo">
+
+<section id="que-son">
+  <div class="contenedor prosa">
+    <span class="rotulo">01 · La idea básica</span>
+    <h2>Qué es un aminoácido, explicado sin química</h2>
+    <p>Imagina que las palabras de un idioma se forman con letras. Con las mismas 27 letras del español puedes escribir «casa», «saca» y «asca»: las letras son las mismas, lo que cambia es el orden. Ese orden lo cambia todo.</p>
+    <p>Las proteínas funcionan igual. Un <strong>aminoácido</strong> es una molécula pequeña que sirve de letra. Una <strong>proteína</strong> es la palabra: una cadena larga de aminoácidos enlazados en un orden concreto. Tu cuerpo usa veinte letras y con ellas escribe unas veinte mil palabras distintas, cada una con un trabajo específico.</p>
+    <p>La comparación se queda corta en un punto importante, y vale la pena entenderlo desde ya: una palabra escrita es plana, pero una proteína <strong>se pliega</strong>. La cadena se dobla sobre sí misma hasta tomar una forma tridimensional precisa, y esa forma es lo que le permite hacer su trabajo. La hemoglobina tiene una forma que atrapa oxígeno. La insulina tiene una forma que encaja en un receptor de tus células como una llave en su cerradura. Cambia el orden de los aminoácidos y cambias la forma; cambia la forma y la proteína deja de funcionar.</p>
+
+    <div class="nota">
+      <span class="etq">De dónde viene el nombre</span>
+      <p>«Aminoácido» es literalmente la suma de dos partes que toda la molécula lleva: un grupo <strong>amino</strong> (NH₂) y un grupo <strong>ácido</strong> carboxilo (COOH). Nada más. El nombre describe la pieza.</p>
+    </div>
+
+    <h3>Por qué deberías conocerlos</h3>
+    <p>Porque casi todo lo que hace tu cuerpo pasa por ellos. Un músculo que crece está incorporando aminoácidos. Una herida que cierra está fabricando colágeno con ellos. Cuando duermes bien, parte del mérito es de un aminoácido llamado triptófano que termina convertido en melatonina. Cuando comes frijoles con arroz, sin saberlo estás combinando dos fuentes de aminoácidos que se completan entre sí.</p>
+    <p>También son la base de discusiones que oirás todo el tiempo: proteína completa e incompleta, suplementos de BCAA, dietas veganas, la prueba del talón que le hacen a los recién nacidos. Todas esas conversaciones son, en el fondo, conversaciones sobre aminoácidos.</p>
+  </div>
+</section>
+
+<section id="estructura">
+  <div class="contenedor prosa">
+    <span class="rotulo">02 · Anatomía de la pieza</span>
+    <h2>Un esqueleto común y una pieza intercambiable</h2>
+    <p>Aquí está la idea más útil de toda la guía, y si te quedas solo con esto ya ganaste algo: <strong>los veinte aminoácidos son idénticos salvo por una parte</strong>.</p>
+    <p>Todos tienen un átomo de carbono en el centro, llamado <span class="term" title="Carbono alfa: el átomo de carbono central de un aminoácido">carbono alfa</span> (Cα). De ese carbono salen cuatro brazos:</p>
+    <ul>
+      <li><strong>El grupo amino (−NH₂).</strong> Un nitrógeno con dos hidrógenos. Es el «enchufe hembra» de la pieza.</li>
+      <li><strong>El grupo carboxilo (−COOH).</strong> Es el «enchufe macho». Aquí es donde se conecta con el siguiente aminoácido.</li>
+      <li><strong>Un hidrógeno (−H).</strong> El más simple posible; solo ocupa un lugar.</li>
+      <li><strong>El grupo R, o cadena lateral.</strong> Aquí está toda la variedad. Puede ser un solo hidrógeno (glicina, la más simple), una cadena grasosa (leucina), un anillo (fenilalanina), algo con azufre (cisteína) o algo con carga eléctrica (lisina).</li>
+    </ul>
+    <p>Veinte grupos R distintos, veinte aminoácidos. Eso es todo el catálogo.</p>
+
+    <h3>El grupo R decide el carácter</h3>
+    <p>La cadena lateral no es un adorno: determina cómo se comporta el aminoácido cuando está dentro de una proteína plegada, y por lo tanto qué forma tomará la proteína.</p>
+    <ul>
+      <li>Si el grupo R <strong>repele el agua</strong> (hidrofóbico), tenderá a esconderse en el interior de la proteína, lejos del agua del cuerpo. Es exactamente lo que hace una gota de aceite en un vaso de agua: se agrupa consigo misma.</li>
+      <li>Si el grupo R <strong>ama el agua</strong> (hidrofílico o polar), se quedará en la superficie, en contacto con el medio.</li>
+      <li>Si tiene <strong>carga eléctrica</strong>, positiva o negativa, buscará atraerse con cargas opuestas y repeler las iguales, como imanes.</li>
+    </ul>
+    <p>Ese juego de atracciones y rechazos es, literalmente, lo que dobla la cadena y le da a cada proteína su forma final. Nadie la dobla desde fuera: se pliega sola por física.</p>
+
+    <div class="nota">
+      <span class="etq">Un detalle que verás en clase</span>
+      <p>En el agua del cuerpo (pH cercano a 7) los aminoácidos casi nunca están «neutros». El grupo amino suele haber capturado un protón (queda como −NH₃⁺) y el carboxilo suele haber soltado el suyo (queda como −COO⁻). A esa forma con una carga positiva y una negativa al mismo tiempo se le llama <strong>zwitterión</strong>. La molécula sigue siendo la misma; solo cambian sus cargas.</p>
+    </div>
+
+    <h3>Por qué se dice «L-aminoácidos»</h3>
+    <p>El carbono alfa sostiene cuatro cosas distintas, y eso permite dos versiones de la misma molécula que son imágenes en espejo, como tu mano izquierda y tu derecha. Tienen las mismas partes pero no se pueden superponer. A esas versiones se les llama <strong>L</strong> y <strong>D</strong>.</p>
+    <p>La vida en la Tierra usa casi exclusivamente la forma <strong>L</strong>. Tus enzimas están hechas para encajar con la mano izquierda; la derecha simplemente no entra. La excepción es la glicina, cuyo grupo R es un hidrógeno: al tener dos brazos iguales, no tiene mano izquierda ni derecha.</p>
+  </div>
+</section>
+
+<section id="los-20">
+  <div class="contenedor">
+    <div class="prosa">
+      <span class="rotulo">03 · El catálogo</span>
+      <h2>Los veinte, uno por uno</h2>
+      <p>Cada tarjeta es un aminoácido. La letra grande es su código de una letra, el que usan los biólogos para escribir secuencias de proteínas como si fueran texto. La franja de color indica el carácter de su grupo R, y la marca <span class="mono" style="color:var(--azul)">ESE</span> señala los que tu cuerpo no sabe fabricar.</p>
+      <p><strong>Toca cualquiera para ver su ficha completa.</strong></p>
+    </div>
+
+    <div class="filtros">
+      <button class="filtro" data-filtro="todos" aria-pressed="true">Todos</button>
+      <button class="filtro" data-filtro="esencial" aria-pressed="false">Esenciales</button>
+      <button class="filtro" data-filtro="hidro" aria-pressed="false">Hidrofóbicos</button>
+      <button class="filtro" data-filtro="polar" aria-pressed="false">Polares</button>
+      <button class="filtro" data-filtro="acido" aria-pressed="false">Ácidos</button>
+      <button class="filtro" data-filtro="basico" aria-pressed="false">Básicos</button>
+      <button class="filtro" data-filtro="especial" aria-pressed="false">Casos especiales</button>
+      <input class="buscador" id="buscador" type="search" placeholder="Buscar: lisina, K, azufre…" aria-label="Buscar aminoácido">
+    </div>
+
+    <div class="tablero" id="tablero"></div>
+
+    <div class="leyenda">
+      <span><i class="punto" style="background:var(--hidro)"></i> Hidrofóbico (huye del agua)</span>
+      <span><i class="punto" style="background:var(--polar)"></i> Polar sin carga</span>
+      <span><i class="punto" style="background:var(--acido)"></i> Ácido (carga −)</span>
+      <span><i class="punto" style="background:var(--basico)"></i> Básico (carga +)</span>
+      <span><i class="punto" style="background:var(--especial)"></i> Caso especial</span>
+    </div>
+
+    <div class="prosa">
+      <div class="nota">
+        <span class="etq">¿Y los aminoácidos 21 y 22?</span>
+        <p>Existen dos más que se incorporan a proteínas por mecanismos poco frecuentes: la <strong>selenocisteína</strong>, que sí está presente en los humanos en un puñado de enzimas antioxidantes, y la <strong>pirrolisina</strong>, exclusiva de ciertos microorganismos. Fuera de las proteínas hay cientos de aminoácidos más, como la ornitina o la taurina, que hacen otros trabajos en el cuerpo pero no forman parte de las cadenas proteicas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="enlace">
+  <div class="contenedor prosa">
+    <span class="rotulo">04 · Cómo se unen</span>
+    <h2>El enlace peptídico y las cuatro capas del plegamiento</h2>
+    <p>Dos aminoácidos se unen siempre de la misma forma: el grupo carboxilo (COOH) de uno se conecta con el grupo amino (NH₂) del siguiente, y en el proceso sobra una molécula de agua, que se libera. La unión resultante se llama <strong>enlace peptídico</strong>.</p>
+    <p>Como cada aminoácido conserva un enchufe libre en cada extremo, la cadena puede seguir creciendo indefinidamente. Por convención se lee siempre desde el extremo con el amino libre (extremo N) hacia el extremo con el carboxilo libre (extremo C), igual que leemos de izquierda a derecha.</p>
+
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Nombre</th><th>Cuántos aminoácidos</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td>Dipéptido</td><td>2</td><td>Carnosina (en el músculo)</td></tr>
+          <tr><td>Tripéptido</td><td>3</td><td>Glutatión (antioxidante celular)</td></tr>
+          <tr><td>Oligopéptido</td><td>Hasta unos 20</td><td>Oxitocina (9), vasopresina (9)</td></tr>
+          <tr><td>Polipéptido</td><td>Decenas a cientos</td><td>Insulina (51)</td></tr>
+          <tr><td>Proteína</td><td>Uno o varios polipéptidos ya plegados</td><td>Hemoglobina (574, en 4 cadenas)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>La frontera entre «péptido» y «proteína» es más una costumbre que una regla estricta: se habla de proteína cuando la cadena es larga y ya tiene una estructura tridimensional definida.</p>
+
+    <h3>Las cuatro capas de la forma</h3>
+    <p>Una proteína no es una cadena suelta. Se organiza en niveles, y cada nivel se construye sobre el anterior.</p>
+
+    <div class="rejilla c2">
+      <div class="tarjeta">
+        <h4>1 · Primaria</h4>
+        <p>El orden exacto de los aminoácidos en la cadena, escrito como una lista de letras. Es la información pura, la que viene del ADN. Todo lo demás se deriva de aquí.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>2 · Secundaria</h4>
+        <p>Tramos de la cadena que adoptan formas repetitivas por puentes de hidrógeno: la <strong>hélice alfa</strong> (un resorte) y la <strong>hoja beta</strong> (un acordeón plegado). Son los patrones locales.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>3 · Terciaria</h4>
+        <p>Cómo se dobla la cadena entera en tres dimensiones, empujada por las cadenas laterales: las hidrofóbicas se esconden dentro, las polares salen a la superficie. Aquí nace la función.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>4 · Cuaternaria</h4>
+        <p>Varias cadenas ya plegadas que se ensamblan en un solo complejo. La hemoglobina son cuatro cadenas trabajando juntas. No todas las proteínas llegan a este nivel.</p>
+      </div>
+    </div>
+
+    <div class="nota">
+      <span class="etq">Un ejemplo real de por qué importa</span>
+      <p>En la anemia falciforme, un solo aminoácido de la hemoglobina cambia: donde debería haber ácido glutámico (carga negativa, amigo del agua) hay valina (hidrofóbica). Una letra entre 574. Ese cambio hace que las moléculas se peguen entre sí, deforma los glóbulos rojos y produce la enfermedad. Es la demostración más clara de que el orden lo es todo.</p>
+    </div>
+
+    <h3>Desnaturalizar: cuando la forma se pierde</h3>
+    <p>Si calientas una proteína, la pones en un medio muy ácido o la agitas con fuerza, las atracciones que la mantenían plegada se rompen y la cadena se desenrolla. A eso se le llama <strong>desnaturalización</strong>, y lo has visto mil veces: la clara de huevo que pasa de transparente a blanca en el sartén, la leche que se corta con limón, el ceviche que se «cocina» con jugo de limón sin fuego.</p>
+    <p>Ojo con un malentendido frecuente: desnaturalizar <em>no</em> rompe los enlaces peptídicos. La secuencia de aminoácidos sigue intacta; lo que se perdió es el plegamiento. Por eso el huevo cocido sigue alimentándote igual de bien, y de hecho lo digieres mejor.</p>
+  </div>
+</section>
+
+<section id="clases">
+  <div class="contenedor prosa">
+    <span class="rotulo">05 · Clasificación</span>
+    <h2>Cinco familias según su cadena lateral</h2>
+    <p>Agrupar los veinte por el carácter de su grupo R es la forma más útil de memorizarlos, porque el grupo describe lo que hacen dentro de la proteína.</p>
+
+    <h4 style="color:var(--hidro)">Hidrofóbicos / no polares</h4>
+    <p><span class="mono">Gly · Ala · Val · Leu · Ile · Pro · Phe · Met · Trp</span></p>
+    <p>Sus cadenas laterales son básicamente carbono e hidrógeno, sin cargas ni afinidad por el agua. Se esconden en el centro de la proteína y forman el «núcleo» que la mantiene compacta. También son los que atraviesan las membranas celulares, porque las membranas son grasas.</p>
+
+    <h4 style="color:var(--polar)">Polares sin carga</h4>
+    <p><span class="mono">Ser · Thr · Cys · Asn · Gln · Tyr</span></p>
+    <p>Tienen oxígeno, nitrógeno o azufre que les permite formar puentes de hidrógeno con el agua. Viven en la superficie de la proteína. Serina, treonina y tirosina son además los puntos donde la célula «enciende y apaga» proteínas colocándoles fosfatos: es uno de los mecanismos de control más importantes de la biología.</p>
+
+    <h4 style="color:var(--acido)">Ácidos (carga negativa)</h4>
+    <p><span class="mono">Asp · Glu</span></p>
+    <p>Su cadena lateral pierde un protón y queda con carga negativa. Atraen a los básicos y participan en sitios activos de enzimas y en la unión de minerales como el calcio.</p>
+
+    <h4 style="color:var(--basico)">Básicos (carga positiva)</h4>
+    <p><span class="mono">Lys · Arg · His</span></p>
+    <p>Con carga positiva. Por eso las proteínas ricas en lisina y arginina, como las histonas, se pegan tan bien al ADN, que tiene carga negativa. La histidina es especial: su carga depende del pH del entorno, lo que la vuelve perfecta para enzimas que necesitan pasar protones de un lado a otro.</p>
+
+    <h4 style="color:var(--especial)">Casos especiales</h4>
+    <p><span class="mono">Gly · Pro · Cys</span></p>
+    <ul>
+      <li><strong>Glicina.</strong> Su R es un solo hidrógeno. Es tan pequeña que cabe donde ninguna otra cabe y le da flexibilidad extrema a la cadena.</li>
+      <li><strong>Prolina.</strong> Su cadena lateral se cierra en anillo sobre el propio esqueleto. Eso la vuelve rígida y le impide participar en hélices; se le llama «rompe-hélices» y suele aparecer en los codos y giros.</li>
+      <li><strong>Cisteína.</strong> Tiene azufre. Dos cisteínas pueden unir sus azufres y formar un <strong>puente disulfuro</strong>, una especie de grapa que amarra dos partes de la proteína. El chiste del permanente en el cabello es exactamente eso: romper y volver a formar estos puentes en la queratina.</li>
+    </ul>
+
+    <h3>Otra forma de clasificarlos: qué pasa cuando se queman</h3>
+    <p>Cuando el cuerpo usa aminoácidos como combustible, unos terminan convertidos en glucosa y otros en cuerpos cetónicos.</p>
+    <ul>
+      <li><strong>Glucogénicos:</strong> pueden convertirse en glucosa. Son la mayoría.</li>
+      <li><strong>Cetogénicos:</strong> solo pueden convertirse en cuerpos cetónicos. Únicamente dos: leucina y lisina.</li>
+      <li><strong>Mixtos:</strong> ambas cosas. Isoleucina, fenilalanina, tirosina, triptófano y treonina.</li>
+    </ul>
+    <p>Un truco para recordar los dos cetogénicos puros: son las dos <strong>L</strong>, <em>l</em>eucina y <em>l</em>isina.</p>
+  </div>
+</section>
+
+<section id="esenciales">
+  <div class="contenedor prosa">
+    <span class="rotulo">06 · Esenciales</span>
+    <h2>Los nueve que tienes que comer</h2>
+    <p>«Esencial» en nutrición no significa «más importante». Los veinte son igual de necesarios. Significa algo mucho más concreto: <strong>tu cuerpo no tiene las enzimas para fabricarlo, así que la única forma de obtenerlo es la comida</strong>.</p>
+
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Categoría</th><th>Cuáles</th><th>Qué significa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Esenciales (9)</strong></td><td class="mono">Histidina, isoleucina, leucina, lisina, metionina, fenilalanina, treonina, triptófano, valina</td><td>Se obtienen solo de la dieta.</td></tr>
+          <tr><td><strong>Condicionalmente esenciales (6)</strong></td><td class="mono">Arginina, cisteína, glutamina, glicina, prolina, tirosina</td><td>Normalmente los fabricas, pero en enfermedad grave, quemaduras, prematuridad o estrés metabólico intenso la producción no alcanza.</td></tr>
+          <tr><td><strong>No esenciales (5)</strong></td><td class="mono">Alanina, asparagina, ácido aspártico, ácido glutámico, serina</td><td>Tu cuerpo los sintetiza a partir de otras moléculas sin problema.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Una regla en inglés muy usada para memorizar los nueve esenciales es <strong>PVT TIM HALL</strong>: <span class="mono">P</span>henylalanine, <span class="mono">V</span>aline, <span class="mono">T</span>hreonine, <span class="mono">T</span>ryptophan, <span class="mono">I</span>soleucine, <span class="mono">M</span>ethionine, <span class="mono">H</span>istidine, <span class="mono">A</span>rginine*, <span class="mono">L</span>eucine, <span class="mono">L</span>ysine. (La arginina aparece ahí porque es esencial durante el crecimiento infantil; en el adulto sano se considera condicional.)</p>
+
+    <div class="nota">
+      <span class="etq">La trampa de «condicionalmente esencial»</span>
+      <p>Dos de ellos dependen de un esencial para existir. La <strong>tirosina</strong> se fabrica a partir de fenilalanina, y la <strong>cisteína</strong> a partir de metionina. Si falta la materia prima, falta el producto. Por eso la línea entre esencial y no esencial es menos rígida de lo que parece.</p>
+    </div>
+  </div>
+</section>
+
+<section id="codigo">
+  <div class="contenedor prosa">
+    <span class="rotulo">07 · Del ADN a la proteína</span>
+    <h2>Quién decide el orden de las piezas</h2>
+    <p>El orden de los aminoácidos no es azar: está escrito en tu ADN. El proceso tiene dos pasos.</p>
+    <ol>
+      <li><strong>Transcripción.</strong> En el núcleo de la célula se copia un fragmento de ADN a una molécula mensajera llamada ARN mensajero (ARNm). Es como sacar una fotocopia de una sola página de un libro enorme para no sacar el libro de la biblioteca.</li>
+      <li><strong>Traducción.</strong> Esa copia viaja al ribosoma, la máquina que lee el mensaje de tres en tres letras y va enganchando el aminoácido que corresponde a cada tríada. El resultado es la cadena.</li>
+    </ol>
+    <p>Cada grupo de tres letras se llama <strong>codón</strong>. Como hay cuatro letras (A, U, G, C en el ARN) y se leen de tres en tres, existen 4 × 4 × 4 = <strong>64 codones</strong> para solo 20 aminoácidos. Sobran, así que varios codones distintos significan el mismo aminoácido: al código genético se le llama <em>degenerado</em> por eso. Tres codones no significan ningún aminoácido: son la señal de <strong>paro</strong>, el punto final de la frase. Y <span class="mono">AUG</span> hace doble trabajo: significa metionina y también «empieza aquí».</p>
+  </div>
+
+  <div class="contenedor">
+    <div class="laboratorio">
+      <h4>Traductor de secuencias</h4>
+      <p style="margin:0 0 12px;font-size:.95rem;opacity:.85">Escribe una secuencia de ADN o ARN (solo las letras A, T, G, C, U) y mira qué proteína saldría. Se lee de tres en tres desde el inicio.</p>
+      <textarea id="entrada-adn" spellcheck="false" aria-label="Secuencia de ADN o ARN">ATG GCA TTG GAA CTT TAT AAG TGA</textarea>
+      <div class="acciones">
+        <button class="boton primario" id="btn-traducir">Traducir</button>
+        <button class="boton" data-ejemplo="ATGGTGCATCTGACTCCTGAGGAGAAGTCT">Inicio de la hemoglobina</button>
+        <button class="boton" data-ejemplo="ATGTTTGTTAATCAACATCTGTGTGGCTCACAT">Cadena B de la insulina</button>
+        <button class="boton" data-ejemplo="ATGAAATGGGTAACCTTTATTTCCCTT">Inicio de la albúmina (señal)</button>
+      </div>
+      <div class="salida" id="salida-adn" aria-live="polite"></div>
+      <p class="aviso-lab" id="aviso-lab">La T del ADN se convierte en U al pasar a ARN. Las letras que no formen un codón completo al final se ignoran.</p>
+    </div>
+  </div>
+
+  <div class="contenedor prosa">
+    <h3>La tabla completa de los 64 codones</h3>
+    <p>Esta es la tabla que traduce el idioma del ADN al idioma de las proteínas. Es prácticamente idéntica en todos los seres vivos del planeta, desde una bacteria hasta una ballena: una de las pruebas más fuertes de que toda la vida comparte un antepasado común.</p>
+  </div>
+  <div class="contenedor">
+    <div class="mapa-codones" id="mapa-codones"></div>
+  </div>
+</section>
+
+<section id="funciones">
+  <div class="contenedor prosa">
+    <span class="rotulo">08 · Para qué sirven</span>
+    <h2>Mucho más que construir músculo</h2>
+    <p>Construir proteínas es su trabajo principal, pero varios aminoácidos tienen segundas ocupaciones que te afectan a diario.</p>
+
+    <div class="rejilla c2">
+      <div class="tarjeta">
+        <h4>Triptófano</h4>
+        <p>Materia prima de la <strong>serotonina</strong> (ánimo y saciedad) y, a partir de ella, de la <strong>melatonina</strong> (sueño). También sirve para fabricar niacina, la vitamina B3.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Tirosina</h4>
+        <p>Punto de partida de la <strong>dopamina</strong>, la <strong>adrenalina</strong> y la <strong>noradrenalina</strong>. También de las hormonas tiroideas y de la <strong>melanina</strong>, el pigmento de piel y cabello.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Glicina</h4>
+        <p>Un tercio del colágeno es glicina. Además forma parte del <strong>hemo</strong>, la pieza de la hemoglobina que carga el oxígeno, y actúa como neurotransmisor en la médula espinal.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Arginina</h4>
+        <p>Origen del <strong>óxido nítrico</strong>, la molécula que relaja los vasos sanguíneos y regula la presión arterial. Interviene también en el ciclo que elimina el exceso de nitrógeno.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Glutamina y glutamato</h4>
+        <p>El glutamato es el principal neurotransmisor <em>excitador</em> del cerebro. La glutamina es el aminoácido más abundante de la sangre y el combustible favorito de las células del intestino y del sistema inmune.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Cisteína y metionina</h4>
+        <p>Aportan el azufre que forma los puentes disulfuro de la queratina (cabello y uñas) y del <strong>glutatión</strong>, uno de los principales antioxidantes de la célula.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Histidina</h4>
+        <p>Se convierte en <strong>histamina</strong>, la molécula responsable de la picazón, los estornudos y la inflamación en las alergias. Los antihistamínicos actúan justo ahí.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Leucina</h4>
+        <p>Funciona como una señal, no solo como ladrillo: activa la vía mTOR, que le indica al músculo que es momento de construir proteína nueva.</p>
+      </div>
+    </div>
+
+    <h3>El destino del exceso</h3>
+    <p>Aquí hay algo importante que casi nadie sabe: <strong>el cuerpo no guarda aminoácidos de reserva</strong>. Las grasas se almacenan en el tejido adiposo, la glucosa como glucógeno en hígado y músculo, pero no existe un depósito equivalente para aminoácidos.</p>
+    <p>El aminoácido que sobra se desmonta. Su nitrógeno se separa y termina convertido en <strong>urea</strong> en el hígado, que los riñones eliminan por la orina. El esqueleto de carbono que queda se usa como energía o se convierte en grasa. Por eso el «exceso» de proteína no se acumula como músculo extra: el músculo se construye cuando hay un estímulo que lo pide, no por rebalse.</p>
+    <p>Y como no hay reserva, hay un flujo constante llamado <strong>recambio proteico</strong>: el cuerpo desarma sus propias proteínas viejas y recicla los aminoácidos para armar nuevas, todos los días de tu vida.</p>
+
+    <div class="nota">
+      <span class="etq">Cuando el sistema falla</span>
+      <p>La <strong>fenilcetonuria (PKU)</strong> es un ejemplo claro. Quien la tiene no puede convertir fenilalanina en tirosina, así que la fenilalanina se acumula y daña el cerebro en desarrollo. Se detecta con el tamiz neonatal (la prueba del talón) y se maneja controlando estrictamente la fenilalanina de la dieta. Por eso los refrescos light traen la advertencia «fenilcetonúricos: contiene fenilalanina»: el aspartame libera fenilalanina al digerirse.</p>
+    </div>
+  </div>
+</section>
+
+<section id="comida">
+  <div class="contenedor prosa">
+    <span class="rotulo">09 · En el plato</span>
+    <h2>Proteína completa, incompleta y la lógica de combinar</h2>
+    <p>Una proteína de la dieta se llama <strong>completa</strong> cuando aporta los nueve aminoácidos esenciales en cantidades suficientes. Se llama <strong>incompleta</strong> cuando alguno queda corto; a ese que escasea se le llama <em>aminoácido limitante</em>, y funciona como el eslabón más débil: por más que sobren los otros ocho, la síntesis se frena ahí.</p>
+
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Grupo de alimentos</th><th>Perfil</th><th>Suele faltarle</th></tr></thead>
+        <tbody>
+          <tr><td>Huevo, carne, pescado, pollo, lácteos</td><td>Completa</td><td>—</td></tr>
+          <tr><td>Soya, quinoa, amaranto, garbanzo</td><td>Completa (de origen vegetal)</td><td>—</td></tr>
+          <tr><td>Cereales: maíz, arroz, trigo, avena</td><td>Incompleta</td><td>Lisina (y triptófano en el maíz)</td></tr>
+          <tr><td>Leguminosas: frijol, lenteja, haba</td><td>Incompleta</td><td>Metionina</td></tr>
+          <tr><td>Nueces y semillas</td><td>Incompleta</td><td>Lisina</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Por qué los frijoles con arroz funcionan</h3>
+    <p>Mira las dos filas de en medio. Al cereal le falta lisina y le sobra metionina; a la leguminosa le falta metionina y le sobra lisina. Juntos se tapan los huecos mutuamente y el resultado es tan completo como la carne. A esto se le llama <strong>complementación proteica</strong>.</p>
+    <p>Lo notable es que muchas cocinas tradicionales llegaron a esa combinación siglos antes de que existiera la bioquímica: frijoles con tortilla en México, arroz con lentejas en India, hummus con pan en Medio Oriente, arroz con porotos en Sudamérica. Nadie lo calculó; funcionó y se quedó.</p>
+
+    <div class="nota">
+      <span class="etq">Un mito ya superado</span>
+      <p>Durante años se enseñó que los alimentos complementarios debían comerse <em>en la misma comida</em>. Hoy se sabe que no hace falta: el hígado mantiene un fondo circulante de aminoácidos durante horas, así que basta con que la variedad esté presente a lo largo del día. Comer arroz al mediodía y frijoles en la noche funciona igual de bien.</p>
+    </div>
+
+    <h3>Sobre suplementos</h3>
+    <p>Verás mucha publicidad de aminoácidos aislados. Vale la pena tener el contexto:</p>
+    <ul>
+      <li><strong>BCAA</strong> son los tres aminoácidos de cadena ramificada: leucina, isoleucina y valina. La evidencia sugiere que, en quien ya consume proteína suficiente y variada, aportan poco frente a comer alimentos con proteína completa, que de todos modos los contienen.</li>
+      <li><strong>Proteína en polvo</strong> es, en esencia, comida concentrada: suero de leche, caseína, soya o chícharo. Es cómoda, no mágica.</li>
+      <li>Los aminoácidos aislados en dosis altas pueden desequilibrar la absorción de otros, porque compiten por los mismos transportadores del intestino.</li>
+    </ul>
+    <p>Esta guía es informativa y no sustituye la orientación de un profesional. Si tienes una condición renal o hepática, estás embarazada, o piensas hacer un cambio importante en tu alimentación, conviene consultarlo con un médico o nutriólogo, porque el manejo de proteína cambia bastante en esos casos.</p>
+  </div>
+</section>
+
+<section id="mitos">
+  <div class="contenedor prosa">
+    <span class="rotulo">10 · Aclaraciones</span>
+    <h2>Errores comunes, corregidos</h2>
+
+    <div class="rejilla c2">
+      <div class="tarjeta">
+        <h4>«Las proteínas vegetales son incompletas»</h4>
+        <p>Casi todos los alimentos vegetales contienen los veinte aminoácidos; lo que varía es la <em>proporción</em>. Y varios, como la soya y la quinoa, están completos por sí solos. La palabra «incompleta» describe un desequilibrio, no una ausencia.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>«Más proteína, más músculo»</h4>
+        <p>Sin el estímulo del entrenamiento, el exceso se desmonta y se elimina o se convierte en energía. No hay bodega de aminoácidos donde acumularlos esperando a ser músculo.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>«El colágeno que como se va a mi piel»</h4>
+        <p>El colágeno se digiere y se descompone en aminoácidos, como cualquier otra proteína. Esos aminoácidos entran al fondo común y el cuerpo decide dónde usarlos. No hay una vía directa del plato a las arrugas.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>«Los aminoácidos son un suplemento»</h4>
+        <p>Son el contenido de cualquier proteína que comes. Un huevo es un suplemento de aminoácidos con muy buena relación calidad-precio.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>«Cocinar destruye la proteína»</h4>
+        <p>Cocinar desnaturaliza: deshace el plegamiento pero deja intacta la secuencia. En muchos casos mejora la digestibilidad, como en la clara de huevo o en las leguminosas.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>«Esencial significa más importante»</h4>
+        <p>Significa únicamente que no lo fabricas tú. Los no esenciales son igual de necesarios; simplemente tienes la maquinaria para producirlos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="practica">
+  <div class="contenedor prosa">
+    <span class="rotulo">11 · Comprobación</span>
+    <h2>Ocho preguntas para ver si quedó claro</h2>
+    <p>Responde sin volver arriba. Cada respuesta viene con su explicación.</p>
+  </div>
+  <div class="contenedor">
+    <div id="quiz"></div>
+    <div class="marcador" id="marcador">Aciertos: 0 de 8</div>
+  </div>
+</section>
+
+
+<section id="examen">
+  <div class="contenedor prosa">
+    <span class="rotulo">12 · Evaluación</span>
+    <h2>Examen final</h2>
+    <p>Veinte preguntas sobre todo lo que viste, una a la vez y sin decirte si acertaste hasta el final. Puedes moverte hacia adelante y hacia atrás, cambiar respuestas y entregar cuando quieras. Al terminar obtienes tu calificación, el desglose por tema y la revisión de cada error.</p>
+  </div>
+  <div class="contenedor">
+    <div class="examen" id="examen-caja"></div>
+  </div>
+</section>
+
+<section id="glosario">
+  <div class="contenedor prosa">
+    <span class="rotulo">13 · Glosario</span>
+    <h2>Las palabras que aparecen en todos lados</h2>
+    <div class="tabla-envoltura">
+      <table>
+        <tbody>
+          <tr><th style="width:220px">Aminoácido</th><td>Molécula con un grupo amino, un grupo carboxilo y una cadena lateral variable. La unidad de las proteínas.</td></tr>
+          <tr><th>Carbono alfa (Cα)</th><td>El carbono central del que salen los cuatro grupos.</td></tr>
+          <tr><th>Grupo R</th><td>La cadena lateral. Lo único que distingue a un aminoácido de otro.</td></tr>
+          <tr><th>Enlace peptídico</th><td>La unión entre el carboxilo de un aminoácido y el amino del siguiente.</td></tr>
+          <tr><th>Péptido / polipéptido</th><td>Cadena corta / cadena larga de aminoácidos.</td></tr>
+          <tr><th>Zwitterión</th><td>Forma del aminoácido con una carga positiva y una negativa al mismo tiempo.</td></tr>
+          <tr><th>Hidrofóbico / hidrofílico</th><td>Que repele el agua / que se lleva bien con ella.</td></tr>
+          <tr><th>Puente disulfuro</th><td>Grapa química entre dos cisteínas, vía sus azufres.</td></tr>
+          <tr><th>Desnaturalización</th><td>Pérdida de la forma tridimensional sin romper la secuencia.</td></tr>
+          <tr><th>Codón</th><td>Grupo de tres letras del ARN que codifica un aminoácido o una señal de paro.</td></tr>
+          <tr><th>Traducción</th><td>Proceso por el cual el ribosoma lee el ARNm y ensambla la proteína.</td></tr>
+          <tr><th>Aminoácido limitante</th><td>El esencial que está más escaso en un alimento y frena la síntesis.</td></tr>
+          <tr><th>Recambio proteico</th><td>Ciclo continuo de degradación y síntesis de las proteínas del cuerpo.</td></tr>
+          <tr><th>Transaminación</th><td>Transferir el grupo amino de un aminoácido a otra molécula; así se fabrican los no esenciales.</td></tr>
+          <tr><th>Ciclo de la urea</th><td>Ruta del hígado que convierte el nitrógeno sobrante en urea para eliminarlo.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="contenedor prosa">
+    <h4>Para seguir leyendo</h4>
+    <ul>
+      <li>Lehninger, <em>Principios de Bioquímica</em> — capítulo de aminoácidos y péptidos. El libro de referencia.</li>
+      <li>Berg, Tymoczko &amp; Stryer, <em>Bioquímica</em> — disponible libre en NCBI Bookshelf.</li>
+      <li>PDB-101 del Protein Data Bank (<span class="mono">pdb101.rcsb.org</span>) — estructuras de proteínas en 3D, explicadas.</li>
+      <li>Khan Academy, sección de biología molecular, en español.</li>
+    </ul>
+    <p>Guía educativa de divulgación. No sustituye asesoría médica ni nutricional.</p>
+    <a class="arriba" href="#">↑ Volver al inicio</a>
+  </div>
+</footer>
+
+</main>
+
+<div class="telon" id="telon" role="dialog" aria-modal="true" aria-labelledby="panel-titulo">
+  <div class="panel" id="panel"></div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var COLOR={hidro:"#B87C1C",polar:"#237A70",acido:"#A32E3C",basico:"#4348AC",especial:"#7A4699"};
+var NOMBRE_CLASE={hidro:"Hidrofóbico (no polar)",polar:"Polar sin carga",acido:"Ácido, carga negativa",basico:"Básico, carga positiva",especial:"Caso especial"};
+var NOMBRE_ESEN={esencial:"Esencial — solo de la dieta",condicional:"Condicionalmente esencial",no:"No esencial — tu cuerpo lo fabrica"};
+
+var AA=[
+{l:"A",ab:"Ala",n:"Alanina",clase:"hidro",es:"no",pm:89,r:"Un metilo (−CH₃), lo más simple después de la glicina.",fun:"Transporta nitrógeno del músculo al hígado en el ciclo glucosa-alanina. Es de los aminoácidos más abundantes en las proteínas.",comida:"Carne, pescado, huevo, leguminosas.",dato:"Al ser tan pequeña y neutra, encaja bien en las hélices alfa.",cod:["GCU","GCC","GCA","GCG"]},
+{l:"R",ab:"Arg",n:"Arginina",clase:"basico",es:"condicional",pm:174,r:"Cadena larga terminada en un grupo guanidinio, con carga positiva siempre.",fun:"Precursora del óxido nítrico, que dilata los vasos sanguíneos. Pieza clave del ciclo de la urea.",comida:"Nueces, semillas de calabaza, pavo, garbanzo.",dato:"Se vuelve esencial durante el crecimiento infantil y tras quemaduras o cirugía mayor.",cod:["CGU","CGC","CGA","CGG","AGA","AGG"]},
+{l:"N",ab:"Asn",n:"Asparagina",clase:"polar",es:"no",pm:132,r:"Una amida (−CONH₂), polar pero sin carga.",fun:"Es el punto de anclaje más común de los azúcares que se pegan a las proteínas (glicosilación).",comida:"Espárragos, papa, huevo, lácteos.",dato:"Fue el primer aminoácido aislado, en 1806, del jugo de espárrago. De ahí su nombre.",cod:["AAU","AAC"]},
+{l:"D",ab:"Asp",n:"Ácido aspártico",clase:"acido",es:"no",pm:133,r:"Un carboxilo extra que suelta su protón y queda negativo.",fun:"Participa en el ciclo de la urea y en sitios activos de enzimas. Ayuda a unir iones de calcio.",comida:"Carne, caña de azúcar, aguacate.",dato:"Junto con la fenilalanina forma el aspartame, el edulcorante.",cod:["GAU","GAC"]},
+{l:"C",ab:"Cys",n:"Cisteína",clase:"especial",es:"condicional",pm:121,r:"Un grupo tiol (−SH) con azufre. El más reactivo de todos.",fun:"Dos cisteínas forman puentes disulfuro que amarran la proteína. Componente del glutatión, antioxidante mayor de la célula.",comida:"Huevo, ajo, cebolla, pollo, brócoli.",dato:"Los puentes disulfuro de la queratina son los que se rompen y se rehacen en un permanente o un alaciado.",cod:["UGU","UGC"]},
+{l:"Q",ab:"Gln",n:"Glutamina",clase:"polar",es:"condicional",pm:146,r:"Amida de cadena algo más larga que la asparagina.",fun:"El aminoácido más abundante de la sangre. Combustible principal de las células del intestino y del sistema inmunitario. Transporta nitrógeno de forma segura.",comida:"Caldo de huesos, carne, lácteos, col.",dato:"En enfermedad grave el cuerpo lo consume más rápido de lo que lo produce; por eso es condicional.",cod:["CAA","CAG"]},
+{l:"E",ab:"Glu",n:"Ácido glutámico",clase:"acido",es:"no",pm:147,r:"Carboxilo con carga negativa, una cadena más largo que el aspártico.",fun:"Principal neurotransmisor excitador del cerebro. Punto de partida para fabricar muchos otros aminoácidos por transaminación.",comida:"Tomate maduro, queso parmesano, salsa de soya, hongos.",dato:"Su sal es el glutamato monosódico. Es el responsable del sabor umami.",cod:["GAA","GAG"]},
+{l:"G",ab:"Gly",n:"Glicina",clase:"especial",es:"condicional",pm:75,r:"Un solo átomo de hidrógeno. El grupo R más pequeño posible.",fun:"Un tercio del colágeno. Forma parte del grupo hemo y del glutatión. Actúa como neurotransmisor inhibidor en la médula espinal.",comida:"Gelatina, piel de pollo, caldo de huesos.",dato:"Es el único aminoácido sin versión izquierda ni derecha: al tener dos brazos iguales, es simétrico.",cod:["GGU","GGC","GGA","GGG"]},
+{l:"H",ab:"His",n:"Histidina",clase:"basico",es:"esencial",pm:155,r:"Un anillo imidazol cuya carga cambia según el pH del entorno.",fun:"Perfecta para enzimas que necesitan mover protones. Precursora de la histamina.",comida:"Carne, pescado, plátano, lácteos.",dato:"La histamina que produce es la culpable de la picazón y los estornudos en las alergias.",cod:["CAU","CAC"]},
+{l:"I",ab:"Ile",n:"Isoleucina",clase:"hidro",es:"esencial",pm:131,r:"Cadena ramificada de hidrocarburo. Es uno de los tres BCAA.",fun:"Aporta al núcleo hidrofóbico de las proteínas y sirve como combustible del músculo.",comida:"Huevo, pescado, lentejas, queso.",dato:"Es glucogénica y cetogénica a la vez: su esqueleto puede terminar como glucosa o como cuerpos cetónicos.",cod:["AUU","AUC","AUA"]},
+{l:"L",ab:"Leu",n:"Leucina",clase:"hidro",es:"esencial",pm:131,r:"Cadena ramificada voluminosa. El segundo BCAA.",fun:"Activa la vía mTOR, que da la orden de construir proteína muscular. Es señal, no solo ladrillo.",comida:"Suero de leche, carne, soya, cacahuate.",dato:"Junto con la lisina es uno de los dos aminoácidos puramente cetogénicos.",cod:["UUA","UUG","CUU","CUC","CUA","CUG"]},
+{l:"K",ab:"Lys",n:"Lisina",clase:"basico",es:"esencial",pm:146,r:"Cadena larga terminada en un amino con carga positiva.",fun:"Indispensable para el colágeno y para que las histonas se peguen al ADN. También para fabricar carnitina.",comida:"Carne, pescado, lácteos, frijol, lenteja.",dato:"Es el aminoácido limitante de los cereales. Por eso el arroz o el maíz solos no bastan.",cod:["AAA","AAG"]},
+{l:"M",ab:"Met",n:"Metionina",clase:"hidro",es:"esencial",pm:149,r:"Cadena con azufre, pero sin el tiol reactivo de la cisteína.",fun:"Toda proteína empieza por ella durante la traducción. Dona grupos metilo en incontables reacciones. Materia prima de la cisteína.",comida:"Huevo, pescado, nueces de Brasil, ajonjolí.",dato:"Su codón AUG es la señal universal de «empieza aquí».",cod:["AUG"]},
+{l:"F",ab:"Phe",n:"Fenilalanina",clase:"hidro",es:"esencial",pm:165,r:"Un anillo aromático de benceno. Grande y muy hidrofóbico.",fun:"Se convierte en tirosina, y por esa vía en dopamina, adrenalina y melanina.",comida:"Carne, leche, huevo, soya.",dato:"Quien tiene fenilcetonuria no puede procesarla; por eso los productos con aspartame llevan advertencia.",cod:["UUU","UUC"]},
+{l:"P",ab:"Pro",n:"Prolina",clase:"especial",es:"condicional",pm:115,r:"Su cadena lateral se cierra en anillo sobre el propio esqueleto.",fun:"Da rigidez y forma los giros de la cadena. Muy abundante en el colágeno.",comida:"Gelatina, lácteos, carne, espárrago.",dato:"Se le llama «rompe-hélices»: donde aparece, la hélice alfa se interrumpe.",cod:["CCU","CCC","CCA","CCG"]},
+{l:"S",ab:"Ser",n:"Serina",clase:"polar",es:"no",pm:105,r:"Un grupo hidroxilo (−OH), pequeño y amigable con el agua.",fun:"Punto donde la célula coloca fosfatos para encender y apagar proteínas. Participa en el sitio activo de muchas enzimas digestivas.",comida:"Soya, huevo, nueces, lácteos.",dato:"La penicilina funciona atacando precisamente una serina del sitio activo de una enzima bacteriana.",cod:["UCU","UCC","UCA","UCG","AGU","AGC"]},
+{l:"T",ab:"Thr",n:"Treonina",clase:"polar",es:"esencial",pm:119,r:"Un hidroxilo con un metilo al lado.",fun:"Importante en las mucinas, las proteínas que forman el moco protector del intestino. También sitio de fosforilación.",comida:"Huevo, carne, lentejas, semillas.",dato:"Fue el último de los veinte en ser descubierto, en 1936.",cod:["ACU","ACC","ACA","ACG"]},
+{l:"W",ab:"Trp",n:"Triptófano",clase:"hidro",es:"esencial",pm:204,r:"Un doble anillo llamado indol. Es el grupo R más grande de todos.",fun:"Precursor de la serotonina, y de ahí de la melatonina. También de la vitamina B3.",comida:"Pavo, semillas de calabaza, chocolate, avena, plátano.",dato:"Es el más escaso en la dieta y el único con un solo codón junto con la metionina.",cod:["UGG"]},
+{l:"Y",ab:"Tyr",n:"Tirosina",clase:"polar",es:"condicional",pm:181,r:"Anillo aromático con un hidroxilo: mitad hidrofóbico, mitad polar.",fun:"Origen de la dopamina, la adrenalina, la noradrenalina, las hormonas tiroideas y la melanina.",comida:"Queso, soya, pollo, semillas de calabaza.",dato:"Se fabrica a partir de fenilalanina; si esta falta, la tirosina se vuelve esencial.",cod:["UAU","UAC"]},
+{l:"V",ab:"Val",n:"Valina",clase:"hidro",es:"esencial",pm:117,r:"Cadena ramificada compacta. El tercer BCAA.",fun:"Estructura del núcleo hidrofóbico y combustible muscular.",comida:"Queso, carne, hongos, cacahuate.",dato:"En la anemia falciforme, una valina ocupa el lugar de un ácido glutámico en la hemoglobina. Un solo cambio, toda la enfermedad.",cod:["GUU","GUC","GUA","GUG"]}
+];
+
+var CODIGO={};
+AA.forEach(function(a){a.cod.forEach(function(c){CODIGO[c]=a;});});
+var PARO={UAA:1,UAG:1,UGA:1};
+
+/* ---------- tablero de los 20 ---------- */
+var tablero=document.getElementById("tablero");
+AA.forEach(function(a,i){
+  var b=document.createElement("button");
+  b.className="aa";
+  b.dataset.clase=a.clase;
+  b.dataset.esencial=a.es;
+  b.dataset.busca=(a.n+" "+a.ab+" "+a.l+" "+a.r+" "+a.fun+" "+a.dato).toLowerCase();
+  b.dataset.i=i;
+  b.setAttribute("aria-label","Ver ficha de "+a.n);
+  b.innerHTML='<span class="banda" style="background:'+COLOR[a.clase]+'"></span>'+
+    (a.es==="esencial"?'<span class="esen">ESE</span>':'')+
+    '<span class="letra">'+a.l+'</span>'+
+    '<span class="abrev">'+a.ab+' · '+a.pm+' g/mol</span>'+
+    '<span class="nombre">'+a.n+'</span>';
+  b.addEventListener("click",function(){abrirFicha(i);});
+  tablero.appendChild(b);
+});
+
+var filtroActual="todos", textoActual="";
+function aplicar(){
+  var tarjetas=tablero.querySelectorAll(".aa");
+  for(var i=0;i<tarjetas.length;i++){
+    var t=tarjetas[i];
+    var okF = filtroActual==="todos" || t.dataset.clase===filtroActual || (filtroActual==="esencial"&&t.dataset.esencial==="esencial");
+    var okT = !textoActual || t.dataset.busca.indexOf(textoActual)>-1;
+    t.classList.toggle("oculto",!(okF&&okT));
+  }
+}
+Array.prototype.forEach.call(document.querySelectorAll(".filtro"),function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll(".filtro").forEach(function(o){o.setAttribute("aria-pressed","false");});
+    b.setAttribute("aria-pressed","true");
+    filtroActual=b.dataset.filtro;aplicar();
+  });
+});
+document.getElementById("buscador").addEventListener("input",function(e){
+  textoActual=e.target.value.trim().toLowerCase();aplicar();
+});
+
+/* ---------- ficha ---------- */
+var telon=document.getElementById("telon"), panel=document.getElementById("panel"), ultimoFoco=null;
+function esqueleto(a){
+  var radio=8+(a.pm-75)/129*11;
+  return '<svg viewBox="0 0 260 150" width="100%" height="130" aria-hidden="true">'+
+  '<g fill="none" stroke="#5A675F" stroke-width="1.6">'+
+  '<line x1="130" y1="62" x2="72" y2="62"/><line x1="130" y1="62" x2="188" y2="62"/>'+
+  '<line x1="130" y1="62" x2="130" y2="26"/><line x1="130" y1="62" x2="130" y2="108"/></g>'+
+  '<circle cx="130" cy="62" r="16" fill="#EDEFE8" stroke="#16211E" stroke-width="1.6"/>'+
+  '<text x="130" y="67" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="11" fill="#16211E">Cα</text>'+
+  '<text x="52" y="66" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="11" fill="#5A675F">NH₂</text>'+
+  '<text x="212" y="66" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="11" fill="#5A675F">COOH</text>'+
+  '<text x="130" y="20" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="11" fill="#5A675F">H</text>'+
+  '<circle cx="130" cy="'+(108+radio)+'" r="'+radio+'" fill="'+COLOR[a.clase]+'"/>'+
+  '<text x="130" y="'+(113+radio)+'" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-size="13" font-weight="800" fill="#EDEFE8">R</text>'+
+  '</svg>';
+}
+function abrirFicha(i){
+  var a=AA[i];
+  panel.innerHTML='<button class="cerrar" aria-label="Cerrar">×</button>'+
+   '<h3 id="panel-titulo">'+a.n+'</h3>'+
+   '<p class="sub">'+a.ab+' · '+a.l+' · '+a.pm+' g/mol · <span style="color:'+COLOR[a.clase]+'">'+NOMBRE_CLASE[a.clase]+'</span></p>'+
+   esqueleto(a)+
+   '<p style="text-align:center;font-family:var(--mono);font-size:.68rem;color:var(--tinta-suave);letter-spacing:.08em;margin-top:-6px">EL TAMAÑO DEL CÍRCULO R ES PROPORCIONAL AL PESO MOLECULAR</p>'+
+   '<dl class="ficha">'+
+   '<dt>Cadena R</dt><dd>'+a.r+'</dd>'+
+   '<dt>Dieta</dt><dd>'+NOMBRE_ESEN[a.es]+'</dd>'+
+   '<dt>Codones</dt><dd><span class="codones">'+a.cod.map(function(c){return "<i>"+c+"</i>";}).join("")+'</span></dd>'+
+   '<dt>Alimentos</dt><dd>'+a.comida+'</dd>'+
+   '</dl>'+
+   '<h4 style="margin-top:0">Qué hace</h4><p style="font-size:.95rem">'+a.fun+'</p>'+
+   '<h4>Dato para recordarlo</h4><p style="font-size:.95rem;margin-bottom:0">'+a.dato+'</p>';
+  telon.classList.add("abierto");
+  ultimoFoco=document.activeElement;
+  panel.querySelector(".cerrar").focus();
+  panel.querySelector(".cerrar").addEventListener("click",cerrarFicha);
+}
+function cerrarFicha(){telon.classList.remove("abierto");if(ultimoFoco)ultimoFoco.focus();}
+telon.addEventListener("click",function(e){if(e.target===telon)cerrarFicha();});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&telon.classList.contains("abierto"))cerrarFicha();});
+
+/* ---------- traductor ---------- */
+var entrada=document.getElementById("entrada-adn"), salida=document.getElementById("salida-adn");
+function traducir(){
+  var s=(entrada.value||"").toUpperCase().replace(/[^ATGCU]/g,"").replace(/T/g,"U");
+  salida.innerHTML="";
+  if(s.length<3){salida.innerHTML='<p style="opacity:.6;font-family:var(--mono);font-size:.8rem;margin:0">Escribe al menos tres letras (A, T, G, C o U).</p>';return;}
+  for(var i=0;i+2<s.length;i+=3){
+    var c=s.substr(i,3), d=document.createElement("div");
+    if(PARO[c]){d.className="pieza alto";d.innerHTML="<b>■</b><span>"+c+" PARO</span>";salida.appendChild(d);break;}
+    var a=CODIGO[c];
+    d.className="pieza";
+    d.innerHTML="<b>"+(a?a.l:"?")+"</b><span>"+c+" "+(a?a.ab:"—")+"</span>";
+    if(a)d.title=a.n;
+    salida.appendChild(d);
+  }
+}
+document.getElementById("btn-traducir").addEventListener("click",traducir);
+entrada.addEventListener("input",traducir);
+Array.prototype.forEach.call(document.querySelectorAll("[data-ejemplo]"),function(b){
+  b.addEventListener("click",function(){entrada.value=b.dataset.ejemplo.replace(/(.{3})/g,"$1 ").trim();traducir();});
+});
+traducir();
+
+/* ---------- tabla de codones ---------- */
+var mapa=document.getElementById("mapa-codones"), L=["U","C","A","G"], html="";
+L.forEach(function(p1){L.forEach(function(p2){L.forEach(function(p3){
+  var c=p1+p2+p3;
+  if(PARO[c]){html+='<div class="codon paro"><b>'+c+'</b><span>PARO</span></div>';}
+  else{var a=CODIGO[c];html+='<div class="codon" style="border-left:3px solid '+COLOR[a.clase]+'"><b>'+c+'</b><span>'+a.ab+(c==="AUG"?" ▸":"")+'</span></div>';}
+});});});
+mapa.innerHTML=html;
+
+/* ---------- quiz ---------- */
+var P=[
+{q:"¿Qué parte es la única que cambia entre un aminoácido y otro?",o:["El grupo amino","El carbono alfa","El grupo R o cadena lateral","El grupo carboxilo"],ok:2,ex:"Los cuatro elementos del esqueleto son idénticos en los veinte. Solo la cadena lateral varía."},
+{q:"«Aminoácido esencial» quiere decir que…",o:["Es más importante que los demás","Tu cuerpo no puede fabricarlo","Solo está en la carne","Se necesita en mayor cantidad"],ok:1,ex:"Esencial significa únicamente que hay que obtenerlo de la dieta. Son nueve en el adulto."},
+{q:"¿Qué se libera cuando dos aminoácidos forman un enlace peptídico?",o:["Dióxido de carbono","Una molécula de agua","Nitrógeno","Un protón"],ok:1,ex:"Es una reacción de condensación: el COOH de uno y el NH₂ del otro se unen y sobra H₂O."},
+{q:"Al freír un huevo, la clara se vuelve blanca porque…",o:["Se rompen los enlaces peptídicos","Se pierden los aminoácidos","Las proteínas se desnaturalizan","Se forman aminoácidos nuevos"],ok:2,ex:"El calor deshace el plegamiento, pero la secuencia de aminoácidos queda intacta. Por eso sigue alimentando igual."},
+{q:"¿Por qué el arroz con frijoles forma una proteína completa?",o:["Porque juntos aportan más calorías","Porque el cereal tiene poca lisina y la leguminosa poca metionina, y se complementan","Porque ambos son proteína completa por separado","Porque se digieren mejor juntos"],ok:1,ex:"Cada uno cubre el aminoácido limitante del otro. A eso se le llama complementación proteica."},
+{q:"¿Cuántas letras del ARN forman un codón?",o:["Dos","Tres","Cuatro","Depende del aminoácido"],ok:1,ex:"Tres. Con cuatro letras posibles salen 64 combinaciones para 20 aminoácidos más la señal de paro."},
+{q:"¿Qué le pasa al aminoácido que sobra en la dieta?",o:["Se guarda como reserva de aminoácidos","Se convierte automáticamente en músculo","Se desmonta: el nitrógeno sale como urea y el resto se usa como energía o grasa","Se elimina intacto en las heces"],ok:2,ex:"No existe un depósito de aminoácidos equivalente al glucógeno o la grasa."},
+{q:"¿Qué aminoácido puede formar puentes disulfuro gracias a su azufre?",o:["Glicina","Prolina","Cisteína","Lisina"],ok:2,ex:"Dos cisteínas unen sus grupos −SH y forman una grapa que estabiliza la proteína. Es la base química del permanente en el cabello."}
+];
+var quiz=document.getElementById("quiz"), marcador=document.getElementById("marcador"), aciertos=0, hechas={};
+P.forEach(function(p,i){
+  var d=document.createElement("div"); d.className="pregunta";
+  var h='<p>'+(i+1)+'. '+p.q+'</p>';
+  p.o.forEach(function(t,j){h+='<button class="opcion" data-p="'+i+'" data-o="'+j+'">'+t+'</button>';});
+  h+='<p class="explica" id="ex'+i+'">'+p.ex+'</p>';
+  d.innerHTML=h; quiz.appendChild(d);
+});
+quiz.addEventListener("click",function(e){
+  var b=e.target.closest(".opcion"); if(!b)return;
+  var i=+b.dataset.p, j=+b.dataset.o; if(hechas[i])return; hechas[i]=1;
+  var cont=b.parentNode;
+  cont.querySelectorAll(".opcion").forEach(function(o,k){
+    if(k===P[i].ok)o.classList.add("bien");
+    else if(o===b)o.classList.add("mal");
+    o.disabled=true;
+  });
+  if(j===P[i].ok)aciertos++;
+  document.getElementById("ex"+i).classList.add("visible");
+  var total=Object.keys(hechas).length;
+  marcador.textContent="Aciertos: "+aciertos+" de 8"+(total===8?(aciertos===8?" — impecable.":(aciertos>=6?" — muy bien.":" — vale la pena repasar los apartados 02 y 06.")):"");
+});
+
+/* ---------- navegación ---------- */
+var barraProg=document.getElementById("progreso");
+var secciones=Array.prototype.slice.call(document.querySelectorAll("section[id]"));
+var enlaces=Array.prototype.slice.call(document.querySelectorAll(".indice a"));
+function alScroll(){
+  var h=document.documentElement;
+  var p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;
+  barraProg.style.width=Math.min(100,p)+"%";
+  var actual=null;
+  secciones.forEach(function(s){if(s.getBoundingClientRect().top<=120)actual=s.id;});
+  enlaces.forEach(function(a){a.classList.toggle("activo",a.getAttribute("href")==="#"+actual);});
+}
+window.addEventListener("scroll",alScroll,{passive:true});
+alScroll();
+})();
+</script>
+
+<script>
+(function(){
+"use strict";
+var caja=document.getElementById("examen-caja");
+
+var BANCO=[
+{t:"Estructura",q:"¿Cuántos grupos distintos salen del carbono alfa de un aminoácido?",o:["Dos","Tres","Cuatro","Cinco"],ok:2,ex:"Amino, carboxilo, un hidrógeno y el grupo R. Esa disposición de cuatro brazos es la que permite las formas L y D."},
+{t:"Estructura",q:"El grupo carboxilo de un aminoácido se escribe:",o:["−NH₂","−COOH","−SH","−OH"],ok:1,ex:"−COOH es el grupo ácido. −NH₂ es el amino, −SH el tiol de la cisteína y −OH el hidroxilo de la serina."},
+{t:"Estructura",q:"Se llama zwitterión a la forma del aminoácido que:",o:["No tiene ninguna carga","Tiene una carga positiva y una negativa a la vez","Perdió su grupo R","Está unida a otro aminoácido"],ok:1,ex:"Al pH del cuerpo el amino capta un protón (−NH₃⁺) y el carboxilo suelta el suyo (−COO⁻). La molécula es la misma; solo cambian sus cargas."},
+{t:"Estructura",q:"¿Por qué la vida usa casi solo aminoácidos de la forma L?",o:["Porque la forma D no existe en la naturaleza","Porque la forma L pesa menos","Porque las enzimas están hechas para encajar con esa versión y la D no entra","Porque la forma D es tóxica"],ok:2,ex:"L y D son imágenes en espejo, como las dos manos. Las enzimas reconocen una sola de ellas."},
+{t:"Los 20",q:"¿Qué aminoácido tiene como grupo R un solo átomo de hidrógeno?",o:["Alanina","Glicina","Serina","Valina"],ok:1,ex:"La glicina es la más pequeña y la única sin forma L ni D, porque sus dos brazos son iguales."},
+{t:"Los 20",q:"La letra K corresponde a:",o:["Lisina","Leucina","Cisteína","Treonina"],ok:0,ex:"Lisina es K porque la L ya estaba ocupada por la leucina. Varios códigos de una letra siguen esa lógica de segunda opción."},
+{t:"Los 20",q:"¿Cuáles son los tres aminoácidos de cadena ramificada, los BCAA?",o:["Lisina, arginina e histidina","Leucina, isoleucina y valina","Serina, treonina y tirosina","Glicina, alanina y prolina"],ok:1,ex:"Los tres son esenciales e hidrofóbicos. La leucina destaca porque además funciona como señal para construir músculo."},
+{t:"Los 20",q:"¿Qué aminoácido interrumpe las hélices alfa por tener su cadena lateral cerrada en anillo sobre el esqueleto?",o:["Triptófano","Prolina","Metionina","Fenilalanina"],ok:1,ex:"A la prolina se le llama rompe-hélices. Aparece sobre todo en los codos y giros de la cadena."},
+{t:"Enlace y plegamiento",q:"El enlace peptídico se forma entre:",o:["Dos grupos amino","El carboxilo de uno y el amino del siguiente","Dos grupos R","Dos átomos de azufre"],ok:1,ex:"Y en el proceso se libera una molécula de agua. La unión entre dos azufres es el puente disulfuro, que es otra cosa."},
+{t:"Enlace y plegamiento",q:"La estructura primaria de una proteína es:",o:["Su forma tridimensional final","El orden exacto de sus aminoácidos","La hélice alfa","El conjunto de varias cadenas ensambladas"],ok:1,ex:"Es la información pura, la que viene del ADN. Los otros tres niveles se derivan de ella."},
+{t:"Enlace y plegamiento",q:"Las hélices alfa y las hojas beta pertenecen al nivel:",o:["Primario","Secundario","Terciario","Cuaternario"],ok:1,ex:"Son patrones locales y repetitivos que se sostienen por puentes de hidrógeno del esqueleto."},
+{t:"Enlace y plegamiento",q:"En la anemia falciforme, ¿qué cambia en la hemoglobina?",o:["Se pierde una cadena entera","Un ácido glutámico es sustituido por una valina","Se rompen todos los puentes disulfuro","Falta el hierro"],ok:1,ex:"Un solo aminoácido entre 574: donde había una carga negativa amiga del agua aparece una cadena hidrofóbica, y las moléculas se pegan entre sí."},
+{t:"Clasificación",q:"Un grupo R hidrofóbico dentro de una proteína plegada tiende a quedar:",o:["En la superficie, tocando el agua","Escondido en el interior","Unido al ADN","Fuera de la célula"],ok:1,ex:"Se comporta como el aceite en el agua: se agrupa consigo mismo, lejos del medio acuoso. Ese empuje es el motor principal del plegamiento."},
+{t:"Clasificación",q:"¿Cuáles son los dos únicos aminoácidos puramente cetogénicos?",o:["Leucina y lisina","Alanina y serina","Valina y glicina","Arginina y prolina"],ok:0,ex:"Las dos L. Todos los demás son glucogénicos o mixtos."},
+{t:"Esenciales",q:"¿Cuántos aminoácidos esenciales tiene el adulto sano?",o:["Cinco","Nueve","Doce","Veinte"],ok:1,ex:"Histidina, isoleucina, leucina, lisina, metionina, fenilalanina, treonina, triptófano y valina."},
+{t:"Esenciales",q:"La tirosina se considera condicionalmente esencial porque:",o:["Solo está en alimentos de origen animal","Se fabrica a partir de fenilalanina, que sí es esencial","El cuerpo no la usa casi nunca","Se destruye al cocinar"],ok:1,ex:"Si falta la materia prima, falta el producto. Lo mismo pasa con la cisteína, que se fabrica a partir de metionina."},
+{t:"Código genético",q:"Se dice que el código genético es degenerado porque:",o:["Se deteriora con la edad","Varios codones distintos codifican el mismo aminoácido","Algunos aminoácidos no tienen codón","Cambia entre especies"],ok:1,ex:"Hay 64 codones para 20 aminoácidos más el paro, así que sobran combinaciones."},
+{t:"Código genético",q:"¿Qué significa el codón AUG?",o:["Solo paro","Metionina y además la señal de inicio","Triptófano","Solo inicio, sin aminoácido"],ok:1,ex:"Hace doble trabajo: marca el comienzo de la traducción y coloca la primera metionina."},
+{t:"Funciones",q:"El triptófano es la materia prima de:",o:["La melanina","La serotonina y la melatonina","El óxido nítrico","La histamina"],ok:1,ex:"La melanina viene de la tirosina, el óxido nítrico de la arginina y la histamina de la histidina."},
+{t:"Nutrición",q:"Se llama aminoácido limitante de un alimento a:",o:["El que está en mayor cantidad","El esencial que está más escaso y frena la síntesis","El que se destruye al cocinar","El que solo aportan las plantas"],ok:1,ex:"Funciona como el eslabón más débil: por más que sobren los otros ocho, la producción de proteína se detiene ahí. En los cereales suele ser la lisina."}
+];
+
+var orden=[], idx=0, respuestas=[], t0=0, cronoID=null, entregado=false;
+
+function barajar(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var x=a[i];a[i]=a[j];a[j]=x;}return a;}
+
+function iniciar(){
+  orden=barajar(BANCO.map(function(p,i){return i;}));
+  respuestas=orden.map(function(){return null;});
+  idx=0;entregado=false;t0=Date.now();
+  if(cronoID)clearInterval(cronoID);
+  cronoID=setInterval(function(){var c=document.getElementById("crono");if(c)c.textContent=reloj();},1000);
+  pintar();
+}
+function reloj(){
+  var s=Math.floor((Date.now()-t0)/1000);
+  return ("0"+Math.floor(s/60)).slice(-2)+":"+("0"+(s%60)).slice(-2);
+}
+function contestadas(){var n=0;respuestas.forEach(function(r){if(r!==null)n++;});return n;}
+
+function pintar(){
+  var p=BANCO[orden[idx]], letras=["A","B","C","D"];
+  var h='<div class="ex-cab">'+
+    '<span class="paso">Pregunta '+(idx+1)+' de '+orden.length+'</span>'+
+    '<span class="crono" id="crono">'+reloj()+'</span>'+
+    '<span class="ex-riel"><i style="width:'+((idx+1)/orden.length*100)+'%"></i></span>'+
+  '</div>'+
+  '<span class="ex-tema">'+p.t+'</span>'+
+  '<p class="ex-preg">'+p.q+'</p>';
+  p.o.forEach(function(t,j){
+    h+='<button class="ex-op" data-o="'+j+'" aria-pressed="'+(respuestas[idx]===j)+'"><i>'+letras[j]+'</i><span>'+t+'</span></button>';
+  });
+  h+='<div class="ex-pie">'+
+     '<button class="boton suave" id="ex-prev"'+(idx===0?" disabled":"")+'>← Anterior</button>'+
+     '<button class="boton suave" id="ex-next"'+(idx===orden.length-1?" disabled":"")+'>Siguiente →</button>'+
+     '<button class="boton" id="ex-entregar">Entregar examen</button>'+
+     '<span class="cuenta">'+contestadas()+' de '+orden.length+' contestadas</span>'+
+     '</div><div class="ex-puntos" id="ex-puntos"></div>';
+  caja.innerHTML=h;
+
+  var pts=document.getElementById("ex-puntos");
+  orden.forEach(function(_,i){
+    var b=document.createElement("button");
+    b.className="ex-punto"+(respuestas[i]!==null?" resuelta":"")+(i===idx?" aqui":"");
+    b.textContent=i+1;b.setAttribute("aria-label","Ir a la pregunta "+(i+1));
+    b.addEventListener("click",function(){idx=i;pintar();});
+    pts.appendChild(b);
+  });
+
+  caja.querySelectorAll(".ex-op").forEach(function(b){
+    b.addEventListener("click",function(){
+      respuestas[idx]=+b.dataset.o;
+      if(idx<orden.length-1){idx++;pintar();}else{pintar();}
+    });
+  });
+  document.getElementById("ex-prev").addEventListener("click",function(){if(idx>0){idx--;pintar();}});
+  document.getElementById("ex-next").addEventListener("click",function(){if(idx<orden.length-1){idx++;pintar();}});
+  document.getElementById("ex-entregar").addEventListener("click",entregar);
+}
+
+function entregar(){
+  var faltan=orden.length-contestadas();
+  if(faltan>0 && !confirm("Te faltan "+faltan+" pregunta"+(faltan>1?"s":"")+" por contestar. ¿Entregar de todos modos?"))return;
+  entregado=true;clearInterval(cronoID);
+  var aciertos=0, porTema={};
+  orden.forEach(function(qi,i){
+    var p=BANCO[qi];
+    if(!porTema[p.t])porTema[p.t]={bien:0,total:0};
+    porTema[p.t].total++;
+    if(respuestas[i]===p.ok){aciertos++;porTema[p.t].bien++;}
+  });
+  var pct=Math.round(aciertos/orden.length*100);
+  var titulo,texto;
+  if(pct>=90){titulo="Dominas el tema.";texto="Podrías explicarle esto a alguien más sin problema.";}
+  else if(pct>=70){titulo="Aprobado con solidez.";texto="La base está clara. Revisa abajo los temas donde perdiste puntos.";}
+  else if(pct>=50){titulo="Vas por buen camino.";texto="Los conceptos generales están, faltan los detalles. Vuelve a los apartados marcados en rojo.";}
+  else{titulo="Conviene releer la guía.";texto="Empieza por los apartados 02 y 05, que son la base de todo lo demás.";}
+
+  var circ=2*Math.PI*54;
+  var h='<div class="ex-nota">'+
+    '<svg class="aro" viewBox="0 0 128 128" role="img" aria-label="Calificación '+pct+' por ciento">'+
+      '<circle class="base" cx="64" cy="64" r="54"/>'+
+      '<circle class="marca" cx="64" cy="64" r="54" stroke-dasharray="'+circ+'" stroke-dashoffset="'+circ+'" id="aro-marca"/>'+
+      '<text x="64" y="66" text-anchor="middle" font-size="30">'+pct+'</text>'+
+      '<text x="64" y="86" text-anchor="middle" font-size="10" font-family="IBM Plex Mono,monospace" fill="#5A675F" letter-spacing="1">DE 100</text>'+
+    '</svg>'+
+    '<div class="ex-veredicto"><h3>'+titulo+'</h3><p>'+texto+'</p>'+
+    '<p style="margin-top:10px;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em">'+aciertos+' / '+orden.length+' correctas · tiempo '+reloj()+'</p></div>'+
+  '</div>';
+
+  h+='<h4 style="margin-top:0">Desglose por tema</h4><div class="ex-temas">';
+  Object.keys(porTema).forEach(function(t){
+    var d=porTema[t], p=Math.round(d.bien/d.total*100);
+    h+='<div class="ex-tema-fila"><span>'+t+'</span>'+
+       '<span class="medidor"><i class="'+(p<60?"bajo":"")+'" style="width:'+p+'%"></i></span>'+
+       '<b>'+d.bien+'/'+d.total+'</b></div>';
+  });
+  h+='</div><h4>Revisión</h4>';
+  orden.forEach(function(qi,i){
+    var p=BANCO[qi], r=respuestas[i], bien=(r===p.ok);
+    h+='<div class="revision'+(bien?" acertada":"")+'">'+
+       '<p class="pq">'+(i+1)+'. '+p.q+'</p>'+
+       (bien?'<p class="lin buena">Tu respuesta: <b>'+p.o[r]+'</b> ✓</p>':
+        '<p class="lin">Tu respuesta: <b>'+(r===null?"sin contestar":p.o[r])+'</b></p><p class="lin buena">Correcta: <b>'+p.o[p.ok]+'</b></p>')+
+       '<p class="por">'+p.ex+'</p></div>';
+  });
+  h+='<div class="ex-pie"><button class="boton" id="ex-otra">Repetir examen</button>'+
+     '<button class="boton suave" id="ex-arriba">Volver a la guía</button></div>';
+  caja.innerHTML=h;
+
+  setTimeout(function(){
+    var m=document.getElementById("aro-marca");
+    if(m)m.style.strokeDashoffset=circ*(1-pct/100);
+  },80);
+  caja.scrollIntoView({behavior:"smooth",block:"start"});
+  document.getElementById("ex-otra").addEventListener("click",function(){iniciar();caja.scrollIntoView({behavior:"smooth",block:"start"});});
+  document.getElementById("ex-arriba").addEventListener("click",function(){
+    document.getElementById("que-son").scrollIntoView({behavior:"smooth"});
+  });
+}
+
+iniciar();
+})();
+</script>
+
+</body>
+</html>
