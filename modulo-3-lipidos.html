@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Módulo 3 · Lípidos</title>
+<meta name="description" content="Módulo 3: concepto y clasificación de los lípidos, ácidos grasos, ceras, acilgliceroles, fosfátidos de glicerina, esfingolípidos, terpenos, esteroides y eicosanoides.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="barra">
+  <div class="barra-in">
+    <a class="volver" href="index.html">← Índice</a>
+    <span class="marca">Módulo 03 · <b>Lípidos</b></span>
+    <nav class="indice" aria-label="Apartados">
+      <a href="#concepto">Concepto</a>
+      <a href="#catalogo">Las 7 clases</a>
+      <a href="#funciones">Funciones</a>
+      <a href="#acidos-grasos">Ácidos grasos</a>
+      <a href="#ceras">Ceras</a>
+      <a href="#acilgliceroles">Acilgliceroles</a>
+      <a href="#fosfatidos">Fosfátidos</a>
+      <a href="#esfingolipidos">Esfingolípidos</a>
+      <a href="#terpenos">Terpenos</a>
+      <a href="#esteroides">Esteroides</a>
+      <a href="#eicosanoides">Eicosanoides</a>
+      <a href="#clinica">Clínica</a>
+      <a href="#examen">Examen</a>
+    </nav>
+  </div>
+  <div class="progreso" id="progreso"></div>
+</header>
+
+<div class="hero">
+  <div class="contenedor">
+    <p class="credito">Módulo 03 · Conferencia: Lípidos<br>Biología Celular y Molecular · Tema 2 · 1<sup>er</sup> ciclo · Curso 2026-2</p>
+    <h1 style="max-width:15ch">No los une su estructura, <em>los une el agua</em>.</h1>
+    <p class="entrada" style="max-width:52ch">Los lípidos son el único grupo de biomoléculas que no se define por lo que son, sino por cómo se comportan: no se disuelven en agua. Bajo esa etiqueta caben moléculas tan distintas como una grasa, una hormona sexual, una vitamina y la membrana de tus células.</p>
+    <div class="hero-datos">
+      <div class="dato"><b>7</b><span>clases estructurales</span></div>
+      <div class="dato"><b>3</b><span>ácidos grasos esenciales</span></div>
+      <div class="dato"><b>C20</b><span>origen de los eicosanoides</span></div>
+      <div class="dato"><b>27</b><span>carbonos del colesterol</span></div>
+    </div>
+    <div class="mapa">
+      <a href="#concepto"><b>3.1</b>Concepto y clasificación</a>
+      <a href="#catalogo"><b>3.2</b>Catálogo de las siete clases</a>
+      <a href="#funciones"><b>3.3</b>Funciones generales</a>
+      <a href="#acidos-grasos"><b>3.4</b>Ácidos grasos</a>
+      <a href="#ceras"><b>3.5</b>Ceras</a>
+      <a href="#acilgliceroles"><b>3.6</b>Acilgliceroles</a>
+      <a href="#fosfatidos"><b>3.7</b>Fosfátidos de glicerina</a>
+      <a href="#esfingolipidos"><b>3.8</b>Esfingolípidos</a>
+      <a href="#terpenos"><b>3.9</b>Terpenos y vitaminas liposolubles</a>
+      <a href="#esteroides"><b>3.10</b>Esteroides y colesterol</a>
+      <a href="#eicosanoides"><b>3.11</b>Eicosanoides</a>
+      <a href="#clinica"><b>3.12</b>Aplicación clínica y conclusiones</a>
+    </div>
+  </div>
+</div>
+
+<main class="lienzo">
+
+<section id="concepto" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">3.1</span><span class="rotulo" style="margin:0">Concepto</span></div>
+    <h2>Qué define a un lípido</h2>
+    <div class="nota">
+      <span class="etq">Definición</span>
+      <p>Los lípidos son un <strong>conjunto heterogéneo de compuestos químicos</strong> que tienen como característica común su <strong>escasa solubilidad en el agua</strong> y ser <strong>solubles en solventes apolares orgánicos</strong> como el benceno, la nafta, la gasolina, la acetona y el cloroformo.</p>
+    </div>
+    <p>Fíjate en la palabra <strong>heterogéneo</strong>: es la clave del grupo. A diferencia de las proteínas, que son todas polímeros de aminoácidos, aquí no hay una estructura común. Lo único que comparten es su comportamiento frente al agua, y precisamente por eso pueden extraerse de cualquier material biológico usando esos solventes orgánicos.</p>
+    <h3>Clasificación teniendo en cuenta su similitud estructural</h3>
+    <p>Como no hay una estructura única, se agrupan en siete clases por parecido:</p>
+    <ol class="lista-num">
+      <li><b>Ácidos grasos</b>Ácidos orgánicos monocarboxílicos, la pieza que aparece dentro de casi todos los demás.</li>
+      <li><b>Ceras</b>Ácido graso de cadena larga esterificado con un alcohol monohidroxilado o con un esterol.</li>
+      <li><b>Acilgliceroles</b>Glicerol con uno, dos o tres ácidos grasos esterificados.</li>
+      <li><b>Fosfátidos de glicerina o fosfoglicéridos</b>Glicerol, ácidos grasos y un grupo fosfato con un alcohol unido.</li>
+      <li><b>Esfingolípidos</b>Construidos sobre la esfingosina en lugar del glicerol.</li>
+      <li><b>Terpenos o lípidos isoprenoides</b>Formados por unidades de isopreno.</li>
+      <li><b>Esteroides</b>Con el núcleo de cuatro anillos fusionados.</li>
+    </ol>
+    <div class="nota">
+      <span class="etq">Objetivo de la conferencia</span>
+      <p>Explicar las propiedades y características estructurales de los principales lípidos de importancia biológica, ilustrando ejemplos de sus roles fisiológicos y sus aplicaciones farmacológicas.</p>
+    </div>
+  </div>
+</section>
+
+<section id="catalogo" class="submod">
+  <div class="contenedor">
+    <div class="prosa">
+      <div class="submod-cab"><span class="n">3.2</span><span class="rotulo" style="margin:0">Catálogo</span></div>
+      <h2>Las siete clases de un vistazo</h2>
+      <p>Antes de entrar en cada una, esta tabla te da el mapa completo. Toca cualquier tarjeta para ver su ficha.</p>
+    </div>
+    <div class="tablero" id="tablero-lipidos" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr))"></div>
+    <div class="leyenda">
+      <span><i class="punto" style="background:var(--polar)"></i> Anfipático</span>
+      <span><i class="punto" style="background:var(--hidro)"></i> Apolar</span>
+      <span><i class="punto" style="background:var(--especial)"></i> Depende del caso</span>
+    </div>
+  </div>
+</section>
+
+<section id="funciones" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">3.3</span><span class="rotulo" style="margin:0">Funciones</span></div>
+    <h2>Funciones generales de los lípidos</h2>
+    <p>Ocho funciones, cada una con su ejemplo. El ejemplo importa tanto como la función, porque es lo que se pregunta.</p>
+  </div>
+  <div class="contenedor">
+    <div class="rejilla c2">
+      <div class="tarjeta"><h4>1 · Reserva energética</h4><p>Los <strong>triacilglicéridos</strong> o grasas neutras, almacenados en el tejido adiposo.</p></div>
+      <div class="tarjeta"><h4>2 · Componentes de membranas biológicas</h4><p>Los <strong>fosfátidos de glicerina</strong>, los <strong>esfingolípidos</strong> y el <strong>colesterol</strong>.</p></div>
+      <div class="tarjeta"><h4>3 · Mantienen la temperatura corporal</h4><p>Ayudan a evitar las pérdidas de calor.</p></div>
+      <div class="tarjeta"><h4>4 · Sostén y protección de órganos</h4><p>Protegen contra traumatismos físicos.</p></div>
+      <div class="tarjeta"><h4>5 · Regulación del metabolismo como segundos mensajeros</h4><p>El <strong>diacilglicerol (DAG)</strong> y el <strong>trifosfato de inositol (IP₃)</strong>.</p></div>
+      <div class="tarjeta"><h4>6 · Funciones hormonales</h4><p>Las <strong>hormonas esteroideas</strong>.</p></div>
+      <div class="tarjeta"><h4>7 · Funciones fisiológicas y farmacológicas</h4><p>Las <strong>prostaglandinas</strong>, los <strong>tromboxanos</strong> y los <strong>leucotrienos</strong>.</p></div>
+      <div class="tarjeta"><h4>8 · Vitaminas</h4><p>Las vitaminas liposolubles <strong>A, D y E</strong>, esenciales para el funcionamiento normal del organismo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="acidos-grasos" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">3.4</span><span class="rotulo" style="margin:0">Ácidos grasos</span></div>
+    <h2>La pieza que aparece en casi todos</h2>
+    <div class="nota">
+      <span class="etq">Definición</span>
+      <p>Son <strong>ácidos orgánicos monocarboxílicos</strong> que en su gran mayoría forman parte de lípidos complejos. Poseen una <strong>porción polar hidrofílica</strong> (el grupo carboxilo) y una <strong>porción apolar hidrofóbica</strong> (la cadena hidrocarbonada), por lo que son <strong>lípidos anfipáticos</strong>.</p>
+    </div>
+    <p>A pH fisiológico (7,35–7,45 en sangre arterial) el grupo carboxilo se encuentra <strong>disociado</strong>, lo que le da una carga negativa que le permite interactuar con el agua y otros solventes polares. La cadena hidrocarbonada, en cambio, interactúa con compuestos apolares mediante <strong>interacciones hidrofóbicas</strong>. Una sola molécula, dos comportamientos opuestos: eso es ser anfipático.</p>
+
+    <h3>Nomenclatura: cómo se numeran los carbonos</h3>
+    <p>La numeración se hace <strong>a partir del carbono carboxílico, que es el número 1</strong>. En ocasiones se usan letras griegas, empezando por el <strong>carbono número dos</strong>: α, β, γ, δ… y el <strong>carbono terminal se representa con la letra ω (omega)</strong>.</p>
+    <div class="tabla-envoltura">
+      <table>
+        <tbody>
+          <tr><th style="width:130px">Numérica</th><td class="mono">10 · 9 · 8 · 7 · 6 · 5 · 4 · 3 · 2 · <strong>1 (COOH)</strong></td></tr>
+          <tr><th>Griega</th><td class="mono"><strong>ω</strong> · — · — · — · δ · γ · β · α · <strong>COOH</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>De ahí vienen los nombres «omega 3», «omega 6» y «omega 9»: indican en qué carbono está el primer doble enlace <strong>contando desde el extremo omega</strong>, el opuesto al carboxilo.</p>
+
+    <h3>Clasificación según sus enlaces carbono-carbono</h3>
+    <ul>
+      <li><strong>Saturados:</strong> poseen enlaces simples carbono-carbono; todas las valencias del carbono están saturadas con hidrógeno.</li>
+      <li><strong>Insaturados:</strong> presentan uno o más dobles enlaces en su cadena. Los <strong>poliinsaturados</strong> son los que presentan más de un doble enlace.</li>
+    </ul>
+
+    <h3>Clasificación según el largo de la cadena</h3>
+    <p>Se cumple tanto para saturados como para insaturados.</p>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Tipo</th><th>Átomos de carbono</th></tr></thead>
+        <tbody>
+          <tr><td>Cadena corta</td><td class="mono">2 – 4</td></tr>
+          <tr><td>Cadena media</td><td class="mono">6 – 10</td></tr>
+          <tr><td>Cadena larga</td><td class="mono">12 – 26</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="contenedor">
+    <div class="laboratorio">
+      <h4>Clasificador de ácidos grasos</h4>
+      <p style="opacity:.85">Elige el número de carbonos y el tipo de enlaces, y comprueba cómo quedaría clasificado.</p>
+      <label for="ag-c" style="font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7">Átomos de carbono: <span id="ag-c-v">18</span></label>
+      <input type="range" id="ag-c" min="2" max="26" step="1" value="18">
+      <div class="constructor" style="margin-top:14px">
+        <button class="opcx" data-sat="sat" aria-pressed="false">Saturado</button>
+        <button class="opcx" data-sat="mono" aria-pressed="true">Un doble enlace</button>
+        <button class="opcx" data-sat="poli" aria-pressed="false">Varios dobles enlaces</button>
+      </div>
+      <div class="veredicto" id="ag-out" aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="contenedor prosa">
+    <h3>Los que hay que saberse con nombre y apellido</h3>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Ácido graso</th><th>Carbonos</th><th>Tipo</th><th>Dónde está</th></tr></thead>
+        <tbody>
+          <tr><td>Mirístico</td><td class="mono">14</td><td>Saturado</td><td>Lípidos naturales</td></tr>
+          <tr><td>Palmítico</td><td class="mono">16</td><td>Saturado</td><td>El más común de los saturados</td></tr>
+          <tr><td>Esteárico</td><td class="mono">18</td><td>Saturado</td><td>Grasas animales</td></tr>
+          <tr><td>Oleico</td><td class="mono">18</td><td>Monoinsaturado, serie ω9</td><td>Aceites vegetales, típico del aceite de oliva</td></tr>
+          <tr><td><strong>Linoleico</strong></td><td class="mono">18</td><td>Poliinsaturado, serie <strong>ω6</strong></td><td><strong>Esencial.</strong> Granos secos y aceites vegetales</td></tr>
+          <tr><td><strong>Linolénico</strong></td><td class="mono">18</td><td>Poliinsaturado, serie <strong>ω3</strong></td><td><strong>Esencial.</strong> Aceite de soya, de canola, nueces y aceites de pescado</td></tr>
+          <tr><td><strong>Araquidónico</strong></td><td class="mono">20</td><td>Poliinsaturado, serie <strong>ω6</strong></td><td><strong>Parcialmente esencial.</strong> Precursor de los eicosanoides</td></tr>
+          <tr><td>Eicosapentaenoico (EPA)</td><td class="mono">20</td><td>Poliinsaturado, serie ω3</td><td>Aceites de pescado: salmón, atún, macarela</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="nota">
+      <span class="etq">Ácidos grasos esenciales</span>
+      <p>Los esenciales <strong>no pueden ser sintetizados en nuestro organismo</strong>, por lo que se deben ingerir en la dieta. <strong>Todos son poliinsaturados</strong>: linoleico (ω6), linolénico (ω3) y araquidónico (ω6, parcialmente esencial, porque puede obtenerse a partir del linoleico).</p>
+    </div>
+
+    <h3>Propiedades físicas</h3>
+    <p>Están vinculadas a la presencia del grupo carboxilo y a la cadena hidrocarbonada, en cuanto a su <strong>longitud</strong> y su <strong>grado de saturación</strong>. En lo relativo a la solubilidad:</p>
+    <ul>
+      <li>Los de <strong>cadena corta son más solubles</strong> en agua, por la influencia de su grupo carboxilo polar.</li>
+      <li>A medida que <strong>aumenta el tamaño de la cadena</strong>, esa solubilidad <strong>decrece hasta hacerse prácticamente nula</strong>.</li>
+      <li>La presencia de <strong>insaturaciones incrementa</strong> la solubilidad en solventes polares.</li>
+    </ul>
+    <p>La lógica es sencilla: el grupo carboxilo es la parte que se lleva bien con el agua y siempre es uno solo; cuanto más larga la cola apolar, menos pesa esa cabeza en el conjunto.</p>
+  </div>
+</section>
+
+<section id="ceras" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">3.5</span><span class="rotulo" style="margin:0">Ceras</span></div>
+    <h2>Ceras</h2>
+    <div class="nota">
+      <span class="etq">Definición</span>
+      <p>Son los lípidos que se forman por <strong>esterificación de ácidos grasos de cadena larga</strong> con determinados <strong>alcoholes monohidroxilados</strong> o con <strong>esteroles</strong>.</p>
+    </div>
+    <p>Cuando el alcohol es un esterol, como el colesterol, el resultado es un <strong>éster de colesterol</strong>, que también se considera una cera. Al esterificarse desaparece el grupo −OH libre del colesterol, y con él su carácter anfipático: por eso los ésteres de colesterol son completamente apolares y no pueden formar parte de las membranas.</p>
+  </div>
+</section>
+
+<section id="acilgliceroles" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">3.6</span><span class="rotulo" style="margin:0">Acilgliceroles</span></div>
+    <h2>Glicerol más ácidos grasos</h2>
+    <p>Están constituidos por una molécula de <strong>glicerol</strong> a la que se le esterifican <strong>ácidos grasos</strong>. El glicerol tiene tres grupos hidroxilo, así que caben hasta tres.</p>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Nombre</th><th>Ácidos grasos esterificados</th></tr></thead>
+        <tbody>
+          <tr><td>Monoacilgliceroles</td><td>1</td></tr>
+          <tr><td>Diacilgliceroles</td><td>2</td></tr>
+          <tr><td><strong>Triacilgliceroles</strong></td><td>3</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>La reacción se resume así: <strong>glicerol + tres ácidos grasos → triacilglicérido</strong>.</p>
+
+    <h3>Propiedades de los triacilgliceroles</h3>
+    <p>Por sus características estructurales son moléculas <strong>apolares</strong>: los tres hidroxilos del glicerol quedan ocupados, así que no queda ninguna porción polar libre. Esto los distingue de todos los demás lípidos complejos del módulo.</p>
+    <div class="rejilla c2">
+      <div class="tarjeta"><h4>Sólidos a temperatura ambiente</h4><p>Cuando presentan ácidos grasos <strong>saturados de cadena larga</strong>. Son las <strong>mantecas</strong>.</p></div>
+      <div class="tarjeta"><h4>Líquidos a temperatura ambiente</h4><p>Cuando sus ácidos grasos son <strong>saturados de cadena corta</strong> (menos de 10 carbonos) o <strong>insaturados</strong>. Son los <strong>aceites</strong>.</p></div>
+    </div>
+    <h3>Funciones de los triacilgliceroles</h3>
+    <ol class="lista-num">
+      <li><b>Constituyen una reserva energética</b>Es su función principal, almacenada en el tejido adiposo.</li>
+      <li><b>Actúan como fuente de energía</b>Se movilizan cuando el organismo lo necesita.</li>
+      <li><b>Intervienen en la regulación térmica</b>El panículo adiposo aísla y evita la pérdida de calor.</li>
+      <li><b>Actúan como sostén de órganos</b>La grasa perivisceral los mantiene en su sitio.</li>
+      <li><b>Protegen contra traumatismos físicos</b>Amortiguan los golpes.</li>
+    </ol>
+    <p>La <strong>caquexia</strong> —la pérdida extrema de tejido adiposo y muscular en enfermedades graves— muestra lo que ocurre cuando estas cinco funciones se pierden a la vez.</p>
+  </div>
+</section>
+
+<section id="fosfatidos" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">3.7</span><span class="rotulo" style="margin:0">Fosfátidos de glicerina</span></div>
+    <h2>Los lípidos de la membrana</h2>
+    <div class="nota">
+      <span class="etq">Definición</span>
+      <p>Los fosfátidos de glicerina o de glicerol son <strong>lípidos complejos de estructura anfipática</strong>. Están formados por <strong>glicerol</strong>, <strong>uno o dos residuos de ácidos grasos</strong> y, en el <strong>carbono número tres, un grupo fosfato</strong> al que se le pueden unir otros compuestos, generalmente alcoholes.</p>
+    </div>
+    <h3>Para entenderlo sin mucho esfuerzo</h3>
+    <p>La conferencia propone leer la molécula por zonas, y es la mejor forma de no perderse:</p>
+    <div class="tabla-envoltura">
+      <table>
+        <tbody>
+          <tr><th style="width:180px">Zona constante</th><td>Glicerol y fosfato</td></tr>
+          <tr><th>Zona variable</th><td>Ácidos grasos y alcohol</td></tr>
+          <tr><th>Zona apolar</th><td>Cadenas de ácidos grasos (las «colas»)</td></tr>
+          <tr><th>Zona polar</th><td>Fosfato y alcohol (la «cabeza»)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Es la misma lógica de constante/variable que viste en los aminoácidos, y la misma de polar/apolar de los ácidos grasos, aplicada ahora a una molécula más grande. En las membranas biológicas las porciones polares se orientan <strong>hacia el exterior</strong> de la bicapa lipídica y las apolares <strong>hacia el interior</strong>, donde las colas se sujetan entre sí por <strong>uniones hidrofóbicas</strong>.</p>
+
+    <h3>El ácido fosfatídico, la base de todos</h3>
+    <p>Tiene esterificados al glicerol <strong>dos ácidos grasos</strong> —uno de ellos casi siempre insaturado— y un <strong>grupo fosfato</strong>. Constituye la <strong>estructura básica del resto de los fosfátidos de glicerina</strong> y, metabólicamente, es el <strong>precursor de su síntesis</strong> e incluso un intermediario en la síntesis de los triacilgliceroles.</p>
+    <p>Como poseen asimetría molecular, presentan isomería óptica. La variedad más frecuente en los fosfátidos naturales es la <strong>serie L</strong>, que se representa con el residuo del ácido graso del carbono 2 (o β) hacia la izquierda y el grupo fosfato del carbono 3 (o α′) hacia la derecha.</p>
+  </div>
+
+  <div class="contenedor">
+    <div class="laboratorio">
+      <h4>Constructor de fosfoglicéridos</h4>
+      <p style="opacity:.85">Al ácido fosfatídico se le une un sustituyente (X) sobre el grupo fosfato, y de ahí sale el nombre. Elige el sustituyente y comprueba qué fosfoglicérido se forma.</p>
+      <div class="constructor" id="fg-opciones"></div>
+      <div class="veredicto" id="fg-out" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="contenedor prosa">
+    <h3>Cómo se une el sustituyente</h3>
+    <p>Siempre por <strong>enlace éster fosfórico</strong>, con pérdida de una molécula de agua. En la fosfatidilserina se esterifica el hidroxilo de la cadena lateral de la <strong>L-serina</strong>; en la fosfatidiletanolamina, el de la <strong>etanolamina</strong>, que se forma por <strong>descarboxilación de la serina</strong>; en la fosfatidilcolina, la <strong>colina</strong>, un compuesto básico nitrogenado.</p>
+
+    <h4>Los plasmalógenos son la excepción</h4>
+    <p>No se consideran derivados del ácido fosfatídico, porque <strong>carecen de residuo de ácido graso en el carbono 1 (o α)</strong> del glicerol. En su lugar se une, <strong>por enlace éter</strong>, un <strong>alcohol enólico (insaturado) o alquenol</strong> de cadena larga. Contienen nitrógeno, aportado por la serina, la etanolamina o la colina, y toman el nombre correspondiente en cada caso.</p>
+
+    <h4>Los fosfatidilinositoles y los segundos mensajeros</h4>
+    <p>Son fosfátidos de glicerina <strong>no nitrogenados</strong> que contienen un alcohol cíclico de seis átomos de carbono llamado <strong>mioinositol</strong> o mesoinositol.</p>
+    <p>El <strong>4,5-bisfosfato de fosfoinositol (PIP₂)</strong> es un constituyente de los fosfolípidos de membrana que, por acción de determinadas hormonas, se escinde mediante la <strong>fosfolipasa C</strong> y da dos productos:</p>
+    <div class="rejilla c2">
+      <div class="tarjeta"><h4>1,2-diacilglicerol (DAG)</h4><p>Se queda en la membrana.</p></div>
+      <div class="tarjeta"><h4>1,4,5-trifosfato de inositol (IP₃)</h4><p>Difunde al citoplasma.</p></div>
+    </div>
+    <p>Ambos actúan como <strong>segundos mensajeros en la respuesta hormonal</strong>. Es el ejemplo de la función número 5 de los lípidos.</p>
+
+    <h3>Clasificación según el grupo sustituyente</h3>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Grupo sustituyente</th><th>Nombre del fosfoglicérido</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">−H</td><td><strong>Ácido fosfatídico</strong> (base estructural)</td></tr>
+          <tr><td>Serina</td><td>Fosfatidilserina (serín-cefalina)</td></tr>
+          <tr><td>Etanolamina</td><td>Fosfatidiletanolamina (etanolamín-cefalina)</td></tr>
+          <tr><td>Colina</td><td>Fosfatidilcolina (lecitina)</td></tr>
+          <tr><td>Glicerol</td><td>Fosfatidilglicerol</td></tr>
+          <tr><td>Inositol</td><td>Fosfatidilinositol</td></tr>
+          <tr><td>Fosfatidilglicerol</td><td>Cardiolipina (difosfatidilglicerol)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Funciones de los fosfátidos de glicerina</h3>
+    <ol class="lista-num">
+      <li><b>Componentes de las membranas celulares</b>Su carácter anfipático es lo que permite la bicapa.</li>
+      <li><b>Los ácidos fosfatídicos son precursores</b>De la síntesis de los otros fosfátidos de glicerina y de los acilgliceroles.</li>
+      <li><b>Coagulación y efecto tensoactivo</b>Las lecitinas y cefalinas intervienen en la coagulación sanguínea y, por su acentuado carácter anfipático, tienen efectos tensoactivos que explican su participación en los procesos respiratorios a nivel de los alvéolos pulmonares y en la digestión de algunos lípidos.</li>
+      <li><b>Donadores de ácido araquidónico</b>Las fosfatidilcolinas y los fosfatidilinositoles lo ceden para la síntesis de prostaglandinas, tromboxanos, prostaciclinas y leucotrienos.</li>
+      <li><b>Origen de segundos mensajeros</b>El diacilglicerol y el trifosfato de inositol, formados a partir del PIP₂.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="esfingolipidos" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">3.8</span><span class="rotulo" style="margin:0">Esfingolípidos</span></div>
+    <h2>Lo mismo, pero sobre esfingosina</h2>
+    <div class="nota">
+      <span class="etq">Definición</span>
+      <p>Son <strong>lípidos complejos que contienen un alcohol nitrogenado e insaturado de 18 átomos de carbono</strong>: el <strong>esfingol o esfingosina</strong>.</p>
+    </div>
+    <h3>La esfingosina, punto por punto</h3>
+    <ul>
+      <li><strong>18 carbonos.</strong></li>
+      <li>Los <strong>carbonos 1 y 3</strong> presentan grupos <strong>hidroxilo (−OH)</strong>.</li>
+      <li>El <strong>carbono 2</strong> presenta un grupo <strong>amino (−NH₂)</strong>.</li>
+      <li>Un <strong>doble enlace entre los carbonos 4 y 5</strong>.</li>
+    </ul>
+    <h3>La ceramida</h3>
+    <p>Al esfingol se le une un <strong>ácido graso por enlace amida</strong> (sobre el grupo amino del carbono 2), formando la <strong>ceramida</strong>, que es la <strong>estructura básica</strong> de todos estos compuestos. El enlace amida se forma al reaccionar un grupo carboxilo con uno amino, con pérdida de una molécula de agua: exactamente la misma reacción del enlace peptídico.</p>
+    <div class="nota ojo">
+      <span class="etq">El contraste que se pregunta</span>
+      <p>En los <strong>fosfátidos de glicerina</strong> el ácido graso se une al glicerol por <strong>enlace éster</strong>. En los <strong>esfingolípidos</strong> el ácido graso se une a la esfingosina por <strong>enlace amida</strong>. Distinto esqueleto, distinto enlace.</p>
+    </div>
+
+    <h3>Clasificación</h3>
+    <p>Según qué se le una al hidroxilo del carbono 1 de la ceramida:</p>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Grupo sustituyente (−X)</th><th>Nombre del esfingolípido</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">−H</td><td><strong>Ceramida</strong></td></tr>
+          <tr><td>Fosfato-colina</td><td><strong>Esfingomielina</strong> (esfingolípido fosfatado)</td></tr>
+          <tr><td>Glúcidos</td><td><strong>Glicolípidos</strong> o glicoesfingolípidos (no fosfatados)</td></tr>
+          <tr><td>Un monosacárido neutro: glucosa o galactosa</td><td>Cerebrósidos</td></tr>
+          <tr><td>Hasta 7 monosacáridos, incluidos N-acetil-galactosamina y ácido siálico, más glucosa, galactosa, manosa y fructosa</td><td>Gangliósidos</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Los <strong>glicoesfingolípidos</strong> se dividen en <strong>cerebrósidos</strong>, <strong>sulfátidos o sulfolípidos</strong> y <strong>gangliósidos</strong>. Los gangliósidos se distinguen porque contienen <strong>oligosacáridos</strong> —de 3 a 9 monosacáridos— y, característicamente, <strong>ácido siálico</strong>.</p>
+    <div class="nota">
+      <span class="etq">Por qué las esfingomielinas son fosfolípidos</span>
+      <p>Las esfingomielinas, junto con los fosfátidos de glicerina, constituyen los <strong>fosfolípidos</strong>, porque presentan <strong>fósforo</strong> en su estructura. Los glicolípidos no lo tienen: llevan glúcidos en su lugar.</p>
+    </div>
+  </div>
+  <div class="contenedor">
+    <div class="laboratorio">
+      <h4>Constructor de esfingolípidos</h4>
+      <p style="opacity:.85">Elige qué se une al carbono 1 de la ceramida.</p>
+      <div class="constructor" id="es-opciones"></div>
+      <div class="veredicto" id="es-out" aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="contenedor prosa">
+    <h3>Lectura por zonas</h3>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th></th><th>Esfingomielina</th><th>Glicolípido</th></tr></thead>
+        <tbody>
+          <tr><th>Zona constante</th><td>Esfingosina y fosfato-colina</td><td>Esfingosina</td></tr>
+          <tr><th>Zona variable</th><td>Ácido graso</td><td>Ácido graso y glúcidos</td></tr>
+          <tr><th>Zona polar</th><td>Fosfato-colina</td><td>Glúcidos</td></tr>
+          <tr><th>Zona apolar</th><td>Ácido graso y esfingosina</td><td>Ácido graso y esfingosina</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Los esfingolípidos son, por tanto, <strong>lípidos anfipáticos</strong>: cabeza polar hidrofílica y colas apolares hidrofóbicas, igual que los fosfátidos de glicerina.</p>
+
+    <h3>Funciones de los esfingolípidos</h3>
+    <ol class="lista-num">
+      <li><b>Forman parte de las membranas biológicas</b>Se encuentran en grandes cantidades en la <strong>sustancia blanca</strong> del sistema nervioso central.</li>
+      <li><b>Las esfingomielinas son componentes de las vainas mielínicas</b>De los nervios.</li>
+      <li><b>Acción antigénica</b>Algunos glicoesfingolípidos se la confieren a la superficie de ciertas células, lo que contribuye a su reconocimiento molecular.</li>
+      <li><b>Los cerebrósidos y sulfátidos</b>Forman parte de tejidos como el cerebro, los nervios, el bazo y los riñones.</li>
+      <li><b>Los gangliósidos</b>Aparecen en las células ganglionares del cerebro y en tejidos no nerviosos.</li>
+      <li><b>Transmisión del impulso nervioso</b>Se les atribuye participación en ella.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="terpenos" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">3.9</span><span class="rotulo" style="margin:0">Terpenos</span></div>
+    <h2>Terpenos y vitaminas liposolubles</h2>
+    <div class="nota">
+      <span class="etq">Definición</span>
+      <p>Los terpenos son compuestos heterogéneos, en su mayoría de <strong>origen vegetal</strong>, que contienen en su estructura <strong>varias unidades de isopreno</strong> (2-metil-1,3-butadieno).</p>
+    </div>
+    <p>Son terpenos las vitaminas liposolubles <strong>A, E y K</strong>. La vitamina D no es un terpeno: deriva del colesterol, y por eso se estudia en el apartado siguiente.</p>
+  </div>
+  <div class="contenedor">
+    <div class="rejilla c3">
+      <div class="tarjeta">
+        <h4>Vitamina A · Retinol</h4>
+        <p><strong>Precursor:</strong> los pigmentos vegetales carotenos.</p>
+        <p><strong>Fuentes:</strong> mantequilla, yema de huevo, zanahoria, calabaza, remolacha.</p>
+        <p><strong>Carencia:</strong> ceguera nocturna y <strong>xeroftalmia</strong>, en la que la conjuntiva se engruesa, reseca y queratiniza.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Vitamina K · Naftoquinonas</h4>
+        <p><strong>Formas:</strong> K1 o filoquinona, K2 o farnoquinona, K3 o menadiona (sintética).</p>
+        <p><strong>Fuentes:</strong> vegetales como lechuga y col, hígado; además se sintetiza por microorganismos de la flora intestinal.</p>
+        <p><strong>Carencia:</strong> síndrome hemorrágico por falta de protrombina o factor II de la coagulación. En el recién nacido prematuro puede causar hemorragia intracraneal.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Vitamina E · Tocoferoles</h4>
+        <p><strong>Fuentes:</strong> aceites vegetales de maíz y girasol, huevo, lechuga y mantequilla.</p>
+        <p><strong>Carencia:</strong> hemólisis y signos neurológicos, aunque es raro que se presente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="esteroides" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">3.10</span><span class="rotulo" style="margin:0">Esteroides</span></div>
+    <h2>El colesterol y todo lo que sale de él</h2>
+    <div class="nota">
+      <span class="etq">Definición</span>
+      <p>Los esteroides presentan el sistema policíclico del <strong>ciclopentanoperhidrofenantreno</strong>. Su estructura característica es el <strong>núcleo esteroide</strong>: cuatro anillos fusionados, <strong>tres de seis carbonos y uno de cinco</strong>.</p>
+    </div>
+    <p>Dentro del grupo de los esteroides se encuentran los <strong>esteroles</strong>, y el más importante de todos es el <strong>colesterol</strong>.</p>
+    <h3>El colesterol, descrito con precisión</h3>
+    <ul>
+      <li>Un grupo <strong>hidroxilo en el carbono 3</strong>.</li>
+      <li><strong>Grupos metilo angulares</strong> en los carbonos 10 y 13.</li>
+      <li>Una <strong>cadena hidrocarbonada en el carbono 17</strong>, de 8 átomos de carbono.</li>
+      <li>En total, <strong>27 carbonos</strong>.</li>
+    </ul>
+    <div class="nota">
+      <span class="etq">Por qué es anfipático</span>
+      <p>La molécula de colesterol es <strong>anfipática</strong>: su porción polar la constituye el <strong>grupo OH</strong> y la apolar, <strong>el resto de la molécula</strong>. Por eso el <strong>colesterol libre</strong> forma parte de las membranas biológicas.</p>
+      <p>Cuando al OH se le une un ácido graso por <strong>enlace éster</strong>, se forma un <strong>éster de colesterol</strong>. Estos compuestos constituyen <strong>ceras</strong> y <strong>carecen de carácter anfipático</strong>, porque ya no queda grupo polar libre.</p>
+    </div>
+
+    <h3>El colesterol es precursor de cuatro grupos de compuestos</h3>
+  </div>
+  <div class="contenedor">
+    <div class="rejilla c2">
+      <div class="tarjeta">
+        <h4>1 · Vitamina D3</h4>
+        <p>Formas: D2 o ergocolecalciferol y D3 o colecalciferol. Fuente principal: aceite de hígado de bacalao.</p>
+        <p><strong>Carencia:</strong> raquitismo en niños y osteomalacia en adultos, ambas por descalcificación de los huesos.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>2 · Ácidos biliares</h4>
+        <p>Al conjugarse con los aminoácidos <strong>glicina</strong> y <strong>taurina</strong> forman las <strong>sales biliares</strong>. El ácido cólico, por ejemplo, da el ácido glicocólico.</p>
+        <p>Las sales biliares tienen <strong>acción detergente</strong>, por lo que favorecen la emulsificación de los lípidos de la dieta y cumplen una función importante en su digestión y absorción.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>3 · Corticosteroides</h4>
+        <p><strong>Glucocorticoides:</strong> cortisol o hidrocortisona, liberado como respuesta al estrés; incrementa la glucosa sanguínea por gluconeogénesis y suprime el sistema inmunológico. También la corticosterona.</p>
+        <p><strong>Mineralocorticoides:</strong> aldosterona, que conserva sodio, secreta potasio e incrementa la presión sanguínea.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>4 · Hormonas sexuales</h4>
+        <p><strong>Progesterona:</strong> involucrada en el ciclo menstrual, el embarazo y la embriogénesis. Se produce en el cuerpo lúteo y la placenta.</p>
+        <p><strong>Andrógenos:</strong> testosterona, clave en el desarrollo de los tejidos reproductivos masculinos y los caracteres sexuales secundarios.</p>
+        <p><strong>Estrógenos:</strong> estradiol, que actúa sobre los órganos reproductivos y desencadena la ovulación por retroalimentación positiva.</p>
+      </div>
+    </div>
+  </div>
+  <div class="contenedor prosa">
+    <div class="nota ojo">
+      <span class="etq">Relevancia clínica</span>
+      <p>Los <strong>altos niveles de colesterol en sangre</strong> están asociados con la formación de <strong>placas de ateroma (ateroesclerosis)</strong>, y una dieta rica en colesterol puede incrementar sus niveles. Los valores normales de colesterol en sangre son de <strong>3,87 a 6,50 mmol/L</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="eicosanoides" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">3.11</span><span class="rotulo" style="margin:0">Eicosanoides</span></div>
+    <h2>Derivados de ácidos grasos de veinte carbonos</h2>
+    <div class="nota">
+      <span class="etq">Definición</span>
+      <p>Son <strong>ácidos grasos derivados de los eicosapolienoicos (C20)</strong>: fundamentalmente del <strong>ácido araquidónico</strong> (serie ω6) y del <strong>ácido eicosapentaenoico</strong> (serie ω3).</p>
+    </div>
+    <p>Tienen importantes efectos fisiológicos y farmacológicos, <strong>actúan en bajas concentraciones</strong> y en muchos casos mediante el <strong>AMPc como segundo mensajero</strong>, por lo que su acción es de tipo hormonal, aunque <strong>actúan localmente y no a distancia</strong>. Esa es la diferencia con una hormona clásica.</p>
+    <h3>Comprenden dos grupos</h3>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Grupo</th><th>Compuestos</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Prostanoides</strong></td><td>Prostaglandinas (PG) y prostaciclinas (PGI)</td></tr>
+          <tr><td><strong>Los otros dos</strong></td><td>Tromboxanos (TX) y leucotrienos (LT)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Las dos rutas a partir del ácido araquidónico</h3>
+    <div class="ruta">
+      <div class="paso-b"><h4>Vía de la ciclooxigenasa (COX)</h4><p>El ácido araquidónico da <strong>prostaglandinas, prostaciclinas y tromboxanos</strong>. Es la vía que bloquean la aspirina, la fenilbutazona y los corticoides.</p></div>
+      <div class="paso-b"><h4>Vía de la lipooxigenasa</h4><p>El ácido araquidónico da <strong>leucotrienos</strong>. Esta vía no la bloquea la aspirina.</p></div>
+    </div>
+  </div>
+  <div class="contenedor">
+    <div class="rejilla c2">
+      <div class="tarjeta">
+        <h4>Prostaglandinas (PG)</h4>
+        <p>Inducen <strong>reacciones inflamatorias</strong> en los tejidos (PGE2 y PG1) y participan en la <strong>intensidad y duración del dolor</strong> (PGE2).</p>
+        <p>Algunas intervienen en el <strong>trabajo de parto</strong> y pueden interrumpir el embarazo (PGE2 y PGF2α); de ahí medicamentos como el misoprostol.</p>
+        <p>Las PGE, PGA y PGI2 tienen <strong>efecto vasodilatador</strong>; otras inhiben la secreción ácida gástrica y se han empleado en el tratamiento de la úlcera péptica. Las más importantes en el ser humano son la PGE2 y la PGF2α.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Tromboxanos (TX)</h4>
+        <p><strong>Regulan la coagulación sanguínea.</strong> Su función principal es participar en la <strong>hemostasia</strong>: coagulación y agregación plaquetaria.</p>
+        <p>El <strong>TXA2</strong> es además un potente <strong>broncoconstrictor</strong>, y por su papel en la agregación plaquetaria es importante en el cierre de heridas y hemorragias.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Prostaciclinas (PGI)</h4>
+        <p>Actúan <strong>previniendo la formación y agregación plaquetarias</strong>: hacen lo contrario que los tromboxanos.</p>
+        <p>Son también <strong>vasodilatadores eficaces</strong> y las secretan las <strong>células endoteliales</strong> de los vasos sanguíneos.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Leucotrienos (LT)</h4>
+        <p>Provocan la <strong>contracción de la musculatura lisa</strong>, constricción de las vías aéreas, tráquea e intestino, y modifican la <strong>permeabilidad capilar</strong> produciendo edemas.</p>
+        <p>Juegan un papel importante en las respuestas <strong>inflamatorias y alérgicas</strong>. Los producen los leucocitos (neutrófilos y eosinófilos) y <strong>se encuentran elevados en el asma bronquial</strong>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="contenedor prosa">
+    <div class="nota">
+      <span class="etq">La pareja opuesta que siempre se pregunta</span>
+      <p><strong>Tromboxano:</strong> favorece la agregación plaquetaria y es vasoconstrictor; lo producen las plaquetas.<br>
+      <strong>Prostaciclina:</strong> inhibe la agregación plaquetaria y es vasodilatadora; la producen las células endoteliales.<br>
+      Ambos vienen del mismo ácido araquidónico y de la misma enzima COX, pero con efectos contrarios. Ese equilibrio es lo que mantiene la sangre fluida dentro del vaso y coagulable en la herida.</p>
+    </div>
+  </div>
+</section>
+
+<section id="clinica" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">3.12</span><span class="rotulo" style="margin:0">Cierre</span></div>
+    <h2>Aplicación clínica y conclusiones</h2>
+    <h3>Síndrome de dificultad respiratoria del recién nacido</h3>
+    <p>Se caracteriza porque los pulmones inmaduros de los bebés prematuros —nacidos antes de las 37 semanas— <strong>no producen suficiente surfactante alveolar</strong>. El surfactante contiene en su composición <strong>dipalmitoil-fosfatidilcolina</strong> y <strong>fosfatidilglicerol</strong>, y reviste los alvéolos permitiendo que se abran y que no colapsen al cerrarse durante la espiración.</p>
+    <p>Sin él, los pulmones no pueden llenarse de aire y el oxígeno no llega al torrente sanguíneo. Lo produce un tipo de célula pulmonar especializada, los <strong>neumocitos tipo II</strong>, que lo almacenan en cuerpos laminares y lo liberan al espacio interalveolar, donde <strong>reduce la tensión superficial</strong>.</p>
+    <p>Es el mejor ejemplo del módulo: un fosfoglicérido concreto, con su carácter anfipático y su efecto tensoactivo, decidiendo si un recién nacido puede respirar.</p>
+
+    <h3>Conclusiones de la conferencia</h3>
+    <ul>
+      <li>Los lípidos constituyen un <strong>conjunto heterogéneo</strong> de compuestos químicos <strong>insolubles en solventes polares</strong> como el agua y <strong>solubles en solventes apolares</strong>.</li>
+      <li>Los <strong>triacilglicéridos</strong> constituyen una reserva de energía almacenada en el tejido adiposo, además de cumplir otras funciones importantes como el mantenimiento de la temperatura corporal y el sostén y protección de los órganos.</li>
+      <li>Los <strong>fosfátidos de glicerina</strong> y los <strong>esfingolípidos</strong> son lípidos <strong>anfipáticos</strong> que forman parte de las membranas biológicas.</li>
+      <li>Los <strong>eicosanoides</strong> derivan de ácidos grasos poliinsaturados de 20 carbonos y cumplen importantes funciones fisiológicas y farmacológicas.</li>
+    </ul>
+    <div class="nota">
+      <span class="etq">Estudio independiente</span>
+      <p><em>Bioquímica Médica</em>, Cardellá–Hernández, Tomo I, capítulo 13, págs. 219 a 238. Buscar la clasificación de los ácidos grasos según composición y según originen o no sales por hidrólisis alcalina (pág. 218); ácidos grasos sustituidos (pág. 226); propiedades químicas de los ácidos grasos, sin estudiar las reacciones (págs. 226–227).</p>
+    </div>
+  </div>
+</section>
+
+<section id="examen" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">3.13</span><span class="rotulo" style="margin:0">Evaluación</span></div>
+    <h2>Examen del módulo 3</h2>
+    <p>Treinta preguntas sobre todo el módulo, en orden aleatorio y una a la vez, sin decirte si acertaste hasta que entregues. Al terminar obtienes calificación, desglose por tema y revisión de cada error.</p>
+  </div>
+  <div class="contenedor"><div class="examen" id="examen-caja"></div></div>
+</section>
+
+<footer style="padding:56px 0 70px;font-size:.9rem;color:var(--tinta-suave)">
+  <div class="contenedor prosa">
+    <p>Módulo 3 de la guía de estudio del Tema 2: Biomoléculas y Macromoléculas, elaborada a partir de la conferencia «Lípidos». Material de apoyo; no sustituye la conferencia ni el libro de texto.</p>
+    <p><a href="modulo-2-proteinas.html">← Anterior: Módulo 2, Proteínas</a> · <a href="index.html">Volver al índice</a></p>
+  </div>
+</footer>
+</main>
+
+<div class="telon" id="telon" role="dialog" aria-modal="true"><div class="panel" id="panel"></div></div>
+
+<script>
+(function(){
+"use strict";
+/* ---- catálogo de las 7 clases ---- */
+var C={anf:"#237A70",apo:"#B87C1C",dep:"#7A4699"};
+var CLASES=[
+{n:"Ácidos grasos",tipo:"anf",comp:"Grupo carboxilo + cadena hidrocarbonada",enl:"—",
+ def:"Ácidos orgánicos monocarboxílicos que en su gran mayoría forman parte de lípidos complejos.",
+ fun:"Son la pieza que aparece dentro de casi todos los demás lípidos y una fuente de energía en sí mismos.",
+ ej:"Palmítico (16C), esteárico (18C), oleico (ω9), linoleico (ω6), linolénico (ω3), araquidónico (20C)."},
+{n:"Ceras",tipo:"apo",comp:"Ácido graso de cadena larga + alcohol monohidroxilado o esterol",enl:"Éster",
+ def:"Lípidos formados por esterificación de ácidos grasos de cadena larga con alcoholes monohidroxilados o con esteroles.",
+ fun:"Protección e impermeabilización. Los ésteres de colesterol son la forma de transporte y depósito del colesterol.",
+ ej:"Ésteres de colesterol."},
+{n:"Acilgliceroles",tipo:"apo",comp:"Glicerol + 1, 2 o 3 ácidos grasos",enl:"Éster",
+ def:"Constituidos por una molécula de glicerol a la que se le esterifican ácidos grasos.",
+ fun:"Reserva energética, fuente de energía, regulación térmica, sostén de órganos y protección contra traumatismos.",
+ ej:"Monoacilgliceroles, diacilgliceroles y triacilgliceroles (mantecas y aceites)."},
+{n:"Fosfátidos de glicerina",tipo:"anf",comp:"Glicerol + 1 o 2 ácidos grasos + fosfato + alcohol",enl:"Éster y éster fosfórico",
+ def:"Lípidos complejos anfipáticos con un grupo fosfato en el carbono 3 del glicerol, al que se une otro compuesto.",
+ fun:"Componentes de membranas, precursores de otros lípidos, coagulación y efecto tensoactivo, donadores de araquidónico y origen de segundos mensajeros.",
+ ej:"Ácido fosfatídico, fosfatidilserina, fosfatidiletanolamina, fosfatidilcolina, fosfatidilinositol, cardiolipina, plasmalógenos."},
+{n:"Esfingolípidos",tipo:"anf",comp:"Esfingosina (18C) + ácido graso + fosfato-colina o glúcidos",enl:"Amida",
+ def:"Lípidos complejos que contienen esfingosina, un alcohol nitrogenado e insaturado de 18 átomos de carbono.",
+ fun:"Membranas biológicas, vainas mielínicas, acción antigénica y participación en la transmisión del impulso nervioso.",
+ ej:"Ceramida, esfingomielina, cerebrósidos, sulfátidos y gangliósidos."},
+{n:"Terpenos",tipo:"apo",comp:"Unidades de isopreno (2-metil-1,3-butadieno)",enl:"—",
+ def:"Compuestos heterogéneos, en su mayoría de origen vegetal, con varias unidades de isopreno en su estructura.",
+ fun:"Funciones vitamínicas: visión, coagulación y protección antioxidante.",
+ ej:"Vitaminas liposolubles A (retinol), E (tocoferoles) y K (naftoquinonas)."},
+{n:"Esteroides",tipo:"dep",comp:"Núcleo de ciclopentanoperhidrofenantreno: 4 anillos fusionados",enl:"—",
+ def:"Lípidos que presentan el sistema policíclico del ciclopentanoperhidrofenantreno: tres anillos de seis carbonos y uno de cinco.",
+ fun:"El colesterol libre es anfipático y forma parte de las membranas; además es precursor de la vitamina D3, los ácidos biliares y las hormonas esteroideas.",
+ ej:"Colesterol (27C), cortisol, aldosterona, progesterona, testosterona, estradiol."}
+];
+var tb=document.getElementById("tablero-lipidos");
+CLASES.forEach(function(c,i){
+  var b=document.createElement("button");
+  b.className="aa";b.setAttribute("aria-label","Ver ficha de "+c.n);
+  b.innerHTML='<span class="banda" style="background:'+C[c.tipo]+'"></span>'+
+    '<span class="letra" style="font-size:1.7rem">'+(i+1)+'</span>'+
+    '<span class="abrev">'+(c.tipo==="anf"?"ANFIPÁTICO":(c.tipo==="apo"?"APOLAR":"SEGÚN EL CASO"))+'</span>'+
+    '<span class="nombre">'+c.n+'</span>';
+  b.addEventListener("click",function(){abrir(i);});
+  tb.appendChild(b);
+});
+var telon=document.getElementById("telon"),panel=document.getElementById("panel"),foco=null;
+function abrir(i){
+  var c=CLASES[i];
+  panel.innerHTML='<button class="cerrar" aria-label="Cerrar">×</button><h3>'+c.n+'</h3>'+
+    '<p class="sub" style="color:'+C[c.tipo]+'">'+(c.tipo==="anf"?"Lípido anfipático":(c.tipo==="apo"?"Lípido apolar":"Depende del compuesto"))+'</p>'+
+    '<p style="font-size:.95rem">'+c.def+'</p>'+
+    '<dl class="ficha"><dt>Componentes</dt><dd>'+c.comp+'</dd>'+
+    '<dt>Enlace</dt><dd>'+c.enl+'</dd></dl>'+
+    '<h4 style="margin-top:0">Funciones</h4><p style="font-size:.94rem">'+c.fun+'</p>'+
+    '<h4>Ejemplos</h4><p style="font-size:.94rem;margin-bottom:0">'+c.ej+'</p>';
+  telon.classList.add("abierto");foco=document.activeElement;
+  var x=panel.querySelector(".cerrar");x.focus();x.addEventListener("click",cerrar);
+}
+function cerrar(){telon.classList.remove("abierto");if(foco)foco.focus();}
+telon.addEventListener("click",function(e){if(e.target===telon)cerrar();});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&telon.classList.contains("abierto"))cerrar();});
+
+/* ---- clasificador de ácidos grasos ---- */
+var agc=document.getElementById("ag-c"),agsat="mono";
+function ag(){
+  var n=+agc.value,largo,nota;
+  document.getElementById("ag-c-v").textContent=n;
+  if(n<=4)largo="cadena corta";
+  else if(n<=5)largo="entre categorías (la conferencia salta de 4 a 6)";
+  else if(n<=10)largo="cadena media";
+  else if(n<12)largo="entre categorías (la conferencia salta de 10 a 12)";
+  else largo="cadena larga";
+  var tipo=agsat==="sat"?"saturado":(agsat==="mono"?"insaturado (monoinsaturado)":"insaturado (poliinsaturado)");
+  var sol=(n<=4?"Bastante soluble en agua: el grupo carboxilo polar todavía pesa mucho frente a una cola corta.":
+    (n<=10?"Solubilidad intermedia y decreciente.":"Solubilidad prácticamente nula en agua."));
+  if(agsat!=="sat")sol+=" Las insaturaciones incrementan algo la solubilidad en solventes polares.";
+  if(agsat==="poli")nota="Los ácidos grasos esenciales son todos poliinsaturados: linoleico (ω6), linolénico (ω3) y araquidónico (ω6, parcialmente esencial).";
+  else if(agsat==="sat"&&n>=12)nota="Un triacilglicérido formado con ácidos grasos así sería sólido a temperatura ambiente: una manteca.";
+  else nota="Un triacilglicérido con ácidos grasos insaturados o saturados de menos de 10 carbonos sería líquido a temperatura ambiente: un aceite.";
+  document.getElementById("ag-out").innerHTML='<b>'+n+' carbonos · '+tipo+'</b><code>Clasificación por longitud: '+largo+'</code><p>'+sol+' '+nota+'</p>';
+}
+agc.addEventListener("input",ag);
+document.querySelectorAll("[data-sat]").forEach(function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll("[data-sat]").forEach(function(o){o.setAttribute("aria-pressed","false");});
+    b.setAttribute("aria-pressed","true");agsat=b.dataset.sat;ag();
+  });
+});
+ag();
+
+/* ---- constructores ---- */
+var FG=[
+{x:"−H",n:"Ácido fosfatídico",d:"Sin sustituyente. Es la base estructural del resto de los fosfátidos de glicerina y el precursor metabólico de su síntesis, además de intermediario en la síntesis de los triacilgliceroles."},
+{x:"Serina",n:"Fosfatidilserina",d:"También llamada serín-cefalina. El ácido fosfatídico se une a la L-serina esterificando el hidroxilo de la cadena lateral de este aminoácido con el grupo fosfato."},
+{x:"Etanolamina",n:"Fosfatidiletanolamina",d:"También llamada etanolamín-cefalina. El sustituyente básico es el alcohol etanolamina, que se forma por descarboxilación de la serina."},
+{x:"Colina",n:"Fosfatidilcolina",d:"Son las lecitinas. El compuesto básico nitrogenado colina se une al ácido fosfórico por enlace éster. La dipalmitoil-fosfatidilcolina es componente del surfactante pulmonar."},
+{x:"Glicerol",n:"Fosfatidilglicerol",d:"No contiene nitrógeno. Un glicerol esterifica al grupo fosfato del ácido fosfatídico."},
+{x:"Inositol",n:"Fosfatidilinositol",d:"No nitrogenado. Contiene mioinositol, un alcohol cíclico de seis carbonos. Su derivado PIP₂ origina los segundos mensajeros DAG e IP₃."},
+{x:"Fosfatidilglicerol",n:"Cardiolipina",d:"También llamada difosfatidilglicerol. Contiene residuos de ácidos fosfatídicos que esterifican grupos OH del glicerol."}
+];
+var ES=[
+{x:"−H",n:"Ceramida",d:"La estructura básica de todos los esfingolípidos: esfingosina más un ácido graso unido por enlace amida."},
+{x:"Fosfato-colina",n:"Esfingomielina",d:"Esfingolípido fosfatado. Al contener fósforo, junto con los fosfátidos de glicerina constituye los fosfolípidos. Es componente de las vainas mielínicas de los nervios."},
+{x:"Un monosacárido neutro (glucosa o galactosa)",n:"Cerebrósido",d:"Glicoesfingolípido no fosfatado. Forma parte de tejidos como el cerebro, los nervios, el bazo y los riñones."},
+{x:"Oligosacárido con ácido siálico",n:"Gangliósido",d:"Glicoesfingolípido con hasta 7 monosacáridos, incluidos N-acetil-galactosamina y ácido siálico. Aparecen en las células ganglionares del cerebro y en tejidos no nerviosos."}
+];
+(function(){
+  var caja=document.getElementById("fg-opciones"),out=document.getElementById("fg-out");
+  function pinta(d){out.innerHTML='<b>'+d.n+'</b><code>ácido fosfatídico + '+d.x+'</code><p>'+d.d+'</p>';}
+  FG.forEach(function(d,i){
+    var b=document.createElement("button");b.className="opcx";b.textContent=d.x;
+    b.setAttribute("aria-pressed",i===0?"true":"false");
+    b.addEventListener("click",function(){
+      caja.querySelectorAll(".opcx").forEach(function(o){o.setAttribute("aria-pressed","false");});
+      b.setAttribute("aria-pressed","true");pinta(d);
+    });
+    caja.appendChild(b);
+  });
+  pinta(FG[0]);
+})();
+(function(){
+  var caja=document.getElementById("es-opciones"),out=document.getElementById("es-out");
+  function pinta(d){out.innerHTML='<b>'+d.n+'</b><code>ceramida + '+d.x+'</code><p>'+d.d+'</p>';}
+  ES.forEach(function(d,i){
+    var b=document.createElement("button");b.className="opcx";b.textContent=d.x;
+    b.setAttribute("aria-pressed",i===0?"true":"false");
+    b.addEventListener("click",function(){
+      caja.querySelectorAll(".opcx").forEach(function(o){o.setAttribute("aria-pressed","false");});
+      b.setAttribute("aria-pressed","true");pinta(d);
+    });
+    caja.appendChild(b);
+  });
+  pinta(ES[0]);
+})();
+})();
+</script>
+
+<script>
+window.BANCO=[
+{t:"Concepto",q:"Los lípidos se definen como un conjunto heterogéneo de compuestos que tienen en común:",o:["Estar formados por glicerol","Su escasa solubilidad en agua y su solubilidad en solventes apolares orgánicos","Contener siempre fósforo","Ser polímeros de ácidos grasos"],ok:1,ex:"Es el único grupo de biomoléculas definido por su comportamiento y no por su estructura. Por eso puede extraerse de cualquier material biológico con solventes orgánicos."},
+{t:"Concepto",q:"¿Cuál de estos NO es uno de los siete grupos de la clasificación estructural de los lípidos?",o:["Esfingolípidos","Terpenos","Aminoácidos grasos","Acilgliceroles"],ok:2,ex:"Los siete son: ácidos grasos, ceras, acilgliceroles, fosfátidos de glicerina, esfingolípidos, terpenos y esteroides."},
+{t:"Funciones",q:"La reserva energética del organismo está constituida principalmente por:",o:["El colesterol","Los triacilglicéridos del tejido adiposo","Los fosfátidos de glicerina","Los esfingolípidos"],ok:1,ex:"También llamados grasas neutras. Los fosfátidos y esfingolípidos son estructurales, no de reserva."},
+{t:"Funciones",q:"Actúan como segundos mensajeros en la regulación del metabolismo:",o:["El diacilglicerol y el trifosfato de inositol","Los triacilglicéridos","Las ceras","Los cerebrósidos"],ok:0,ex:"Ambos se forman a partir del PIP₂ por acción de la fosfolipasa C."},
+{t:"Ácidos grasos",q:"Los ácidos grasos son anfipáticos porque:",o:["Contienen fósforo","Tienen una porción polar hidrofílica y otra apolar hidrofóbica","Tienen dos grupos carboxilo","Son insolubles en todo"],ok:1,ex:"La porción polar es el grupo carboxilo, que a pH fisiológico está disociado; la apolar es la cadena hidrocarbonada."},
+{t:"Ácidos grasos",q:"En la nomenclatura de los ácidos grasos, la letra ω designa:",o:["El carbono del grupo carboxilo","El carbono número dos","El carbono terminal de la cadena","El primer doble enlace"],ok:2,ex:"La numeración empieza en el carboxilo, que es el carbono 1; las letras griegas empiezan en el carbono dos y omega marca el extremo opuesto."},
+{t:"Ácidos grasos",q:"Un ácido graso de 14 átomos de carbono se clasifica como de:",o:["Cadena corta","Cadena media","Cadena larga","No se clasifica"],ok:2,ex:"Corta: 2 a 4 carbonos. Media: 6 a 10. Larga: 12 a 26."},
+{t:"Ácidos grasos",q:"Los ácidos grasos esenciales tienen en común que:",o:["Todos son saturados","Todos son poliinsaturados y deben ingerirse en la dieta","Todos son de cadena corta","Todos son de la serie ω9"],ok:1,ex:"Son el linoleico (ω6), el linolénico (ω3) y el araquidónico (ω6, parcialmente esencial)."},
+{t:"Ácidos grasos",q:"El ácido oleico es:",o:["Saturado de 16 carbonos","Monoinsaturado de la serie ω9, típico del aceite de oliva","Poliinsaturado esencial","Un eicosanoide"],ok:1,ex:"El esteárico, también de 18 carbonos, es el saturado presente en grasas animales."},
+{t:"Ácidos grasos",q:"Respecto a la solubilidad de los ácidos grasos, es correcto que:",o:["Aumenta al aumentar el largo de la cadena","Los de cadena corta son más solubles y las insaturaciones aumentan la solubilidad","Las insaturaciones la disminuyen","Todos son igualmente insolubles"],ok:1,ex:"Cuanto más larga la cola apolar, menos pesa el grupo carboxilo polar en el conjunto de la molécula."},
+{t:"Ácidos grasos",q:"El ácido palmítico tiene:",o:["14 carbonos","16 carbonos","18 carbonos","20 carbonos"],ok:1,ex:"Mirístico 14, palmítico 16 y esteárico 18: los tres saturados más comunes en los lípidos naturales."},
+{t:"Ceras",q:"Las ceras se forman por:",o:["Esterificación de ácidos grasos de cadena larga con alcoholes monohidroxilados o con esteroles","Unión de glicerol con tres ácidos grasos","Unión de esfingosina con un ácido graso","Polimerización de isopreno"],ok:0,ex:"Los ésteres de colesterol son un ejemplo, y carecen de carácter anfipático."},
+{t:"Acilgliceroles",q:"Los acilgliceroles están constituidos por:",o:["Esfingosina y ácidos grasos","Glicerol al que se le esterifican ácidos grasos","Colesterol y ácidos grasos","Isopreno"],ok:1,ex:"Según el número de ácidos grasos esterificados son mono-, di- o triacilgliceroles."},
+{t:"Acilgliceroles",q:"Los triacilgliceroles son moléculas apolares porque:",o:["No contienen oxígeno","Los tres hidroxilos del glicerol quedan ocupados y no queda porción polar libre","Contienen fósforo","Son insaturados"],ok:1,ex:"Es lo que los distingue de los fosfátidos de glicerina y los esfingolípidos, que sí son anfipáticos."},
+{t:"Acilgliceroles",q:"Un triacilglicérido sólido a temperatura ambiente (una manteca) contiene:",o:["Ácidos grasos insaturados","Ácidos grasos saturados de cadena larga","Ácidos grasos saturados de menos de 10 carbonos","Colesterol"],ok:1,ex:"Los aceites, líquidos a temperatura ambiente, tienen ácidos grasos insaturados o saturados de cadena corta."},
+{t:"Fosfátidos",q:"En los fosfátidos de glicerina, el grupo fosfato se encuentra en:",o:["El carbono 1 del glicerol","El carbono 2 del glicerol","El carbono 3 del glicerol","La esfingosina"],ok:2,ex:"Al fosfato del carbono 3 se le pueden unir otros compuestos, generalmente alcoholes, y de ahí sale el nombre de cada fosfoglicérido."},
+{t:"Fosfátidos",q:"En un fosfátido de glicerina, la zona constante está formada por:",o:["Los ácidos grasos","Glicerol y fosfato","El alcohol sustituyente","Las colas hidrocarbonadas"],ok:1,ex:"La zona variable son los ácidos grasos y el alcohol; la polar, el fosfato y el alcohol; la apolar, las cadenas de ácidos grasos."},
+{t:"Fosfátidos",q:"El ácido fosfatídico es importante porque:",o:["Es la estructura básica del resto de los fosfátidos de glicerina y precursor de su síntesis","Es el único que no tiene fosfato","Forma las vainas de mielina","Es un esteroide"],ok:0,ex:"También es intermediario en la síntesis de los triacilgliceroles."},
+{t:"Fosfátidos",q:"La fosfatidilcolina también se conoce como:",o:["Cefalina","Lecitina","Cardiolipina","Plasmalógeno"],ok:1,ex:"Las cefalinas son la fosfatidilserina (serín-cefalina) y la fosfatidiletanolamina (etanolamín-cefalina)."},
+{t:"Fosfátidos",q:"Los plasmalógenos se distinguen del resto porque:",o:["No contienen nitrógeno","Carecen de ácido graso en el carbono 1 y en su lugar llevan un alquenol unido por enlace éter","Tienen tres ácidos grasos","No tienen fosfato"],ok:1,ex:"Por eso no se consideran derivados del ácido fosfatídico. Sí contienen nitrógeno, aportado por serina, etanolamina o colina."},
+{t:"Fosfátidos",q:"La escisión del PIP₂ por la fosfolipasa C produce:",o:["Ácido araquidónico y colina","Diacilglicerol (DAG) y trifosfato de inositol (IP₃)","Ceramida y colina","Glicerol y ácidos grasos"],ok:1,ex:"Ambos actúan como segundos mensajeros en la respuesta hormonal."},
+{t:"Esfingolípidos",q:"La esfingosina es un alcohol nitrogenado e insaturado de:",o:["16 átomos de carbono","18 átomos de carbono","20 átomos de carbono","27 átomos de carbono"],ok:1,ex:"Tiene hidroxilos en los carbonos 1 y 3, un grupo amino en el 2 y un doble enlace entre el 4 y el 5."},
+{t:"Esfingolípidos",q:"El ácido graso se une a la esfingosina mediante:",o:["Enlace éster","Enlace amida","Enlace éter","Enlace glicosídico"],ok:1,ex:"El resultado es la ceramida. En los fosfátidos de glicerina, en cambio, el ácido graso se une al glicerol por enlace éster."},
+{t:"Esfingolípidos",q:"Si a la ceramida se le une fosfato-colina, se obtiene:",o:["Un cerebrósido","Un gangliósido","Una esfingomielina","Un sulfátido"],ok:2,ex:"Al contener fósforo, la esfingomielina es un fosfolípido, igual que los fosfátidos de glicerina."},
+{t:"Esfingolípidos",q:"Los gangliósidos se caracterizan por contener:",o:["Un solo monosacárido neutro","Un oligosacárido que incluye ácido siálico","Fosfato-colina","Colesterol"],ok:1,ex:"Los cerebrósidos, en cambio, llevan un solo monosacárido neutro: glucosa o galactosa."},
+{t:"Esfingolípidos",q:"Las esfingomielinas son componentes característicos de:",o:["Las vainas mielínicas de los nervios","El tejido adiposo","La pared de las arterias","La bilis"],ok:0,ex:"Los esfingolípidos en general abundan en la sustancia blanca del sistema nervioso central."},
+{t:"Terpenos y esteroides",q:"Los terpenos contienen en su estructura varias unidades de:",o:["Glicerol","Isopreno","Esfingosina","Ácido siálico"],ok:1,ex:"Son terpenos las vitaminas liposolubles A, E y K. La vitamina D no lo es: deriva del colesterol."},
+{t:"Terpenos y esteroides",q:"El núcleo esteroide o ciclopentanoperhidrofenantreno consta de:",o:["Cuatro anillos fusionados: tres de seis carbonos y uno de cinco","Dos anillos de seis carbonos","Un anillo de cinco carbonos","Cadenas lineales de isopreno"],ok:0,ex:"El colesterol, con sus 27 carbonos, es el esterol más importante."},
+{t:"Terpenos y esteroides",q:"El colesterol es anfipático porque:",o:["Contiene fósforo","Su porción polar es el grupo OH del carbono 3 y la apolar es el resto de la molécula","Tiene dos cadenas de ácidos grasos","Está esterificado"],ok:1,ex:"Al esterificarse ese OH con un ácido graso se forma un éster de colesterol, que es una cera y pierde el carácter anfipático."},
+{t:"Eicosanoides",q:"El tromboxano y la prostaciclina se diferencian en que:",o:["El tromboxano favorece la agregación plaquetaria y la prostaciclina la inhibe","Ambos favorecen la agregación","El tromboxano deriva de la lipooxigenasa","La prostaciclina no deriva del araquidónico"],ok:0,ex:"Los dos vienen del ácido araquidónico por la vía de la ciclooxigenasa, pero con efectos contrarios. La prostaciclina la secretan las células endoteliales."},
+{t:"Eicosanoides",q:"Los leucotrienos se forman a partir del ácido araquidónico por acción de:",o:["La ciclooxigenasa","La lipooxigenasa","La fosfolipasa C","La ciclasa"],ok:1,ex:"Se encuentran elevados en el asma bronquial y provocan constricción de las vías aéreas y aumento de la permeabilidad capilar."}
+];
+</script>
+<script src="comun.js"></script>
+<script src="examen.js"></script>
+</body>
+</html>

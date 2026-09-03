@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Módulo 2 · Proteínas y macromoléculas</title>
+<meta name="description" content="Módulo 2: principios generales de organización de las macromoléculas, proteínas, niveles estructurales, desnaturalización, propiedades eléctricas y electroforesis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="barra">
+  <div class="barra-in">
+    <a class="volver" href="index.html">← Índice</a>
+    <span class="marca">Módulo 02 · <b>Proteínas</b></span>
+    <nav class="indice" aria-label="Apartados">
+      <a href="#macromoleculas">Macromoléculas</a>
+      <a href="#caracteristicas">8 características</a>
+      <a href="#informacional">Información</a>
+      <a href="#peptidos">Péptidos</a>
+      <a href="#clasificacion">Clasificación</a>
+      <a href="#niveles">Niveles</a>
+      <a href="#secundaria">2.ª estructura</a>
+      <a href="#hemoglobina">Hemoglobina</a>
+      <a href="#desnaturalizacion">Desnaturalización</a>
+      <a href="#electricas">Eléctricas</a>
+      <a href="#electroforesis">Electroforesis</a>
+      <a href="#taller">Taller</a>
+      <a href="#examen">Examen</a>
+    </nav>
+  </div>
+  <div class="progreso" id="progreso"></div>
+</header>
+
+<div class="hero">
+  <div class="contenedor">
+    <p class="credito">Módulo 02 · Conferencia: Proteínas<br>Biología Celular y Molecular · Tema 2 · 1<sup>er</sup> ciclo</p>
+    <h1 style="max-width:16ch">Del orden nace <em>la forma</em>; de la forma, la función.</h1>
+    <p class="entrada" style="max-width:52ch">Las proteínas son macromoléculas informacionales. La secuencia de sus aminoácidos determina la estructura tridimensional que adoptan, y esa estructura es la que les permite reconocer moléculas concretas y hacer su trabajo. Rompe la forma y pierdes la función, aunque la secuencia siga intacta.</p>
+    <div class="hero-datos">
+      <div class="dato"><b>8</b><span>características generales</span></div>
+      <div class="dato"><b>4</b><span>niveles estructurales</span></div>
+      <div class="dato"><b>&gt;5 kD</b><span>define una proteína</span></div>
+      <div class="dato"><b>2</b><span>tipos de información</span></div>
+    </div>
+    <div class="mapa">
+      <a href="#macromoleculas"><b>2.1</b>Concepto de macromolécula</a>
+      <a href="#caracteristicas"><b>2.2</b>Las ocho características generales</a>
+      <a href="#informacional"><b>2.3</b>Carácter informacional y reconocimiento molecular</a>
+      <a href="#peptidos"><b>2.4</b>Péptidos y proteínas</a>
+      <a href="#clasificacion"><b>2.5</b>Clasificación de las proteínas</a>
+      <a href="#niveles"><b>2.6</b>Los cuatro niveles estructurales</a>
+      <a href="#secundaria"><b>2.7</b>α-hélice frente a hoja plegada</a>
+      <a href="#hemoglobina"><b>2.8</b>La hemoglobina como ejemplo</a>
+      <a href="#desnaturalizacion"><b>2.9</b>Desnaturalización y renaturalización</a>
+      <a href="#electricas"><b>2.10</b>Propiedades eléctricas</a>
+      <a href="#electroforesis"><b>2.11</b>Electroforesis</a>
+      <a href="#taller"><b>2.12</b>Taller y preguntas de comprobación</a>
+    </div>
+  </div>
+</div>
+
+<main class="lienzo">
+
+<section id="macromoleculas" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.1</span><span class="rotulo" style="margin:0">Concepto</span></div>
+    <h2>Qué es una macromolécula</h2>
+    <div class="nota">
+      <span class="etq">Definición</span>
+      <p>Las macromoléculas son <strong>biomoléculas constituidas por cientos o miles de átomos, con una distribución tridimensional compleja</strong>. Su estabilidad depende de los <strong>enlaces covalentes</strong> que las forman y de las <strong>interacciones débiles</strong> que posibilitan sus funciones.</p>
+    </div>
+    <p>Fíjate en el reparto de papeles, porque es la clave de todo el módulo: los <strong>enlaces covalentes</strong> sostienen el esqueleto y son fuertes y estables; las <strong>interacciones débiles</strong> sostienen la forma tridimensional y son frágiles a propósito. Esa fragilidad es una ventaja: permite que la molécula cambie de forma para trabajar, y también que se estropee si el medio se altera.</p>
+    <p>Las tres macromoléculas del tema son los <strong>polisacáridos</strong>, los <strong>ácidos nucleicos</strong> y las <strong>proteínas</strong>.</p>
+    <div class="nota">
+      <span class="etq">Objetivos de la conferencia</span>
+      <p>1. Explicar los principios generales de organización de las macromoléculas, resaltando el significado biológico de la relación estructura–función en las biomoléculas informacionales y no informacionales.<br>
+      2. Explicar la estructura general de las proteínas sobre la base de los diferentes niveles estructurales e interacciones químicas que los estabilizan, con énfasis en la diversidad estructural que determina la diversidad funcional, teniendo en cuenta la relación <strong>secuencia – conformación – función</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="caracteristicas" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.2</span><span class="rotulo" style="margin:0">Principios generales</span></div>
+    <h2>Las ocho características generales de las macromoléculas</h2>
+    <p>Se preguntan como lista y también una por una. Van explicadas en el mismo orden en que las presenta la conferencia.</p>
+    <ol class="lista-num">
+      <li><b>Elevado peso molecular</b>Se consideran macromoléculas los polímeros cuya masa molecular supera los <strong>5 kD o 5000 daltons</strong>, porque están constituidos por cientos a miles de monómeros.</li>
+      <li><b>Carácter polimérico</b>Están formadas por monómeros unidos entre sí por <strong>enlaces covalentes</strong>. Los monómeros son sus precursores; los polímeros son las macromoléculas. En el polímero aparecen propiedades que no dependen de los monómeros individuales sino de su organización: cuando el número de monómeros pasa cierto límite, surgen características cualitativas nuevas, ya propias del polímero.</li>
+      <li><b>Carácter uniforme</b>Cada una se forma por la polimerización de <strong>precursores de la misma clase</strong>, enlazados por <strong>el mismo tipo de enlace</strong>. Una proteína es solo aminoácidos unidos solo por enlaces peptídicos; nunca una mezcla.</li>
+      <li><b>Carácter lineal</b>Carecen de ramificaciones. La excepción son algunos polisacáridos ramificados, los homopolisacáridos <strong>glucógeno y almidón</strong>. Como los dos extremos son diferentes, la cadena tiene <strong>polaridad</strong>: se puede definir una dirección y saber cuál es la primera subunidad y cuál la última. Si dos cadenas se acomodan con sus primeros precursores coincidiendo, la disposición es <strong>paralela</strong>; en caso contrario, <strong>antiparalela</strong>.</li>
+      <li><b>Carácter tridimensional</b>Las cadenas lineales adoptan formas y dobleces en el espacio, dependiendo de las propiedades de sus precursores y del enlace que los une. La organización tridimensional se estudia por <strong>niveles</strong>, del primario al cuaternario.</li>
+      <li><b>Carácter informacional</b>Puede ser <strong>secuencial</strong> o <strong>conformacional</strong>. Es la característica que se desarrolla en el apartado siguiente.</li>
+      <li><b>Tendencia a la agregación</b>Las macromoléculas tienden a unirse unas con otras formando grandes estructuras <strong>supramacromoleculares</strong>, y de esa unión aparecen <strong>funciones nuevas</strong>. Ejemplos: los cromosomas, los ribosomas, las lipoproteínas y las membranas biológicas.</li>
+      <li><b>Relación estructura–función</b>La función está directamente vinculada a la estructura. Cuando se pierde la estructura tridimensional se pierde la función, porque desaparecen los <strong>sitios de reconocimiento molecular</strong> a los que están vinculadas esas funciones.</li>
+    </ol>
+
+    <h3>Carácter uniforme: el cuadro que hay que saber</h3>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Macromolécula</th><th>Tipo de monómero</th><th>Tipo de enlace</th></tr></thead>
+        <tbody>
+          <tr><td>Polisacáridos</td><td>Monosacáridos</td><td>Glicosídico</td></tr>
+          <tr><td>Ácidos nucleicos</td><td>Nucleótidos</td><td>Fosfodiéster 3′–5′</td></tr>
+          <tr><td>Proteínas</td><td>Aminoácidos</td><td>Peptídico</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="nota">
+      <span class="etq">Papel de las interacciones débiles</span>
+      <p>Los enlaces covalentes que forman la cadena son fuertes, muy estables en agua y tienen <strong>orientaciones espaciales propias</strong>, y eso determina la estructura tridimensional del polímero. Ahora bien, <strong>todos los niveles estructurales se estabilizan por interacciones débiles, excepto el primario</strong>, que se sostiene por enlaces covalentes. Por eso el nivel primario es el más estable de todos.</p>
+    </div>
+  </div>
+</section>
+
+<section id="informacional" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.3</span><span class="rotulo" style="margin:0">Información molecular</span></div>
+    <h2>Carácter informacional y reconocimiento molecular</h2>
+    <p>La información permite a una macromolécula <strong>discriminar con qué molécula interactúa, en qué sitio y bajo qué circunstancias</strong>. Se presenta de dos formas.</p>
+
+    <h3>Información secuencial</h3>
+    <p>Está contenida en la <strong>estructura primaria</strong>, por lo que es muy estable. Depende de la diversidad estructural de los precursores: <strong>a mayor variedad de monómeros, mayor contenido de información</strong>.</p>
+    <p>El ejemplo de la conferencia es claro: si a cada aminoácido le asignas una letra del alfabeto, el orden en que los coloques forma una palabra distinta. El mensaje está en la secuencia.</p>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Macromolécula</th><th>Variedad de monómeros</th><th>Consecuencia</th></tr></thead>
+        <tbody>
+          <tr><td>Homopolisacáridos (almidón, glucógeno)</td><td>Uno solo: glucosa</td><td><strong>Sin carácter informacional.</strong> Su función es de almacén energético.</td></tr>
+          <tr><td>Ácidos nucleicos</td><td>4 nucleótidos</td><td>Información suficiente para transmitir y conservar la información genética.</td></tr>
+          <tr><td>Proteínas</td><td>20 aminoácidos</td><td><strong>Mayor carácter informacional</strong> y, por tanto, múltiples funciones.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Información conformacional</h3>
+    <p><strong>Depende de la información secuencial</strong> y está contenida en la estructura tridimensional. Permite que la macromolécula interactúe con otra biomolécula a través de sitios específicos.</p>
+    <ul>
+      <li><strong>Sitio de reconocimiento molecular:</strong> el lugar donde ocurre la unión.</li>
+      <li><strong>Reconocimiento molecular:</strong> el mecanismo por el cual se establece esa interacción específica.</li>
+      <li><strong>Ligando:</strong> la sustancia que se une.</li>
+    </ul>
+    <h4>Propiedades de los sitios de reconocimiento</h4>
+    <ul>
+      <li>Están localizados en la <strong>superficie</strong> de la macromolécula.</li>
+      <li>Su estructura tridimensional es <strong>complementaria</strong> a la del ligando.</li>
+      <li>Tienen grupos químicos <strong>orientados</strong> para interactuar con los grupos del ligando.</li>
+      <li>La unión del ligando provoca <strong>cambios conformacionales</strong> que permiten que la macromolécula realice su función o que modulan su intensidad.</li>
+    </ul>
+    <div class="nota">
+      <span class="etq">La frase de cierre del módulo</span>
+      <p>La estructura primaria posee un carácter informacional secuencial que determina la estructura tridimensional biológicamente activa —terciaria o cuaternaria según la proteína—, y la función se ejerce mediante el reconocimiento molecular en virtud de la disposición espacial de las cadenas laterales de los aminoácidos. En corto: <strong>secuencia → conformación → función</strong>.</p>
+    </div>
+    <p>Las proteínas presentan <strong>los dos tipos de información</strong>, y esa es una de las razones por las que son las macromoléculas más versátiles del organismo.</p>
+  </div>
+</section>
+
+<section id="peptidos" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.4</span><span class="rotulo" style="margin:0">Péptidos y proteínas</span></div>
+    <h2>Dónde termina un péptido y empieza una proteína</h2>
+    <p>Los <strong>péptidos</strong> son, igual que las proteínas, polímeros de <strong>L-α-aminoácidos</strong> unidos entre sí por el enlace polimerizante peptídico. La diferencia entre unos y otras es de tamaño, y el corte está en los 5000 daltons.</p>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Denominación</th><th>Tamaño</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Oligopéptidos</strong></td><td>De 2 a 7 residuos de aminoácidos</td><td>Hormonas liberadoras hipotalámicas, como la liberadora de tirotropina, que estimula la liberación de tirotropina en la adenohipófisis</td></tr>
+          <tr><td><strong>Polipéptidos</strong></td><td>Más de 7 aminoácidos, pero sin alcanzar los 5000 Da</td><td>Glucagón (29), oxitocina (9), bradiquinina</td></tr>
+          <tr><td><strong>Proteínas</strong></td><td>Peso molecular <strong>mayor de 5000 Da</strong> (5 kDa)</td><td>Hemoglobina, insulina, enzimas, anticuerpos</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="nota">
+      <span class="etq">Definición para memorizar</span>
+      <p>Las proteínas son <strong>polímeros de aminoácidos unidos por enlace peptídico, con peso molecular mayor de 5000 daltons</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="clasificacion" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.5</span><span class="rotulo" style="margin:0">Clasificación</span></div>
+    <h2>Cuatro criterios para clasificar proteínas</h2>
+  </div>
+  <div class="contenedor">
+    <div class="rejilla c2">
+      <div class="tarjeta">
+        <h4>Por su forma</h4>
+        <p><strong>Globulares:</strong> estructura tridimensional esferoidal. Mioglobina, hemoglobina, enzimas, histonas.</p>
+        <p><strong>Fibrosas:</strong> estructura alargada. Colágena, queratina, miosina, fibrina.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Por su solubilidad</h4>
+        <p><strong>Insolubles:</strong> su forma empaquetada les permite formar fibras. Aquí entran todas las fibrosas y las globulares de las membranas biológicas.</p>
+        <p><strong>Solubles:</strong> estructura globular con los <strong>grupos polares hacia la superficie</strong>.</p>
+        <p><strong>Poco solubles:</strong> solubles en disoluciones de sales neutras como el cloruro de sodio. Ejemplo: las globulinas.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Por su composición química</h4>
+        <p><strong>Simples:</strong> formadas solo por aminoácidos.</p>
+        <p><strong>Conjugadas:</strong> tienen unido un <strong>grupo prostético</strong> que no es proteico. Puede ser lípido, glúcido, fosfato o hemo: lipoproteínas, glicoproteínas y hemoproteínas. El citocromo c es un ejemplo, con su grupo hemo.</p>
+      </div>
+      <div class="tarjeta">
+        <h4>Por su función</h4>
+        <p>Enzimas · de transporte · de reserva · contráctiles · estructurales · de defensa · reguladoras.</p>
+        <p>Esta lista es la que justifica que las proteínas <strong>cumplan el principio de multiplicidad de utilización</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="niveles" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.6</span><span class="rotulo" style="margin:0">Niveles estructurales</span></div>
+    <h2>Los cuatro niveles de organización</h2>
+    <p>La organización tridimensional se estudia por niveles, del primario al cuaternario. Cada uno se construye sobre el anterior, y cada uno se sostiene por fuerzas distintas. Esta tabla es la que hay que poder reproducir de memoria.</p>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Nivel</th><th>Concepto</th><th>Fuerzas que lo estabilizan</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Primario</strong></td><td>Orden o sucesión de los monómeros en el polímero. Se lee del extremo NH₂ terminal al COOH terminal.</td><td><strong>Enlace peptídico</strong> (covalente). Es el nivel más estable.</td></tr>
+          <tr><td><strong>Secundario</strong></td><td>Ordenamiento regular que adoptan <em>algunos sectores</em> de la cadena a lo largo de un eje, debido a la interacción entre los grupos carbonílicos y amídicos <strong>del propio enlace peptídico</strong>.</td><td><strong>Puentes de hidrógeno</strong> entre elementos del enlace peptídico.</td></tr>
+          <tr><td><strong>Terciario</strong></td><td>Disposición espacial irregular de la cadena doblándose sobre sí misma. Incluye fragmentos de estructura secundaria y supersecundaria.</td><td>Interacciones débiles entre las <strong>cadenas laterales R</strong> (hidrofóbicas —las más abundantes—, puentes de hidrógeno, uniones salinas y Van der Waals) más los <strong>puentes disulfuro</strong>, que son covalentes.</td></tr>
+          <tr><td><strong>Cuaternario</strong></td><td>Dos o más cadenas polipeptídicas, idénticas o diferentes, generalmente en número par, llamadas <strong>subunidades protoméricas</strong>, que en conjunto forman una estructura oligomérica biológicamente activa.</td><td><strong>Interacciones débiles</strong> entre las subunidades.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="nota">
+      <span class="etq">La distinción que más se confunde</span>
+      <p>El nivel <strong>secundario</strong> se estabiliza por puentes de hidrógeno entre los grupos <strong>del enlace peptídico</strong>, es decir, del esqueleto. El nivel <strong>terciario</strong> se estabiliza por interacciones entre las <strong>cadenas laterales R</strong>. Si te preguntan «entre qué grupos», esa es la respuesta que distingue un nivel del otro.</p>
+    </div>
+    <p>Para las proteínas de una sola cadena, que carecen de estructura cuaternaria, <strong>la estructura terciaria es la responsable directa de sus propiedades biológicas</strong>, porque la disposición espacial de los grupos funcionales determina su interacción con los ligandos.</p>
+    <h3>Estructura supersecundaria</h3>
+    <p>Entre el nivel secundario y el terciario aparecen combinaciones frecuentes de α-hélices y hojas plegadas que se repiten en muchas proteínas distintas. Se les llama <strong>estructuras supersecundarias</strong> y forman parte del plegamiento terciario.</p>
+  </div>
+</section>
+
+<section id="secundaria" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.7</span><span class="rotulo" style="margin:0">Estructura secundaria</span></div>
+    <h2>α-hélice frente a hoja plegada</h2>
+    <p>Los dos modelos principales de estructura secundaria. La conferencia pide compararlos punto por punto, así que aquí está la comparación completa.</p>
+  </div>
+  <div class="contenedor">
+    <div class="comparador">
+      <div class="cab"></div><div class="cab">α-hélice</div><div class="cab">Lámina β u hoja plegada</div>
+      <div class="et">Concepto</div>
+      <div>La cadena se enrolla en forma helicoidal alrededor de un eje imaginario.</div>
+      <div>La cadena se extiende y se pliega en zigzag, formando una superficie plegada.</div>
+      <div class="et">Fuerzas que la estabilizan</div>
+      <div>Puentes de hidrógeno.</div>
+      <div>Puentes de hidrógeno.</div>
+      <div class="et">Entre qué grupos</div>
+      <div>Entre los grupos carbonílicos y amídicos del enlace peptídico.</div>
+      <div>Entre los grupos carbonílicos y amídicos del enlace peptídico.</div>
+      <div class="et">Posición de los puentes de H</div>
+      <div><strong>Intracatenarios</strong>: dentro de la misma cadena, y <strong>paralelos</strong> al eje longitudinal.</div>
+      <div><strong>Intercatenarios</strong>: entre cadenas diferentes, o de la misma cadena que se pliega sobre sí misma. Perpendiculares al eje.</div>
+      <div class="et">Posición de las cadenas R</div>
+      <div>Hacia el <strong>exterior</strong> de la molécula.</div>
+      <div>Por <strong>encima y por debajo</strong> del plano de la estructura.</div>
+      <div class="et">Tipos</div>
+      <div>Helicoidal. Caso particular: la triple hélice del colágeno.</div>
+      <div>Paralela y antiparalela.</div>
+      <div class="et">Ejemplos</div>
+      <div>Mioglobina. Frecuente en proteínas globulares.</div>
+      <div>Dominios de las inmunoglobulinas. También frecuente en proteínas globulares.</div>
+    </div>
+  </div>
+  <div class="contenedor prosa">
+    <div class="nota">
+      <span class="etq">Truco para no confundirlas</span>
+      <p><strong>Hélice = intra</strong> (la cadena se abraza a sí misma). <strong>Hoja = inter</strong> (hacen falta dos tramos enfrentados). Las dos palabras empiezan igual que su respuesta.</p>
+    </div>
+  </div>
+</section>
+
+<section id="hemoglobina" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.8</span><span class="rotulo" style="margin:0">Ejemplo</span></div>
+    <h2>La hemoglobina, una proteína que reúne todo el módulo</h2>
+    <p>Se estudia como ejemplo porque en ella se ven a la vez casi todos los conceptos del tema.</p>
+    <div class="rejilla c2">
+      <div class="tarjeta"><h4>Estructura cuaternaria</h4><p>Está formada por <strong>cuatro cadenas polipeptídicas</strong>, dos α y dos β, unidas entre sí por <strong>interacciones débiles</strong>. Número par de subunidades protoméricas, como marca la definición.</p></div>
+      <div class="tarjeta"><h4>Proteína conjugada</h4><p>Cada cadena lleva unido un <strong>grupo prostético hemo</strong>, que es la parte no proteica y la que permite la unión con el oxígeno. Es, por tanto, una <strong>hemoproteína</strong>.</p></div>
+      <div class="tarjeta"><h4>Globular y soluble</h4><p>Su forma esferoidal y sus grupos polares en la superficie la hacen soluble, lo que le permite viajar dentro del glóbulo rojo.</p></div>
+      <div class="tarjeta"><h4>Reconocimiento molecular</h4><p>El oxígeno es el <strong>ligando</strong>; el hemo, el <strong>sitio de reconocimiento</strong>. Al unirse el oxígeno se producen cambios conformacionales que modulan la afinidad de las demás subunidades.</p></div>
+    </div>
+    <p>Otro ejemplo de nivel cuaternario que menciona la conferencia es la <strong>proteína kinasa A (PKA)</strong>, cuya estructura oligomérica tiene cuatro subunidades: dos reguladoras y dos catalíticas, con actividad enzimática.</p>
+  </div>
+</section>
+
+<section id="desnaturalizacion" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.9</span><span class="rotulo" style="margin:0">Desnaturalización</span></div>
+    <h2>Cuando se pierde la forma</h2>
+    <div class="nota">
+      <span class="etq">Definición</span>
+      <p>La desnaturalización se debe a la <strong>pérdida de la estructura tridimensional</strong> de la proteína y, por ende, <strong>de su función</strong>. Se debe a la acción de agentes físicos o químicos que <strong>rompen las interacciones débiles</strong> que estabilizan la estructura tridimensional. <strong>No afecta a los enlaces peptídicos</strong>, por lo que se mantiene el nivel primario.</p>
+    </div>
+    <h3>Agentes desnaturalizantes</h3>
+    <div class="rejilla c2">
+      <div class="tarjeta"><h4>Químicos</h4><p>Disolventes orgánicos como el <strong>alcohol</strong>, la <strong>urea</strong>, la <strong>acetona</strong>, los <strong>detergentes</strong> y las <strong>variaciones extremas de pH</strong>.</p></div>
+      <div class="tarjeta"><h4>Físicos</h4><p><strong>Radiaciones</strong>, <strong>vibraciones</strong> y <strong>calor</strong> (temperaturas superiores a la óptima).</p></div>
+    </div>
+    <h3>Cómo actúa cada uno</h3>
+    <ul>
+      <li><strong>Disolventes orgánicos, acetona, urea y detergentes:</strong> destruyen fundamentalmente las <strong>uniones hidrofóbicas</strong> que estabilizan el núcleo de las proteínas globulares.</li>
+      <li><strong>Variaciones extremas de pH:</strong> cambian la carga eléctrica de los grupos ionizables de las cadenas laterales expuestas en la superficie. Al cambiar la carga neta se producen <strong>repulsiones electrostáticas</strong>, y también se afectan los puentes de hidrógeno.</li>
+      <li><strong>Aumento de temperatura:</strong> incrementa la energía cinética y provoca vibraciones que destruyen las interacciones débiles <strong>en su conjunto</strong>.</li>
+    </ul>
+    <div class="nota ojo">
+      <span class="etq">Lo que NO se rompe</span>
+      <p>Estos agentes <strong>no afectan a los puentes disulfuro ni al enlace peptídico</strong>, por ser enlaces covalentes fuertes. Por eso la estructura primaria se mantiene intacta.</p>
+    </div>
+    <h3>Renaturalización</h3>
+    <p>Es la <strong>recuperación de la estructura tridimensional y, por ende, de la función</strong>, cuando se deja de someter a la proteína a la acción del agente físico o químico. El experimento clásico es el de la <strong>ribonucleasa</strong>: se desnaturaliza y, al retirar el agente, vuelve a plegarse y recupera su actividad. Esto demuestra que toda la información necesaria para el plegamiento ya estaba en la secuencia.</p>
+  </div>
+</section>
+
+<section id="electricas" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.10</span><span class="rotulo" style="margin:0">Propiedades eléctricas</span></div>
+    <h2>Carga neta y punto isoeléctrico de una proteína</h2>
+    <p>La carga eléctrica neta de una proteína depende de la carga que tengan:</p>
+    <ul>
+      <li>El grupo <strong>NH₂ terminal</strong> de un extremo de la cadena.</li>
+      <li>El grupo <strong>COOH terminal</strong> del otro extremo.</li>
+      <li>Los <strong>grupos ionizables de las cadenas laterales R</strong> de los aminoácidos que la componen.</li>
+    </ul>
+    <p>Y la carga de cada grupo ionizable depende de la relación entre el <strong>pH del medio</strong> y el <strong>pK de ese grupo</strong>, exactamente igual que en los aminoácidos aislados.</p>
+    <ul>
+      <li>En medio <strong>ácido</strong> (alta concentración de H⁺, pH bajo), los grupos amino aceptan iones hidrógeno y la proteína adquiere <strong>carga positiva</strong>.</li>
+      <li>En medio <strong>básico</strong> (pH alto), la proteína cede iones hidrógeno y queda con <strong>carga negativa</strong>.</li>
+      <li>Existe un pH en el que hay <strong>el mismo número de cargas positivas que negativas</strong>. Ese es su punto isoeléctrico.</li>
+    </ul>
+    <div class="nota">
+      <span class="etq">Definiciones que se preguntan juntas</span>
+      <p><strong>Punto isoeléctrico (PI):</strong> valor del pH al cual la proteína presenta carga neta cero y por tanto no es atraída por ninguno de los polos.<br>
+      <strong>Cátodo:</strong> polo negativo (−). Hacia él se mueven los <strong>cationes</strong>, las proteínas cargadas positivamente.<br>
+      <strong>Ánodo:</strong> polo positivo (+). Hacia él se mueven los <strong>aniones</strong>, las proteínas cargadas negativamente.</p>
+    </div>
+    <p><strong>Cada proteína tiene su propio punto isoeléctrico</strong>, que depende de su estructura primaria: es decir, de qué aminoácidos la componen y en qué proporción.</p>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Relación pH y PI</th><th>Especie iónica predominante</th><th>Carga neta</th><th>Migración eléctrica</th></tr></thead>
+        <tbody>
+          <tr><td>pH &lt; PI</td><td>Básica</td><td>(+)</td><td>Hacia el <strong>cátodo</strong></td></tr>
+          <tr><td>pH = PI</td><td>Neutra</td><td>(0)</td><td><strong>No migra</strong></td></tr>
+          <tr><td>pH &gt; PI</td><td>Ácida</td><td>(−)</td><td>Hacia el <strong>ánodo</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="electroforesis" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.11</span><span class="rotulo" style="margin:0">Electroforesis</span></div>
+    <h2>Separar proteínas con un campo eléctrico</h2>
+    <div class="nota">
+      <span class="etq">Definición</span>
+      <p>La electroforesis es un <strong>método de separación de moléculas basado en su desplazamiento en un campo eléctrico</strong>.</p>
+    </div>
+    <p>Por este método se pueden separar proteínas que presenten <strong>cargas eléctricas diferentes</strong>, pues migran hacia polos opuestos; y también proteínas con la <strong>misma carga pero cuantitativamente distinta</strong>: se desplazan más rápido, y por tanto avanzan más, las que tienen mayor número de cargas eléctricas.</p>
+    <p>En el laboratorio clínico el medio más utilizado es de <strong>pH 8,6</strong>. A ese pH las proteínas de la sangre adquieren carga negativa, así que migran del cátodo hacia el ánodo. Cuanto <strong>mayor sea su carga y menor su masa molecular</strong>, más rápido migran, y así se separan. Al final se añade un colorante para visualizarlas.</p>
+    <p>Es un método diagnóstico importante, porque el patrón de bandas de las proteínas del suero cambia en distintas enfermedades.</p>
+  </div>
+  <div class="contenedor">
+    <div class="laboratorio">
+      <h4>Simulador de electroforesis</h4>
+      <p style="opacity:.85">Ajusta el pH del medio y el punto isoeléctrico de la proteína, y observa hacia qué polo migra. Recuerda que lo que decide todo es la <strong>relación entre ambos valores</strong>, no su valor absoluto.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px">
+        <div>
+          <label for="ef-ph" style="font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7">pH del medio: <span id="ef-ph-v">8,6</span></label>
+          <input type="range" id="ef-ph" min="1" max="14" step="0.1" value="8.6">
+        </div>
+        <div>
+          <label for="ef-pi" style="font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7">PI de la proteína: <span id="ef-pi-v">5,0</span></label>
+          <input type="range" id="ef-pi" min="1" max="14" step="0.1" value="5.0">
+        </div>
+      </div>
+      <div class="pista">
+        <div class="polo neg"><b>−</b><span>CÁTODO</span></div>
+        <div class="canal"><div class="mancha" id="ef-mancha" style="left:50%">P</div></div>
+        <div class="polo pos"><b>+</b><span>ÁNODO</span></div>
+      </div>
+      <div class="lectura">
+        <div><dt>Relación</dt><dd id="ef-rel" style="font-size:1.1rem">pH &gt; PI</dd></div>
+        <div><dt>Especie predominante</dt><dd id="ef-esp" style="font-size:1.1rem">Ácida</dd></div>
+        <div><dt>Carga neta</dt><dd id="ef-carga">(−)</dd></div>
+        <div><dt>Migra hacia</dt><dd id="ef-mig" style="font-size:1.1rem">Ánodo</dd></div>
+      </div>
+      <p class="aviso-lab" id="ef-nota" style="font-family:var(--mono);font-size:.72rem;opacity:.6;margin-top:14px"></p>
+    </div>
+  </div>
+</section>
+
+<section id="taller" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.12</span><span class="rotulo" style="margin:0">Taller</span></div>
+    <h2>Conclusiones y preguntas de comprobación</h2>
+    <h3>Conclusiones de la conferencia</h3>
+    <ul>
+      <li>Las proteínas cumplen con el <strong>principio de multiplicidad de utilización</strong>, ya que pueden ser enzimas, transportadoras, de reserva, contráctiles, estructurales, de defensa y reguladoras.</li>
+      <li>Las proteínas son <strong>macromoléculas informacionales</strong>.</li>
+      <li>Las proteínas se pueden separar por el método de <strong>electroforesis</strong>.</li>
+    </ul>
+  </div>
+  <div class="contenedor">
+    <div class="pregunta-abierta">
+      <p class="enun">1. Conteste sí o no para las proteínas: diversidad secuencial, carácter informacional, diversidad estructural, diversidad conformacional y diversidad funcional.</p>
+      <button class="verrespuesta">Ver respuesta modelo</button>
+      <div class="respuesta"><p><strong>Sí a las cinco.</strong> Las proteínas tienen diversidad secuencial porque disponen de 20 aminoácidos distintos para ordenar; de ahí su carácter informacional, que es a la vez secuencial y conformacional. Esa diversidad secuencial genera diversidad estructural y conformacional, y esta última se traduce en diversidad funcional. Es la cadena secuencia → conformación → función aplicada a la tabla.</p></div>
+    </div>
+    <div class="pregunta-abierta">
+      <p class="enun">2. Complete el cuadro de aspectos generales de las proteínas: precursores, lo monótono, lo diverso, tipo de información y qué informa.</p>
+      <button class="verrespuesta">Ver respuesta modelo</button>
+      <div class="respuesta">
+        <p><strong>Precursores:</strong> aminoácidos, unidos por enlace peptídico.<br>
+        <strong>Lo monótono:</strong> el esqueleto formado por la región constante de los aminoácidos y la repetición del mismo enlace peptídico.<br>
+        <strong>Lo diverso:</strong> las cadenas laterales R y el orden en que se colocan.<br>
+        <strong>Tipo de información:</strong> secuencial y conformacional; las proteínas presentan ambas.<br>
+        <strong>¿Qué informa?:</strong> la secuencia determina la conformación, y la conformación crea los sitios de reconocimiento que definen con qué ligando interactúa la proteína y qué función cumple.</p>
+      </div>
+    </div>
+    <div class="pregunta-abierta">
+      <p class="enun">3. Complete: nivel estructural, concepto y fuerzas que lo estabilizan.</p>
+      <button class="verrespuesta">Ver respuesta modelo</button>
+      <div class="respuesta">
+        <p><strong>Primario:</strong> orden de los aminoácidos en la cadena · enlace peptídico (covalente).<br>
+        <strong>Secundario:</strong> ordenamiento regular de sectores de la cadena a lo largo de un eje · puentes de hidrógeno entre los grupos carbonílicos y amídicos del enlace peptídico.<br>
+        <strong>Terciario:</strong> disposición espacial irregular de la cadena doblándose sobre sí misma · interacciones débiles entre cadenas laterales R, sobre todo hidrofóbicas, más puentes disulfuro.<br>
+        <strong>Cuaternario:</strong> asociación de dos o más cadenas polipeptídicas en una unidad biológicamente activa · interacciones débiles entre subunidades.</p>
+      </div>
+    </div>
+    <div class="pregunta-abierta">
+      <p class="enun">4. ¿Cómo se cumplen las características generales de las macromoléculas en las proteínas?</p>
+      <button class="verrespuesta">Ver respuesta modelo</button>
+      <div class="respuesta">
+        <p><strong>Elevado peso molecular:</strong> por definición superan los 5000 Da. <strong>Polimérico:</strong> son polímeros de aminoácidos unidos por enlaces covalentes. <strong>Uniforme:</strong> un solo tipo de precursor, el aminoácido, y un solo tipo de enlace, el peptídico. <strong>Lineal:</strong> no tienen ramificaciones, y sus extremos son distintos (NH₂ terminal y COOH terminal), lo que les da polaridad. <strong>Tridimensional:</strong> se organizan en cuatro niveles. <strong>Informacional:</strong> presentan información secuencial y conformacional. <strong>Agregación:</strong> forman estructuras supramacromoleculares como los ribosomas, las lipoproteínas y las membranas. <strong>Estructura–función:</strong> al desnaturalizarse pierden la función porque desaparecen los sitios de reconocimiento.</p>
+      </div>
+    </div>
+    <div class="pregunta-abierta">
+      <p class="enun">5. Resuma la relación estructura–función con un ejemplo.</p>
+      <button class="verrespuesta">Ver respuesta modelo</button>
+      <div class="respuesta">
+        <p>La estructura primaria contiene la información secuencial que determina la estructura tridimensional biológicamente activa, y la función se ejerce por reconocimiento molecular gracias a la disposición espacial de las cadenas laterales.</p>
+        <p><strong>Ejemplo con la hemoglobina:</strong> su secuencia determina el plegamiento de las cuatro cadenas y la colocación del grupo hemo, que es el sitio de reconocimiento del oxígeno. Si se desnaturaliza por calor o pH extremo, se pierde la conformación, desaparece el sitio y la molécula deja de transportar oxígeno, aunque su secuencia siga completa.</p>
+      </div>
+    </div>
+  </div>
+  <div class="contenedor prosa">
+    <div class="nota">
+      <span class="etq">Estudio independiente</span>
+      <p><em>Bioquímica Médica</em>, Cardellá–Hernández, Tomo I. Capítulo 9: características generales de las macromoléculas, págs. 128 a 137. Capítulo 12: proteínas, págs. 195 a 215 (primer párrafo). Péptidos: págs. 195 a 198. Electroforesis: pág. 214.</p>
+    </div>
+  </div>
+</section>
+
+<section id="examen" class="submod">
+  <div class="contenedor prosa">
+    <div class="submod-cab"><span class="n">2.13</span><span class="rotulo" style="margin:0">Evaluación</span></div>
+    <h2>Examen del módulo 2</h2>
+    <p>Treinta preguntas sobre todo el módulo, en orden aleatorio y una a la vez, sin decirte si acertaste hasta que entregues. Al terminar obtienes calificación, desglose por tema y revisión de cada error.</p>
+  </div>
+  <div class="contenedor"><div class="examen" id="examen-caja"></div></div>
+</section>
+
+<footer style="padding:56px 0 70px;font-size:.9rem;color:var(--tinta-suave)">
+  <div class="contenedor prosa">
+    <p>Módulo 2 de la guía de estudio del Tema 2: Biomoléculas y Macromoléculas, elaborada a partir de la conferencia «Proteínas» de la Dra. Omitsu Agüero Sánchez. Material de apoyo; no sustituye la conferencia ni el libro de texto.</p>
+    <p><a href="index.html">← Volver al índice</a> · <a href="modulo-3-lipidos.html">Siguiente: Módulo 3, Lípidos →</a></p>
+  </div>
+</footer>
+</main>
+
+<script>
+/* ---- simulador de electroforesis ---- */
+(function(){
+"use strict";
+var sph=document.getElementById("ef-ph"),spi=document.getElementById("ef-pi"),m=document.getElementById("ef-mancha");
+function fmt(v){return v.toFixed(1).replace(".",",");}
+function act(){
+  var ph=parseFloat(sph.value),pi=parseFloat(spi.value),d=ph-pi;
+  document.getElementById("ef-ph-v").textContent=fmt(ph);
+  document.getElementById("ef-pi-v").textContent=fmt(pi);
+  var rel,esp,carga,mig,pos,nota;
+  if(Math.abs(d)<0.15){rel="pH = PI";esp="Neutra";carga="(0)";mig="No migra";pos=50;
+    nota="La proteína está en su punto isoeléctrico: tiene el mismo número de cargas positivas que negativas, así que se queda donde está.";}
+  else if(d<0){rel="pH < PI";esp="Básica";carga="(+)";mig="Cátodo (−)";
+    pos=50-Math.min(42,Math.abs(d)*7);
+    nota="El medio es más ácido que el PI, la proteína capta iones hidrógeno y queda positiva. Como catión, es atraída por el polo negativo. Cuanto mayor la diferencia, más rápido migra.";}
+  else{rel="pH > PI";esp="Ácida";carga="(−)";mig="Ánodo (+)";
+    pos=50+Math.min(42,Math.abs(d)*7);
+    nota="El medio es más básico que el PI, la proteína cede iones hidrógeno y queda negativa. Como anión, es atraída por el polo positivo. Es lo que ocurre a pH 8,6 con las proteínas del suero.";}
+  document.getElementById("ef-rel").textContent=rel;
+  document.getElementById("ef-esp").textContent=esp;
+  document.getElementById("ef-carga").textContent=carga;
+  document.getElementById("ef-mig").textContent=mig;
+  document.getElementById("ef-nota").textContent=nota;
+  m.style.left=pos+"%";
+}
+sph.addEventListener("input",act);spi.addEventListener("input",act);act();
+})();
+
+window.BANCO=[
+{t:"Macromoléculas",q:"La estabilidad de las macromoléculas depende de:",o:["Solo de los enlaces covalentes","Los enlaces covalentes que las forman y las interacciones débiles que posibilitan sus funciones","Solo de las interacciones débiles","Del pH exclusivamente"],ok:1,ex:"Los covalentes sostienen el esqueleto; las interacciones débiles sostienen la forma tridimensional y permiten los cambios conformacionales."},
+{t:"Macromoléculas",q:"¿A partir de qué masa molecular se considera macromolécula a un polímero?",o:["500 daltons","1000 daltons","5000 daltons o 5 kD","50 000 daltons"],ok:2,ex:"Ese mismo valor separa a los polipéptidos de las proteínas."},
+{t:"Macromoléculas",q:"El carácter uniforme de las macromoléculas significa que:",o:["Todas tienen el mismo tamaño","Cada una se forma por precursores de la misma clase unidos por el mismo tipo de enlace","Todas son lineales","Todas tienen la misma función"],ok:1,ex:"Las proteínas son solo aminoácidos unidos solo por enlaces peptídicos; nunca una mezcla de precursores."},
+{t:"Macromoléculas",q:"La pareja macromolécula–enlace correcta es:",o:["Polisacáridos – peptídico","Ácidos nucleicos – fosfodiéster 3′–5′","Proteínas – glicosídico","Ácidos nucleicos – glicosídico"],ok:1,ex:"Polisacáridos: glicosídico. Proteínas: peptídico. Ácidos nucleicos: fosfodiéster 3′–5′."},
+{t:"Macromoléculas",q:"Las excepciones al carácter lineal de las macromoléculas son:",o:["Las proteínas fibrosas","Los ácidos nucleicos","El glucógeno y el almidón, que son ramificados","Las enzimas"],ok:2,ex:"Son homopolisacáridos ramificados. En proteínas y ácidos nucleicos la ausencia de ramificaciones es una ventaja."},
+{t:"Macromoléculas",q:"Que los extremos de una macromolécula sean diferentes le confiere:",o:["Polaridad, es decir, una dirección definida","Carga eléctrica","Solubilidad","Carácter polimérico"],ok:0,ex:"Gracias a esa polaridad se sabe cuál es la primera subunidad y cuál la última, y se puede hablar de cadenas paralelas o antiparalelas."},
+{t:"Macromoléculas",q:"La tendencia a la agregación de las macromoléculas produce:",o:["Su degradación","Estructuras supramacromoleculares con funciones nuevas","La pérdida de la información secuencial","Su desnaturalización"],ok:1,ex:"Cromosomas, ribosomas, lipoproteínas y membranas biológicas son ejemplos de esos agregados."},
+{t:"Información",q:"La información secuencial está contenida en:",o:["La estructura terciaria","La estructura primaria","La estructura cuaternaria","Los grupos prostéticos"],ok:1,ex:"Por estar en la estructura primaria, estabilizada por enlaces covalentes, es muy estable."},
+{t:"Información",q:"¿Cuál de estas macromoléculas NO presenta carácter informacional?",o:["Las proteínas","Los ácidos nucleicos","Los homopolisacáridos como el almidón y el glucógeno","Las enzimas"],ok:2,ex:"Están formados solo por unidades de glucosa, todas idénticas: sin variedad de monómeros no hay información. Su función es de almacén energético."},
+{t:"Información",q:"A mayor variedad de monómeros en una macromolécula:",o:["Menor contenido de información","Mayor contenido de información","No cambia la información","Menor estabilidad"],ok:1,ex:"Por eso las proteínas, con 20 aminoácidos posibles, tienen más carácter informacional que los ácidos nucleicos, con 4 nucleótidos."},
+{t:"Información",q:"La sustancia que se une a un sitio de reconocimiento molecular se denomina:",o:["Ligando","Grupo prostético","Protómero","Cofactor"],ok:0,ex:"El mecanismo se llama reconocimiento molecular y el lugar, sitio de reconocimiento."},
+{t:"Información",q:"¿Cuál NO es una propiedad de los sitios de reconocimiento molecular?",o:["Están localizados en la superficie de la macromolécula","Su estructura es complementaria a la del ligando","Están ocultos en el núcleo hidrofóbico de la proteína","Su unión al ligando provoca cambios conformacionales"],ok:2,ex:"Deben estar en la superficie, porque de otro modo el ligando no podría alcanzarlos."},
+{t:"Péptidos",q:"Se denominan oligopéptidos los que tienen:",o:["De 2 a 7 residuos de aminoácidos","Más de 7 aminoácidos","Más de 5000 daltons","Más de 100 aminoácidos"],ok:0,ex:"Ejemplo: las hormonas liberadoras hipotalámicas, como la liberadora de tirotropina."},
+{t:"Péptidos",q:"El glucagón, con 29 aminoácidos, y la oxitocina, con 9, se clasifican como:",o:["Oligopéptidos","Polipéptidos","Proteínas","Aminoácidos"],ok:1,ex:"Tienen más de 7 aminoácidos pero no alcanzan los 5000 Da, así que son polipéptidos."},
+{t:"Péptidos",q:"Los péptidos son polímeros de:",o:["D-α-aminoácidos","L-α-aminoácidos unidos por enlace peptídico","Nucleótidos","Monosacáridos"],ok:1,ex:"La serie L y la posición α son las mismas que en las proteínas: lo único que cambia es el tamaño."},
+{t:"Clasificación",q:"Las proteínas fibrosas incluyen:",o:["Mioglobina y hemoglobina","Colágena, queratina, miosina y fibrina","Las enzimas","Las histonas"],ok:1,ex:"Las globulares, de estructura esferoidal, son la mioglobina, la hemoglobina, las enzimas y las histonas."},
+{t:"Clasificación",q:"Las proteínas poco solubles son aquellas que:",o:["No se disuelven en ningún medio","Son solubles en disoluciones de sales neutras, como las globulinas","Forman fibras","Tienen grupo prostético"],ok:1,ex:"Las solubles son globulares con grupos polares en la superficie; las insolubles son las fibrosas y las de membrana."},
+{t:"Clasificación",q:"Una proteína conjugada es la que:",o:["Está formada solo por aminoácidos","Tiene unido un grupo prostético no proteico","Tiene estructura cuaternaria","Es soluble en agua"],ok:1,ex:"Ese grupo puede ser lípido, glúcido, fosfato o hemo: lipoproteínas, glicoproteínas y hemoproteínas."},
+{t:"Clasificación",q:"El citocromo c es un ejemplo de proteína conjugada porque contiene:",o:["Un grupo hemo como grupo prostético","Dos cadenas polipeptídicas","Solo aminoácidos","Un puente disulfuro"],ok:0,ex:"El grupo hemo es la porción no proteica de la molécula."},
+{t:"Niveles",q:"El único nivel estructural que NO se estabiliza por interacciones débiles es:",o:["El primario","El secundario","El terciario","El cuaternario"],ok:0,ex:"El primario se sostiene por enlaces peptídicos, que son covalentes. Por eso es el nivel más estable."},
+{t:"Niveles",q:"La estructura secundaria se estabiliza por puentes de hidrógeno entre:",o:["Las cadenas laterales R","Los grupos carbonílicos y amídicos del enlace peptídico","Dos cisteínas","Las subunidades protoméricas"],ok:1,ex:"Es la diferencia clave con el nivel terciario, que sí depende de las cadenas laterales R."},
+{t:"Niveles",q:"La principal fuerza que estabiliza la estructura terciaria es:",o:["El enlace peptídico","Las uniones hidrofóbicas","Las fuerzas de Van der Waals","El enlace glicosídico"],ok:1,ex:"Son las más abundantes. También participan puentes de hidrógeno, uniones salinas, Van der Waals y los puentes disulfuro."},
+{t:"Niveles",q:"La estructura cuaternaria se define como:",o:["El orden de los aminoácidos","El plegamiento de una sola cadena","Dos o más cadenas polipeptídicas, generalmente en número par, que forman una unidad biológicamente activa","La hélice alfa"],ok:2,ex:"Esas cadenas se llaman subunidades protoméricas y se unen entre sí por interacciones débiles."},
+{t:"Niveles",q:"En las proteínas de una sola cadena polipeptídica, la responsable directa de sus propiedades biológicas es:",o:["La estructura primaria","La estructura secundaria","La estructura terciaria","La estructura cuaternaria"],ok:2,ex:"Carecen de nivel cuaternario, así que es el terciario el que dispone los grupos funcionales para interactuar con los ligandos."},
+{t:"Estructura secundaria",q:"En la α-hélice, los puentes de hidrógeno son:",o:["Intercatenarios y perpendiculares al eje","Intracatenarios y paralelos al eje longitudinal","Entre cadenas laterales R","Covalentes"],ok:1,ex:"En la hoja plegada, en cambio, son intercatenarios: entre cadenas distintas o de la misma cadena que se pliega."},
+{t:"Estructura secundaria",q:"En la hoja plegada, las cadenas laterales R se disponen:",o:["Hacia el exterior de la hélice","Por encima y por debajo del plano de la estructura","Hacia el interior del eje","Todas hacia el mismo lado"],ok:1,ex:"En la α-hélice se disponen hacia el exterior de la molécula."},
+{t:"Desnaturalización",q:"La desnaturalización de una proteína:",o:["Rompe los enlaces peptídicos y destruye la estructura primaria","Rompe las interacciones débiles y mantiene intacta la estructura primaria","Solo ocurre por agentes químicos","Es siempre irreversible"],ok:1,ex:"Por eso puede haber renaturalización: la información para volver a plegarse sigue en la secuencia."},
+{t:"Desnaturalización",q:"El alcohol, la acetona, la urea y los detergentes actúan fundamentalmente destruyendo:",o:["Los enlaces peptídicos","Las uniones hidrofóbicas que estabilizan el núcleo de las proteínas globulares","Los puentes disulfuro","El grupo prostético"],ok:1,ex:"Las variaciones extremas de pH afectan sobre todo a las cargas y a los puentes de hidrógeno; el calor destruye las interacciones débiles en conjunto."},
+{t:"Electroforesis",q:"Si el pH del medio es menor que el punto isoeléctrico de una proteína, esta:",o:["Queda con carga negativa y migra al ánodo","Queda con carga positiva y migra al cátodo","No migra","Se desnaturaliza"],ok:1,ex:"Con pH bajo la proteína capta iones hidrógeno, queda positiva y como catión es atraída por el polo negativo, el cátodo."},
+{t:"Electroforesis",q:"En el laboratorio clínico se usa habitualmente un medio de pH 8,6 porque a ese pH las proteínas del suero:",o:["Adquieren carga negativa y migran hacia el ánodo","Se encuentran en su punto isoeléctrico","Se desnaturalizan","Adquieren carga positiva"],ok:0,ex:"Migran más rápido las que tienen mayor carga y menor masa molecular, y así se separan en bandas."}
+];
+</script>
+<script src="comun.js"></script>
+<script src="examen.js"></script>
+</body>
+</html>
